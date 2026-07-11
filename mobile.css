@@ -57,14 +57,22 @@
   [style*="padding:26px 56px"], [style*="padding: 26px 56px"],
   [style*="padding:20px 56px"], [style*="padding: 20px 56px"] { padding: 20px 18px !important; }
 
-  /* ========== 2. MENU górne ========== */
-  header { row-gap: 16px !important; }
+  /* ========== 2. MENU górne (v5.1: mniejsze taby, więcej luzu) ========== */
+  header { row-gap: 18px !important; }
   nav {
-    font-size: 14px !important;
+    font-size: 13px !important;
+    letter-spacing: 0.3px !important;
     flex-basis: 100% !important;
     flex-wrap: wrap !important; white-space: normal !important;
-    row-gap: 10px !important; column-gap: 18px !important;
+    row-gap: 12px !important; column-gap: 20px !important;
     justify-content: center !important;
+  }
+  /* przyciski Termin anfragen / Online buchen — mniejsze pigułki */
+  header a[style*="border-radius: 999px"],
+  header a[style*="border-radius:999px"] {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.4px !important;
   }
 
   /* ========== 3. KADRY (image-slot = shadow DOM, sterujemy ramą) ========== */

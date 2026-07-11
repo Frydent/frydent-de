@@ -151,26 +151,26 @@ input,textarea{font-family:'Plus Jakarta Sans',sans-serif}
       </div>
 
     </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
+    <form action="https://formsubmit.co/info@frydent.de" method="POST" style="display:flex;flex-direction:column;gap:14px"><input type="hidden" name="_subject" value="Kontaktformular · Praxis-Website"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://info.frydent.de/danke.html"><input type="text" name="_honey" style="display:none">
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
-        <input type="text" placeholder="Name" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
-        <input type="text" placeholder="Vorname" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
+        <input type="text" name="Name" required placeholder="Name" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
+        <input type="text" name="Vorname" placeholder="Vorname" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
       </div>
-      <input type="text" placeholder="Geburtsdatum" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
+      <input type="text" name="Geburtsdatum" placeholder="Geburtsdatum" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
-        <input type="tel" placeholder="Telefonnummer" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
-        <input type="email" placeholder="E-Mail" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
+        <input type="tel" name="Telefon" placeholder="Telefonnummer" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
+        <input type="email" name="E-Mail" required placeholder="E-Mail" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;box-sizing:border-box;width:100%">
       </div>
-      <textarea placeholder="Mitteilung" rows="5" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;resize:vertical;box-sizing:border-box;width:100%"></textarea>
+      <textarea name="Mitteilung" required placeholder="Mitteilung" rows="5" style="padding:14px 16px;border-radius:10px;border:none;font-size:15px;resize:vertical;box-sizing:border-box;width:100%"></textarea>
       <label style="display:flex;align-items:baseline;gap:10px;font-size:14px;color:#C9D6EC;cursor:pointer">
-        <input type="checkbox" style="flex:none">
+        <input type="checkbox" name="Datenschutz" value="zugestimmt" required style="flex:none">
         <span>Ich stimme der Verwendung meiner Daten gemäß <a href="https://info.frydent.de/datenschutz.html" style="color:#E2C26A;text-decoration:underline">Datenschutzerklärung</a> zu *</span>
       </label>
       <div style="display:flex;justify-content:flex-end;gap:14px;margin-top:4px">
-        <button type="button" style="background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#ffffff;padding:12px 26px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;cursor:pointer">Löschen</button>
-        <button type="button" style="background:#E2C26A;border:none;color:#1E2D4D;padding:12px 28px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;cursor:pointer">Abschicken</button>
+        <button type="reset" style="background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#ffffff;padding:12px 26px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;cursor:pointer">Löschen</button>
+        <button type="submit" style="background:#E2C26A;border:none;color:#1E2D4D;padding:12px 28px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;cursor:pointer">Abschicken</button>
       </div>
-    </div>
+    </form>
   </div>
   </div>
 

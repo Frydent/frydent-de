@@ -1,0 +1,60 @@
+<!-- ============================================================
+     FRYDENT · Head-Snippets für index.html (und Unterseiten)
+     Einfügen im <head>. Stand: 11.07.2026
+     TODO vor Go-Live: alle absoluten URLs von
+     https://frydent.github.io/frydent-de/  →  https://frydent.de/
+     ============================================================ -->
+
+<!-- 1) Sprache: das <html>-Tag ergänzen zu:  <html lang="de">  -->
+
+<!-- 2) Favicons (favicon.svg liegt bereits im Repo-Root) -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+<!-- 3) Fonts self-hosted (ERSETZT die beiden fonts.googleapis.com-Zeilen; DSGVO) -->
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+
+<!-- 4) Canonical -->
+<link rel="canonical" href="https://frydent.github.io/frydent-de/index.html">
+
+<!-- 5) Open Graph / Social Cards -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="FRYDENT · Zahnarztpraxis Bonndorf im Schwarzwald">
+<meta property="og:description" content="Zahnarztpraxis FRYDENT in Bonndorf: Prophylaxe, Zahnerhaltung, Wurzelbehandlung, Zahnersatz, Aligner und ästhetische Zahnmedizin. Gute Zähne. Gute Laune.">
+<meta property="og:image" content="https://frydent.github.io/frydent-de/assets/img/og-image.jpg">
+<meta property="og:url" content="https://frydent.github.io/frydent-de/index.html">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- 6) Strukturierte Daten: schema.org/Dentist (Lokal-SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Zahnarztpraxis FRYDENT",
+  "url": "https://frydent.github.io/frydent-de/",
+  "telephone": "+49 7703 284",
+  "email": "info@frydent.de",
+  "image": "https://frydent.github.io/frydent-de/assets/img/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Martinstraße 21",
+    "postalCode": "79848",
+    "addressLocality": "Bonndorf im Schwarzwald",
+    "addressRegion": "Baden-Württemberg",
+    "addressCountry": "DE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 47.8186, "longitude": 8.3417 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday"], "opens": "14:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Friday"], "opens": "08:00", "closes": "12:30" }
+  ],
+  "sameAs": [
+    "TODO-INSTAGRAM-URL",
+    "TODO-GOOGLE-UNTERNEHMENSPROFIL-URL"
+  ]
+}
+</script>
+<!-- TODO: geo-Koordinaten prüfen (aktuell: Ortsmitte Bonndorf), sameAs-URLs eintragen -->

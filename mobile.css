@@ -74,6 +74,13 @@
     font-size: 12px !important;
     letter-spacing: 0.4px !important;
   }
+  /* v5.2: kontener pigułek na całą szerokość i wycentrowany */
+  header div:has(> a[style*="border-radius: 999px"]),
+  header div:has(> a[style*="border-radius:999px"]) {
+    display: flex !important; justify-content: center !important; flex: 1 1 100% !important;
+  }
+  /* v5.2: więcej światła między logo a menu */
+  nav { margin-top: 8px !important; }
 
   /* ========== 3. KADRY (image-slot = shadow DOM, sterujemy ramą) ========== */
   [style*="height:580px"], [style*="height: 580px"] { height: auto !important; aspect-ratio: 2/1 !important; }

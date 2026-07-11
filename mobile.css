@@ -1,15 +1,13 @@
-/* FRYDENT – mobile retrofit v2 (dziala tylko ponizej 900px / 600px) */
+/* FRYDENT – mobile retrofit v4 (tylko <900px / <600px) */
 
 @media (max-width: 900px) {
 
-  html, body { overflow-x: hidden; }
+  body { overflow-x: clip; }
 
-  /* 1. Wielokolumnowe gridy -> jedna kolumna */
   [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   [style*="grid-template-columns:auto 1fr"] { grid-template-columns: auto 1fr !important; }
   [style*="grid-template-columns:120px 40px"] { grid-template-columns: 72px 20px minmax(0,1fr) !important; }
 
-  /* 2. Sztywne szerokosci, ktore rozpychaly ekran */
   [style*="width:460px"] { width: 100% !important; }
   [style*="width:607px"] { width: auto !important; height: auto !important; flex-wrap: wrap !important; }
   [style*="width:220px"], [style*="width:230px"] { max-width: 100% !important; }
@@ -17,10 +15,10 @@
   [style*="height:580px"] { height: auto !important; aspect-ratio: 2/1 !important; }
   [style*="height:420px"] { height: auto !important; aspect-ratio: 3/2 !important; }
 
-  /* 3. Nawigacja zawija sie zamiast wystawac */
+  image-slot img { object-fit: cover !important; object-position: center 22% !important; }
+
   nav { flex-wrap: wrap !important; white-space: normal !important; row-gap: 8px !important; justify-content: center !important; }
 
-  /* 4. Desktopowe paddingi sekcji */
   [style*="padding:76px 56px"], [style*="padding:70px 56px"],
   [style*="padding:66px 56px"], [style*="padding:66px 60px"],
   [style*="padding:58px 56px"], [style*="padding:54px 56px"],
@@ -28,11 +26,31 @@
   [style*="padding:40px 56px"] { padding: 28px 18px !important; }
   [style*="padding:26px 56px"] { padding: 20px 18px !important; }
 
-  /* 5. Jezyczki Schnellkontakt -> dolna listwa (jak na info.frydent.de) */
   [data-screen-label="Schnellkontakt"] {
     top: auto !important; bottom: 0 !important; left: 0 !important; right: 0 !important;
     transform: none !important; flex-direction: row !important; gap: 0 !important;
-    z-index: 120 !important;
+    z-index: 120 !important; flex-wrap: nowrap !important;
   }
   [data-screen-label="Schnellkontakt"] a {
-    transform: none !important; border-radius: 0 !importan
+    transform: none !important; border-radius: 0 !important;
+    flex: 1 1 0 !important; justify-content: center !important;
+    padding: 13px 6px !important; box-shadow: none !important; gap: 0 !important;
+    flex-wrap: nowrap !important; min-width: 0 !important;
+  }
+  [data-screen-label="Schnellkontakt"] a span { display: none !important; }
+  body { padding-bottom: 58px !important; }
+  footer { margin-bottom: 0 !important; }
+
+  [style*="bottom: 170px"] { bottom: 10px !important; left: 14px !important; font-size: 20px !important; }
+}
+
+@media (max-width: 600px) {
+
+  h1[style*="font-size:35px"] { font-size: 27px !important; }
+  [style*="font-size:32px"] { font-size: 24px !important; }
+  [style*="font-size:28px"] { font-size: 22px !important; }
+  [style*="font-size:26px"] { font-size: 21px !important; }
+
+  [style*="display:flex"][style*="gap"] { flex-wrap: wrap !important; }
+  [data-screen-label="Schnellkontakt"], [data-screen-label="Schnellkontakt"] a { flex-wrap: nowrap !important; }
+}

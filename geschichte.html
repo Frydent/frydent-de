@@ -6,8 +6,7 @@
 <script src="./support.js"></script>
 <title>Unsere Geschichte · FRYDENT Bonndorf</title>
 <meta name="description" content="Verwurzelt im Schwarzwald: die Geschichte unserer Praxis seit 1925.">
-<link rel="stylesheet" href="mobile.css?v=2">
-<script defer src="https://dr-flex.de/embed.js?medicalPracticeId=60190"></script><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script></head>
+<link rel="stylesheet" href="mobile.css?v=2"><script defer src="https://dr-flex.de/embed.js?medicalPracticeId=60190"></script><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script></head>
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
@@ -23,6 +22,30 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
 .ndrop{position:relative;display:inline-flex}
 .ndrop>.nmenu{visibility:hidden;opacity:0;position:absolute;top:100%;left:-16px;padding-top:12px;z-index:130;transition:opacity .15s ease}
 .ndrop:hover>.nmenu{visibility:visible;opacity:1}
+
+@media (max-width:1100px){
+  [data-screen-label]:not([data-screen-label="Schnellkontakt"]) div[style*="display:flex"],
+  [data-screen-label]:not([data-screen-label="Schnellkontakt"]) div[style*="display: flex"]{flex-wrap:wrap;min-width:0}
+}
+@media (max-width:840px){
+  div[style*="px 56px"]{padding-left:20px !important;padding-right:20px !important}
+  div[style*="grid-template-columns"]{grid-template-columns:1fr !important}
+  header{padding:12px 16px !important}
+  header nav{order:3;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px;justify-content:flex-start !important}
+  header nav::-webkit-scrollbar{display:none}
+  .ndrop>.nmenu{display:none !important}
+  .ndrop svg{display:none !important}
+  header>div:last-child a:last-child{display:none !important}
+  header>div:last-child a{padding:9px 16px !important;font-size:12px !important}
+  h1{font-size:27px !important}
+  h2{font-size:23px !important}
+  div[style*="height:580px"],div[style*="height: 580px"],div[style*="height:560px"],div[style*="height: 560px"],div[style*="height:540px"],div[style*="height: 540px"],div[style*="height:520px"],div[style*="height: 520px"],div[style*="height:500px"],div[style*="height: 500px"],div[style*="height:480px"],div[style*="height: 480px"],div[style*="height:460px"],div[style*="height: 460px"],div[style*="height:440px"],div[style*="height: 440px"]{height:300px !important}
+  div[style*="Caveat"]{font-size:19px !important;left:14px !important;bottom:12px !important;text-shadow:0 1px 8px rgba(30,45,77,.6)}
+  [data-screen-label="Schnellkontakt"]{gap:8px !important}
+  [data-screen-label="Schnellkontakt"] a{padding:11px 16px 11px 12px !important;font-size:13px !important;gap:8px !important;transform:translateX(calc(100% - 44px)) !important}
+  [data-screen-label="Schnellkontakt"] a:hover{transform:translateX(0) !important}
+  [data-screen-label="Schnellkontakt"] a svg{width:20px;height:20px}
+}
 </style>
 </helmet>
 
@@ -70,7 +93,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
 
 
   <!-- intro -->
-  <div style="background:repeating-linear-gradient(0deg,rgba(176,145,84,.05) 0px,rgba(176,145,84,.05) 1px,transparent 1px,transparent 3px),repeating-linear-gradient(90deg,rgba(176,145,84,.05) 0px,rgba(176,145,84,.05) 1px,transparent 1px,transparent 3px),linear-gradient(180deg,#F2EFE8 0%,#F6F3EC 70%,#FBFAF7 100%)" data-screen-label="Intro">
+  <div style="background-color:#F2EFE8;background-image:repeating-linear-gradient(0deg,rgba(143,116,64,.05) 0px,rgba(143,116,64,.05) 1px,transparent 1px,transparent 1.6px),repeating-linear-gradient(90deg,rgba(143,116,64,.035) 0px,rgba(143,116,64,.035) 1px,transparent 1px,transparent 1.6px),linear-gradient(180deg,#F2EFE8 0%,#F6F3EC 70%,#FBFAF7 100%)" data-screen-label="Intro">
   <div style="display:flex;flex-direction:column;gap:14px;padding:64px 56px 72px;text-align:center;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Seit 1925</div>
     <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1.2;font-weight:600;color:#8F7440;text-wrap:pretty">Verwurzelt im Schwarzwald. Seit 1925.</h1>
@@ -108,7 +131,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
           <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Gründung der Praxis durch Dr. Stritt</div>
           <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875;max-width:60ch">Mitten in Bonndorf entsteht eine der prägenden Zahnarztpraxen der Region. Der Grundstein für eine über 100-jährige Tradition ist gelegt.</p>
           <div style="position:relative;width:170px;height:200px;margin-top:12px">
-            <image-slot id="tl-stritt" shape="rounded" radius="12" src="" placeholder="Portret — Dr. Stritt"></image-slot>
+            <image-slot id="tl-stritt" shape="rounded" radius="12" src="assets/img-tl-stritt.webp" placeholder="Portret — Dr. Stritt"></image-slot>
           </div>
         </div>
       </div>
@@ -132,7 +155,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
           <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Übergabe an Dr. Michaela Landwerlin-Führer</div>
           <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875;max-width:60ch">Zahnmedizin mit Herz und Präzision in dritter Generation. Die Praxis bleibt ein fester Bestandteil Bonndorfs.</p>
           <div style="position:relative;width:170px;height:200px;margin-top:12px">
-            <image-slot id="tl-landwerlin-fuehrer" shape="rounded" radius="12" src="" placeholder="Portret — Dr. Landwerlin-Führer"></image-slot>
+            <image-slot id="tl-landwerlin-fuehrer" shape="rounded" radius="12" src="assets/img-tl-landwerlin-fuehrer.webp" placeholder="Portret — Dr. Landwerlin-Führer"></image-slot>
           </div>
         </div>
       </div>
@@ -177,7 +200,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
     <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center">
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px">
         <div style="position:relative;width:100%;height:340px">
-          <image-slot id="d-wartezimmer-damals" shape="rounded" radius="14" src="" placeholder="Wartezimmer — damals"></image-slot>
+          <image-slot id="d-wartezimmer-damals" shape="rounded" radius="14" src="assets/img-d-wartezimmer-damals.webp" placeholder="Wartezimmer — damals"></image-slot>
         </div>
         <div style="position:relative;width:100%;height:340px">
           <image-slot id="d-wartezimmer-heute" shape="rounded" radius="14" src="" placeholder="Wartezimmer — heute"></image-slot>
@@ -198,7 +221,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;order:2">
         <div style="position:relative;width:100%;height:340px">
-          <image-slot id="d-labor-damals" shape="rounded" radius="14" src="" placeholder="Praxislabor — damals"></image-slot>
+          <image-slot id="d-labor-damals" shape="rounded" radius="14" src="assets/img-d-labor-damals.webp" placeholder="Praxislabor — damals"></image-slot>
         </div>
         <div style="position:relative;width:100%;height:340px">
           <image-slot id="d-labor-heute" shape="rounded" radius="14" src="" placeholder="Praxislabor — heute"></image-slot>
@@ -213,7 +236,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   <div style="background:#F7F8FA" data-screen-label="Zwei Traditionen">
   <div style="display:grid;grid-template-columns:460px minmax(0,1fr);gap:56px;padding:70px 56px;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <div style="position:relative;width:100%;height:360px">
-      <image-slot id="h-eurochair" shape="rounded" radius="16" src="" placeholder="Zdjęcie — Girsberger Eurochair"></image-slot>
+      <image-slot id="h-eurochair" shape="rounded" radius="16" src="assets/img-h-eurochair.webp" placeholder="Zdjęcie — Girsberger Eurochair"></image-slot>
     </div>
     <div style="display:flex;flex-direction:column;gap:14px">
       <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#8F7440">Wenn zwei Traditionen sich begegnen</h2>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRYDENT — Einwilligungserklärung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  doc-page:not(:defined){visibility:hidden}
+  *{box-sizing:border-box}
+  doc-page{
+    --navy:#2C4170; --navy-deep:#1E2D4D; --blue:#37538E;
+    --gold:#C4A44E; --gold-soft:#D2B156; --accent:#B09154;
+    --line:#C9CEDB; --ink:#3A4256; --paper:#F2EFE8;
+    font-family:'Plus Jakarta Sans',sans-serif; color:var(--ink);
+    font-size:11.5px; line-height:1.5;
+  }
+  h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:600;color:var(--blue);margin:0}
+  p{margin:0 0 8px}
+
+  /* running header/footer, identisch mit Anamnesebogen */
+  .doc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:8px}
+  .doc-head img{height:44px;width:auto;display:block}
+  .doc-head .doctype{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+  .doc-foot{border-top:1px solid var(--line);padding-top:6px;font-size:9.5px;color:#8A8FA0;text-align:center;letter-spacing:.3px}
+
+  .title{font-size:22px;color:var(--blue);margin:2px 0 2px}
+  .subtitle{font-size:11.5px;color:#6A7080;margin:0 0 16px}
+
+  .sec{font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#fff;background:var(--navy);
+    padding:5px 12px;border-radius:5px;margin:16px 0 10px;display:flex;align-items:center;gap:9px;break-after:avoid}
+  .sec .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-soft);flex:none}
+  .sec:first-of-type{margin-top:6px}
+
+  /* fill-in fields, identisch mit Anamnesebogen */
+  .grid{display:grid;gap:9px 18px;margin-bottom:6px}
+  .g2{grid-template-columns:1fr 1fr}
+  .field{display:flex;flex-direction:column;gap:3px}
+  .field .lbl{font-size:9.5px;letter-spacing:.4px;text-transform:uppercase;color:#8A8FA0;font-weight:600}
+  .field .in{border-bottom:1px solid var(--line);height:17px}
+
+  /* Kurzinformation-Box, papierton wie Datenschutz-Box */
+  .info-box{background:var(--paper);border:1px solid #E0D7C2;border-radius:8px;padding:13px 16px;margin:2px 0 12px;font-size:10.5px;line-height:1.6;color:#4B5241;break-inside:avoid}
+  .info-box p{margin:0 0 5px}
+  .info-box p:last-child{margin-bottom:0}
+  .info-box b{color:var(--accent);font-weight:600}
+
+  /* Checkbox-Zeilen */
+  .check-lbl{font-family:'Quicksand',sans-serif;font-size:10.5px;font-weight:600;color:var(--navy-deep);
+    margin:12px 0 4px;letter-spacing:.3px;text-transform:uppercase}
+  .check-lbl:first-of-type{margin-top:6px}
+  .check{display:grid;grid-template-columns:20px 1fr;gap:8px;padding:5px 0;font-size:10.5px;line-height:1.55;
+    align-items:start;border-bottom:1px solid #E3E6EE}
+  .check:last-of-type{border-bottom:none}
+  .check .box{width:13px;height:13px;border:1.4px solid var(--navy);border-radius:3px;margin-top:2px;flex:none}
+  .check .txt{color:var(--ink)}
+  .check .txt b{color:var(--navy-deep);font-weight:600}
+
+  /* Widerruf, akzentuiert mit goldenem Rand */
+  .widerruf{background:#FBF9F4;border-left:3px solid var(--gold);padding:9px 13px;margin:14px 0 12px;
+    font-size:10.5px;line-height:1.55;color:#5A5747;break-inside:avoid}
+  .widerruf b{color:var(--accent);font-weight:600}
+
+  /* Signatur, identisch mit Anamnesebogen */
+  .sign{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:22px}
+  .sign .line{border-top:1px solid var(--navy);padding-top:5px;font-size:9.5px;color:#8A8FA0;
+    letter-spacing:.4px;text-transform:uppercase}
+
+  .minor-block{margin-top:20px;padding-top:14px;border-top:1px dashed var(--line);break-inside:avoid}
+  .minor-lbl{font-family:'Quicksand',sans-serif;font-size:10.5px;font-weight:600;color:var(--navy);
+    margin-bottom:8px;letter-spacing:.3px;text-transform:uppercase}
+</style>
+</head>
+<body>
+<doc-page size="a4" margin="0.7in">
+
+  <div slot="header" class="doc-head">
+    <img src="briefkopf-logo.png" alt="FRYDENT — Zahnärzte in Bonndorf" width="221" height="44">
+    <div class="doctype">Einwilligungserklärung</div>
+  </div>
+
+  <div slot="footer" class="doc-foot">
+    Martinstraße 21 · 79848 Bonndorf im Schwarzwald · Tel. +49 (0) 7703 284 · t.frydrych@frydent.de
+  </div>
+
+  <h1 class="title">Einwilligungserklärung zur Datenverarbeitung</h1>
+  <p class="subtitle">Damit wir Sie zahnmedizinisch behandeln und Ihre Anliegen betreuen können, benötigen wir Ihre Einwilligung in die Verarbeitung Ihrer Daten.</p>
+
+  <div class="sec"><span class="dot"></span>Angaben zur Person</div>
+  <div class="grid g2">
+    <div class="field"><span class="lbl">Name</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Vorname</span><span class="in"></span></div>
+  </div>
+  <div class="grid g2">
+    <div class="field"><span class="lbl">Geburtsdatum</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Telefon</span><span class="in"></span></div>
+  </div>
+  <div class="field" style="margin-bottom:4px">
+    <span class="lbl">E-Mail (freiwillig, für Terminerinnerungen)</span>
+    <span class="in"></span>
+  </div>
+
+  <div class="sec"><span class="dot"></span>Kurzinformation zum Datenschutz (Art. 13 DSGVO)</div>
+  <div class="info-box">
+    <p><b>Verantwortliche Stelle:</b> Zahnarztpraxis FRYDENT, Tatiana Frydrych, Martinstraße 21, 79848 Bonndorf im Schwarzwald, Telefon 07703 284, t.frydrych@frydent.de.</p>
+    <p><b>Datenschutzbeauftragte:</b> Nicht bestellungspflichtig gemäß § 38 BDSG (Praxis mit weniger als 20 mit Datenverarbeitung beschäftigten Personen).</p>
+    <p><b>Zwecke der Verarbeitung:</b> Diagnose, Beratung, zahnmedizinische Behandlung, Abrechnung, Kommunikation, Erfüllung gesetzlicher Pflichten.</p>
+    <p><b>Rechtsgrundlagen:</b> Art. 6 Abs. 1 lit. b und f DSGVO; für Gesundheitsdaten Art. 9 Abs. 2 lit. h DSGVO in Verbindung mit § 22 BDSG.</p>
+    <p><b>Empfänger:</b> Kassenzahnärztliche Vereinigung, gesetzliche und private Krankenkassen, privatärztliche Rechenzentren, Zahnlabore, mit- und weiterbehandelnde Ärztinnen und Ärzte, technische Dienstleister als Auftragsverarbeiter (vertraglich auf Datenschutz verpflichtet).</p>
+    <p><b>Speicherdauer:</b> 10 Jahre nach Abschluss der Behandlung gemäß § 630f Abs. 3 BGB, in gesetzlich vorgesehenen Fällen länger.</p>
+    <p><b>Ihre Rechte:</b> Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch, Datenübertragbarkeit; Beschwerde beim Landesbeauftragten für den Datenschutz und die Informationsfreiheit Baden-Württemberg.</p>
+    <p><b>Ausführliche Datenschutzerklärung</b> erhalten Sie als separates Dokument gemeinsam mit diesem Formular.</p>
+  </div>
+
+  <div class="sec"><span class="dot"></span>Meine Einwilligungen</div>
+
+  <div class="check-lbl">Erforderlich für die zahnmedizinische Behandlung</div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt">Ich willige in die zahnärztliche Untersuchung und Behandlung ein sowie in die dafür notwendige Verarbeitung meiner personenbezogenen Daten und meiner Gesundheitsdaten. Ohne diese Einwilligung ist eine Behandlung nicht möglich.</span>
+  </div>
+
+  <div class="check-lbl">Freiwillige Einwilligungen, jederzeit widerrufbar</div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt"><b>Röntgen.</b> Ich willige in die Erstellung digitaler Röntgenaufnahmen ein, soweit dies medizinisch erforderlich ist.</span>
+  </div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt"><b>Terminerinnerungen.</b> Ich willige ein, dass die Praxis mich per SMS und/oder E-Mail an bevorstehende Termine erinnert.</span>
+  </div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt"><b>Fotografische Dokumentation.</b> Ich willige in die Anfertigung fotografischer Aufnahmen zur internen Behandlungsdokumentation ein. Die Aufnahmen werden ausschließlich in meiner Patientenakte gespeichert und nicht veröffentlicht.</span>
+  </div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt"><b>Weitergabe an externe Stellen.</b> Ich willige in die Weitergabe meiner Daten an Zahnlabore, Rechenzentren, Krankenkassen und die Kassenzahnärztliche Vereinigung ein, soweit dies für Behandlung und Abrechnung erforderlich ist.</span>
+  </div>
+  <div class="check">
+    <span class="box"></span>
+    <span class="txt"><b>Kontakt mit Vor- und Nachbehandlern.</b> Ich willige in die Kontaktaufnahme mit weiteren Ärztinnen, Ärzten und Zahnärzten ein, soweit dies für die weitere Behandlung sinnvoll ist.</span>
+  </div>
+
+  <div class="widerruf">
+    <b>Widerruf.</b> Sie können jede freiwillige Einwilligung jederzeit ohne Angabe von Gründen mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt. Ein Widerruf kann formlos per Telefon, E-Mail oder persönlich in der Praxis erfolgen.
+  </div>
+
+  <div class="sec"><span class="dot"></span>Ort, Datum und Unterschrift</div>
+  <div class="sign">
+    <div class="line">Ort, Datum</div>
+    <div class="line">Unterschrift Patient/in</div>
+  </div>
+
+  <div class="minor-block">
+    <div class="minor-lbl">Bei minderjährigen Patient/innen</div>
+    <div class="field" style="margin-bottom:14px">
+      <span class="lbl">In Vertretung des Patienten / der Patientin (Vor- und Nachname des Kindes)</span>
+      <span class="in"></span>
+    </div>
+    <div class="sign" style="margin-top:6px">
+      <div class="line">Ort, Datum</div>
+      <div class="line">Unterschrift Erziehungsberechtigte/r</div>
+    </div>
+  </div>
+
+</doc-page>
+<script src="doc-page.js"></script>
+<script>/*__docRemeasure*/addEventListener("load",function(){document.querySelectorAll("doc-page").forEach(function(d){d._measure&&d._measure()})});</script>
+</body>
+</html>

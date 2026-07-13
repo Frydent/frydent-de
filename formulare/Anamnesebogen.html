@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRYDENT — Anamnesebogen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  doc-page:not(:defined){visibility:hidden}
+  *{box-sizing:border-box}
+  doc-page{
+    --navy:#2C4170; --navy-deep:#1E2D4D; --blue:#37538E;
+    --gold:#C4A44E; --gold-soft:#D2B156; --accent:#B09154;
+    --line:#C9CEDB; --ink:#3A4256; --paper:#F2EFE8;
+    font-family:'Plus Jakarta Sans',sans-serif; color:var(--ink);
+    font-size:11.5px; line-height:1.5;
+  }
+  h1,h2,h3{font-family:'Quicksand',sans-serif;font-weight:600;color:var(--blue);margin:0}
+  p{margin:0 0 8px}
+
+  /* running header/footer */
+  .doc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:8px}
+  .doc-head img{height:44px;width:auto;display:block}
+  .doc-head .doctype{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+  .doc-foot{border-top:1px solid var(--line);padding-top:6px;font-size:9.5px;color:#8A8FA0;text-align:center;letter-spacing:.3px}
+
+  .title{font-size:22px;color:var(--blue);margin:2px 0 2px}
+  .subtitle{font-size:11.5px;color:#6A7080;margin:0 0 16px}
+
+  .sec{font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#fff;background:var(--navy);
+    padding:5px 12px;border-radius:5px;margin:16px 0 10px;display:flex;align-items:center;gap:9px}
+  .sec .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-soft);flex:none}
+  .sec:first-of-type{margin-top:6px}
+
+  /* fill-in fields */
+  .grid{display:grid;gap:9px 18px;margin-bottom:6px}
+  .g2{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr 1fr 1fr}
+  .field{display:flex;flex-direction:column;gap:3px}
+  .field .lbl{font-size:9.5px;letter-spacing:.4px;text-transform:uppercase;color:#8A8FA0;font-weight:600}
+  .field .in{border-bottom:1px solid var(--line);height:17px}
+
+  /* Ja/Nein checklist table */
+  table{width:100%;border-collapse:collapse;margin:2px 0 4px}
+  th{font-family:'Quicksand',sans-serif;font-size:9.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+     color:var(--navy);text-align:center;padding:0 6px 5px;border-bottom:1.5px solid var(--navy)}
+  th.q{text-align:left}
+  td{padding:5px 6px;border-bottom:1px solid #E3E6EE;vertical-align:middle}
+  td.q{font-size:11px;color:var(--ink)}
+  td.c{width:42px;text-align:center}
+  td.yn{width:52px;text-align:left;white-space:nowrap;font-size:10.5px;color:var(--ink)}
+  td.yn .box{margin-right:3px}
+  .box{display:inline-block;width:13px;height:13px;border:1.4px solid var(--navy);border-radius:3px}
+  .note{font-size:10px;color:#8A8FA0;margin:3px 0 0}
+
+  .inline-note{border-bottom:1px solid var(--line);flex:1;min-width:60px;height:15px;display:inline-block;margin-left:8px}
+
+  .consent{background:var(--paper);border:1px solid #E0D7C2;border-radius:8px;padding:12px 15px;margin:12px 0 14px;font-size:10.5px;line-height:1.6;color:#4B5241}
+  .consent strong{color:var(--accent)}
+
+  .sign{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+  .sign .line{border-top:1px solid var(--navy);padding-top:5px;font-size:9.5px;color:#8A8FA0;letter-spacing:.4px;text-transform:uppercase}
+
+  .hint{font-size:10px;color:var(--accent);font-style:italic;margin:0 0 4px}
+</style>
+</head>
+<body>
+<doc-page size="a4" margin="0.7in">
+
+  <div slot="header" class="doc-head">
+    <img src="briefkopf-logo.png" alt="FRYDENT — Zahnärzte in Bonndorf" width="221" height="44">
+    <div class="doctype">Anamnesebogen</div>
+  </div>
+
+  <div slot="footer" class="doc-foot">
+    Martinstraße 21 · 79848 Bonndorf im Schwarzwald · Tel. +49 (0) 7703 284 · t.frydrych@frydent.de
+  </div>
+
+  <h1 class="title">Anamnesebogen für neue Patientinnen und Patienten</h1>
+  <p class="subtitle">Damit wir Sie sicher und individuell behandeln können, bitten wir Sie, diesen Bogen sorgfältig auszufüllen. Alle Angaben unterliegen der ärztlichen Schweigepflicht.</p>
+
+  <div class="sec"><span class="dot"></span>Persönliche Angaben</div>
+  <div class="grid g2">
+    <div class="field"><span class="lbl">Name</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Vorname</span><span class="in"></span></div>
+  </div>
+  <div class="grid g3">
+    <div class="field"><span class="lbl">Geburtsdatum</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Telefon</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">E-Mail</span><span class="in"></span></div>
+  </div>
+  <div class="grid g2">
+    <div class="field"><span class="lbl">Straße, Hausnummer</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">PLZ, Ort</span><span class="in"></span></div>
+  </div>
+  <div class="grid g3">
+    <div class="field"><span class="lbl">Beruf</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Krankenkasse / Versicherung</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">gesetzlich / privat</span><span class="in"></span></div>
+  </div>
+  <div class="grid g2">
+    <div class="field"><span class="lbl">Hausarzt / Hausärztin</span><span class="in"></span></div>
+    <div class="field"><span class="lbl">Überwiesen durch</span><span class="in"></span></div>
+  </div>
+
+  <div class="sec"><span class="dot"></span>Grund Ihres Besuchs</div>
+  <div class="field" style="margin-bottom:4px"><span class="lbl">Beschwerden, Wünsche oder Anlass</span><span class="in"></span></div>
+  <div class="field"><span class="in"></span></div>
+
+  <div class="sec"><span class="dot"></span>Allgemeine Gesundheit</div>
+  <p class="hint">Bitte kreuzen Sie an. Bestehen bei Ihnen eine oder mehrere der folgenden Erkrankungen?</p>
+  <table>
+    <thead>
+      <tr><th class="q">Erkrankung</th><th>Ja</th><th>Nein</th><th class="q" style="width:34%">Anmerkung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="q">Herz-Kreislauf-Erkrankung / Herzinfarkt</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Bluthochdruck</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Herzklappenersatz / Herzschrittmacher</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Diabetes mellitus (Zuckerkrankheit)</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Schilddrüsenerkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Asthma / Atemwegserkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Epilepsie / neurologische Erkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Rheuma / Gelenkerkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Blutgerinnungsstörung / Blutverdünner</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Lebererkrankung / Hepatitis</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Nierenerkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Infektionskrankheit (HIV, Tuberkulose u. a.)</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Krebserkrankung / Chemo- oder Strahlentherapie</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Osteoporose / Bisphosphonat-Therapie</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Magen-Darm-Erkrankung</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Weitere Erkrankungen</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec"><span class="dot"></span>Allergien und Unverträglichkeiten</div>
+  <table>
+    <thead>
+      <tr><th class="q">Allergie gegen</th><th>Ja</th><th>Nein</th><th class="q" style="width:34%">Anmerkung</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="q">Penicillin / Antibiotika</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Lokalanästhetika (Betäubungsmittel)</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Latex</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Metalle / Nickel</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Jod</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+      <tr><td class="q">Sonstige</td><td class="c"><span class="box"></span></td><td class="c"><span class="box"></span></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec"><span class="dot"></span>Medikamente, Schwangerschaft und Gewohnheiten</div>
+  <table>
+    <tbody>
+      <tr><td class="q">Nehmen Sie regelmäßig Medikamente ein?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td class="q">Welche: <span class="inline-note"></span></td></tr>
+      <tr><td class="q">Rauchen Sie?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+      <tr><td class="q">Besteht eine Schwangerschaft?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td class="q">Woche: <span class="inline-note"></span></td></tr>
+      <tr><td class="q">Stillen Sie zurzeit?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="sec"><span class="dot"></span>Zu Ihren Zähnen</div>
+  <table>
+    <tbody>
+      <tr><td class="q">Bluten Ihr Zahnfleisch häufig?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+      <tr><td class="q">Knirschen oder pressen Sie mit den Zähnen?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+      <tr><td class="q">Sind Ihre Zähne kälte- oder wärmeempfindlich?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+      <tr><td class="q">Haben Sie Angst vor der Behandlung?</td><td class="yn"><span class="box"></span>Ja</td><td class="yn"><span class="box"></span>Nein</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="field" style="margin-top:8px"><span class="lbl">Letzter Zahnarztbesuch (ca.)</span><span class="in"></span></div>
+
+  <div class="consent">
+    Ich versichere, die vorstehenden Fragen nach bestem Wissen wahrheitsgemäß beantwortet zu haben, und werde Änderungen meines Gesundheitszustands mitteilen. Meine Angaben werden ausschließlich zur Behandlung erhoben und unterliegen der ärztlichen Schweigepflicht. Weitere Informationen zum Umgang mit Ihren Daten finden Sie in unserer <strong>Datenschutzerklärung</strong> sowie im FRYDENT <strong>Patientenportal</strong>.
+  </div>
+
+  <div class="sign">
+    <div class="line">Ort, Datum</div>
+    <div class="line">Unterschrift (bei Minderjährigen: Erziehungsberechtigte)</div>
+  </div>
+
+</doc-page>
+<script src="doc-page.js"></script>
+<script>/*__docRemeasure*/addEventListener("load",function(){document.querySelectorAll("doc-page").forEach(function(d){d._measure&&d._measure()})});</script>
+</body>
+</html>

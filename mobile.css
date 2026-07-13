@@ -128,8 +128,30 @@
   [style*="bottom: 170px"], [style*="bottom:170px"] { bottom: 10px !important; left: 14px !important; font-size: 20px !important; }
 
   /* ========== 5. v6: nowy layout ZIP7 ========== */
-  /* rozwijane podmenu nav (.ndrop) — na dotyku ukryte, klik idzie w link nadrzędny */
-  .ndrop > .nmenu, .ndrop svg { display: none !important; }
+  /* v6.1: podmenu nav (.ndrop) — akordeon na tap (skrypt dodaje .open);
+     hover na dotyku bywa "lepki", więc wyłączony */
+  .ndrop:hover > .nmenu { visibility: hidden; opacity: 0; }
+  .ndrop.open { flex-basis: 100% !important; flex-wrap: wrap !important; justify-content: center !important; }
+  .ndrop.open > .nmenu {
+    display: block !important; visibility: visible !important; opacity: 1 !important;
+    position: static !important; flex-basis: 100% !important; padding: 8px 0 0 !important;
+  }
+  .ndrop.open > .nmenu a { text-align: center !important; }
+
+  /* v6.1: hero — cytat tylko na desktopie; na mobile podpis+przyciski na dół zdjęcia */
+  [data-screen-label="Hero"] span[style*="clamp(16px"],
+  [data-screen-label="Hero"] span[style*="clamp(14px"] { display: none !important; }
+  [data-screen-label="Hero"] div[style*="margin-top:30px"],
+  [data-screen-label="Hero"] div[style*="margin-top: 30px"] { margin-top: auto !important; order: 8; }
+  [data-screen-label="Hero"] div[style*="pointer-events:auto"],
+  [data-screen-label="Hero"] div[style*="pointer-events: auto"] { order: 9; margin-top: 14px !important; margin-bottom: 44px !important; }
+
+  /* v6.1: karty zespołu — "lepki" hover nie może trzymać obrotu (tap steruje klasą) */
+  .flip:hover:not(.is-flipped) .flip-inner { transform: none !important; }
+
+  /* v6.1: akapity z zafiksowaną wysokością z edytora (np. 83px pod Teamfoto)
+     wylewały się na kolejne bloki */
+  p[style*="height:"] { height: auto !important; }
 
   /* hero (index): stała, niższa rama zamiast clamp(524px,66vh,648px) */
   [style*="height:clamp(524px"], [style*="height: clamp(524px"] { height: 480px !important; }

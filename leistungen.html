@@ -23,7 +23,7 @@
 <style>
 .lst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .lst-flip{perspective:1200px;height:265px;cursor:pointer}
-.lst-flip-in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.lst-flip-in{position:relative;width:100%;height:100%;transition:transform 1s cubic-bezier(.25,.8,.25,1);transform-style:preserve-3d}
 .lst-flip:hover .lst-flip-in,.lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
 .lst-front,.lst-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;padding:30px 26px 26px;box-sizing:border-box;display:flex;flex-direction:column}
 .lst-front{background:#EDEAE0;border:1px solid #DBD6C7}
@@ -32,6 +32,8 @@
 .lst-front h3{margin:0 0 11px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;line-height:1.35}
 .lst-front p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;line-height:1.65;color:#4B5875}
 .lst-back p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;line-height:1.75;color:#E3EAF6}
+.lst-hint-ico{position:absolute;right:14px;bottom:14px;width:32px;height:32px;border-radius:50%;background:rgba(44,65,112,.10);border:1px solid rgba(44,65,112,.18);display:flex;align-items:center;justify-content:center;color:#5C6B8F;transition:all .3s ease}
+.lst-flip:hover .lst-hint-ico,.lst-flip.is-flipped .lst-hint-ico{background:#2C4170;border-color:#2C4170;color:#fff;transform:rotate(180deg)}
 .lst-hint{position:absolute;bottom:22px;left:26px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#B09154;letter-spacing:.03em}
 @media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
 @media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
@@ -198,6 +200,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Seniorenzahnmedizin</h3>
             <p>Zahnmedizin, die sich dem Menschen anpasst, nicht umgekehrt.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 21v-1.5a6.5 6.5 0 0113 0V21"/><path d="M17.5 12.5c1.6 0 2.9 1.3 2.9 2.9v1"/><path d="M20.4 13.2l1.6-1.6"/></svg>
@@ -212,6 +215,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Angstpatienten</h3>
             <p>Sie müssen sich für Ihre Angst nicht rechtfertigen.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.6c-1.3-1.5-3.4-1.9-5-1a4 4 0 00-1.4 1.3l-.4.6-.4-.6a4 4 0 00-1.4-1.3c-1.6-.9-3.7-.5-5 1a4.6 4.6 0 00-.3 5.6c1.5 2.3 4.4 4.7 7.1 6.6 2.7-1.9 5.6-4.3 7.1-6.6a4.6 4.6 0 00-.3-5.6z"/></svg>
@@ -226,6 +230,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>CEREC: Zahnersatz in einer Sitzung</h3>
             <p>Ein Termin statt zwei, ohne Abdruck und Provisorium.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8.5 10.5l2 2 4.5-4.5"/></svg>
@@ -240,6 +245,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Implantatgetragener Zahnersatz</h3>
             <p>Chirurgie beim Spezialisten, Prothetik und Betreuung bei uns.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6"/><path d="M9.5 5.5h5"/><path d="M9 9h6l-.6 5.5a3 3 0 01-2.4 2.6 3 3 0 01-2.4-2.6L9 9z"/><path d="M12 17v4"/></svg>
@@ -254,6 +260,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Laserbehandlung</h3>
             <p>Aphten und Herpes gezielt und nahezu schmerzfrei behandeln.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v5"/><path d="M12 9.5l-2.5 9a2.6 2.6 0 005 0L12 9.5z"/><path d="M6.5 5L8 6.5M17.5 5L16 6.5"/></svg>
@@ -268,6 +275,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Amalgamsanierung</h3>
             <p>Alte Füllungen raus, moderne Materialien rein.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5c-2 0-3.5 1.8-3.5 4 0 3.5 1.5 8 3 10.5.8 1.3 2.5 1 2.8-.4l.9-4c.2-1 1.4-1 1.6 0l.9 4c.3 1.4 2 1.7 2.8.4 1.5-2.5 3-7 3-10.5 0-2.2-1.5-4-3.5-4-1.4 0-2.3.7-3 1.3-.7-.6-1.6-1.3-3-1.3z"/><path d="M15.5 8.5l3.5-3.5M19 5v3M19 5h-3"/></svg>
@@ -282,6 +290,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Komplette Zahnsanierung</h3>
             <p>Wenn vieles auf einmal ansteht, planen wir Schritt für Schritt.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M4 12h13M4 18h7"/><path d="M17.5 18.5l1.8 1.8 3.2-3.6"/></svg>
@@ -296,6 +305,7 @@ a.sbl:hover{color:#E2C26A !important}
             <h3>Kinderzahnheilkunde</h3>
             <p>Der erste Zahnarztbesuch prägt. Wir lassen Kindern Zeit.</p>
             <span class="lst-hint">Mehr erfahren →</span>
+            <div class="lst-hint-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
           </div>
           <div class="lst-back">
             <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 007 0"/><circle cx="9" cy="9.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15" cy="9.5" r=".9" fill="currentColor" stroke="none"/></svg>
@@ -631,7 +641,7 @@ a.sbl:hover{color:#E2C26A !important}
 
     </div>
 
-    <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;position:sticky;top:110px;margin-top:40px" data-screen-label="Sidebar">
+    <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;position:sticky;top:96px;margin-top:0;align-self:start" data-screen-label="Sidebar">
       <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#ffffff">Unsere Schwerpunkte:</div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <a href="#leistungen" onClick="{{ openEndo }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Endodontie &amp; Wurzelbehandlungen</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>

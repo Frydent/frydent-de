@@ -35,14 +35,13 @@
 .lst-hint{position:absolute;bottom:22px;left:26px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#B09154;letter-spacing:.03em}
 @media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
 @media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
-@media(max-width:900px){.lst-flip{height:auto;perspective:none}
- .lst-flip-in{transform:none !important;transform-style:flat}
- .lst-front,.lst-back{position:static;transform:none !important;backface-visibility:visible}
- .lst-front{border-radius:14px 14px 0 0;border-bottom:none;padding:24px 24px 20px}
- .lst-back{border-radius:0 0 14px 14px;padding:22px 24px 24px;flex-direction:row;align-items:flex-start;gap:16px}
- .lst-back .lst-ico{margin:2px 0 0;width:28px;height:28px}
- .lst-back p{flex:1}
- .lst-hint{display:none}}
+@media(max-width:900px){.lst-flip{height:250px}
+ .lst-flip:hover .lst-flip-in{transform:none}
+ .lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
+ .lst-front,.lst-back{padding:24px 22px}
+ .lst-back .lst-ico{width:30px;height:30px;margin-bottom:12px}
+ .lst-back p{font-size:13.5px;line-height:1.65}
+ .lst-hint{bottom:20px;left:22px}}
 </style>
 </head>
 <body>
@@ -193,7 +192,7 @@ a.sbl:hover{color:#E2C26A !important}
 
     <div class="lst-grid">
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Seniorenzahnmedizin</h3>
@@ -207,7 +206,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Angstpatienten</h3>
@@ -221,7 +220,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>CEREC: Zahnersatz in einer Sitzung</h3>
@@ -235,7 +234,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Implantatgetragener Zahnersatz</h3>
@@ -249,7 +248,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Laserbehandlung</h3>
@@ -263,7 +262,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Amalgamsanierung</h3>
@@ -277,7 +276,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Komplette Zahnsanierung</h3>
@@ -291,7 +290,7 @@ a.sbl:hover{color:#E2C26A !important}
         </div>
       </div>
 
-      <div class="lst-flip">
+      <div class="lst-flip flip">
         <div class="lst-flip-in">
           <div class="lst-front">
             <h3>Kinderzahnheilkunde</h3>
@@ -781,5 +780,11 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
+<script>(function(){var mq=matchMedia('(max-width: 900px)');
+document.addEventListener('click',function(e){
+ var fl=e.target.closest('.lst-flip');
+ document.querySelectorAll('.lst-flip.is-flipped').forEach(function(x){if(x!==fl)x.classList.remove('is-flipped')});
+ if(fl&&mq.matches)fl.classList.toggle('is-flipped');
+},true);})();</script>
 </body>
 </html>

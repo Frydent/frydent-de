@@ -1,4 +1,9 @@
-/* FRYDENT – mobile retrofit v5 (tylko <900px / <600px)
+/* FRYDENT – mobile retrofit v6 (tylko <900px / <600px)
+   ZMIANY v6 (po ZIP7):
+   0. C Design dodał własne @media w stronach (wbrew umowie) — usunięte z HTML.
+      Przejęte z nich do v6: ukrycie podmenu .ndrop na dotyku, obsługa nowych
+      wysokości kontenerów zdjęć. Jego reguły psuły header (display:none na
+      jedynym CTA) i listwę Schnellkontakt (translateX 44px, gap 8px).
    ZMIANY v5:
    1. Pływanie strony: html+body overflow clip, wszystkie selektory [style*=...]
       w DWÓCH wariantach (runtime JS przepisuje style="..." dodając spacje po
@@ -121,6 +126,25 @@
   footer { margin-bottom: 0 !important; }
 
   [style*="bottom: 170px"], [style*="bottom:170px"] { bottom: 10px !important; left: 14px !important; font-size: 20px !important; }
+
+  /* ========== 5. v6: nowy layout ZIP7 ========== */
+  /* rozwijane podmenu nav (.ndrop) — na dotyku ukryte, klik idzie w link nadrzędny */
+  .ndrop > .nmenu, .ndrop svg { display: none !important; }
+
+  /* hero (index): stała, niższa rama zamiast clamp(524px,66vh,648px) */
+  [style*="height:clamp(524px"], [style*="height: clamp(524px"] { height: 480px !important; }
+
+  /* powitalny podpis w hero miał white-space:nowrap → wyjeżdżał poza ekran */
+  span[style*="white-space:nowrap"], span[style*="white-space: nowrap"] { white-space: normal !important; }
+
+  /* nowe wysokości kontenerów zdjęć (image-slot w środku, rama przez aspect-ratio) */
+  [style*="height:640px"], [style*="height: 640px"],
+  [style*="height:460px"], [style*="height: 460px"],
+  [style*="height:440px"], [style*="height: 440px"] { height: auto !important; aspect-ratio: 4/3 !important; }
+  [style*="height:400px"], [style*="height: 400px"],
+  [style*="height:360px"], [style*="height: 360px"],
+  [style*="height:340px"], [style*="height: 340px"],
+  [style*="height:330px"], [style*="height: 330px"] { height: auto !important; aspect-ratio: 3/2 !important; }
 }
 
 @media (max-width: 600px) {
@@ -129,6 +153,8 @@
   [style*="font-size:32px"], [style*="font-size: 32px"] { font-size: 24px !important; }
   [style*="font-size:28px"], [style*="font-size: 28px"] { font-size: 22px !important; }
   [style*="font-size:26px"], [style*="font-size: 26px"] { font-size: 21px !important; }
+  /* hero h1 (clamp 38–58px) — na wąskim ekranie mniejszy */
+  h1[style*="font-size:clamp(38px"], h1[style*="font-size: clamp(38px"] { font-size: 31px !important; }
 
   [data-screen-label="Schnellkontakt"], [data-screen-label="Schnellkontakt"] a { flex-wrap: nowrap !important; }
 }

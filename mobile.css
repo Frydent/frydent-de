@@ -146,6 +146,12 @@
   [data-screen-label="Hero"] div[style*="pointer-events:auto"],
   [data-screen-label="Hero"] div[style*="pointer-events: auto"] { order: 9; margin-top: 14px !important; margin-bottom: 44px !important; }
 
+  /* v6.2: podpis "Nikolina" w hero — na dachu był niewidoczny; jasnobeżowy + cień */
+  [data-screen-label="Hero"] span[style*="Dafoe"] {
+    color: #F5E9CB !important;
+    text-shadow: 0 1px 3px rgba(30,45,77,.55), 0 2px 14px rgba(30,45,77,.45) !important;
+  }
+
   /* v6.1: karty zespołu — "lepki" hover nie może trzymać obrotu (tap steruje klasą) */
   .flip:hover:not(.is-flipped) .flip-inner { transform: none !important; }
 
@@ -175,8 +181,4 @@
   [style*="font-size:32px"], [style*="font-size: 32px"] { font-size: 24px !important; }
   [style*="font-size:28px"], [style*="font-size: 28px"] { font-size: 22px !important; }
   [style*="font-size:26px"], [style*="font-size: 26px"] { font-size: 21px !important; }
-  /* hero h1 (clamp 38–58px) — na wąskim ekranie mniejszy */
-  h1[style*="font-size:clamp(38px"], h1[style*="font-size: clamp(38px"] { font-size: 31px !important; }
-
-  [data-screen-label="Schnellkontakt"], [data-screen-label="Schnellkontakt"] a { flex-wrap: nowrap !important; }
-}
+  /* hero h1 (clam

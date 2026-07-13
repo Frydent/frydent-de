@@ -326,7 +326,7 @@ if(!e.target.closest('.ndrop'))document.querySelectorAll('.ndrop.open').forEach(
 var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').forEach(function(x){if(x!==fl)x.classList.remove('is-flipped')});if(fl&&mq.matches)fl.classList.toggle('is-flipped');
 },true);
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
-tg();if(mq.addEventListener)mq.addEventListener('change',tg);
+tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
 </body>
 </html>

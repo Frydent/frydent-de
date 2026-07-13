@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
 <title>Leistungen · FRYDENT Bonndorf</title>
 <meta name="description" content="Unser Leistungsspektrum in Bonndorf: Prophylaxe, Endodontie, Zahnersatz und CEREC, Parodontologie, Aligner, Ästhetik, Seniorenzahnmedizin, Kinderzahnheilkunde und implantatgetragener Zahnersatz.">
 <link rel="stylesheet" href="mobile.css?v=5"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
@@ -59,10 +58,40 @@ document.addEventListener('click',function(e){
 .hd-soc:hover{color:#2C4170;background:#F1F3F8;border-color:#D9DFEA}
 @media(max-width:900px){.hd-soc{display:none}}
 </style>
+<style>
+.h-421b75:hover{color:#3D5A98}
+.h-d953e7:hover{background:#F4F6FA;color:#3D5A98}
+.h-d39dbe:hover{background:#1E2D4D;color:#ffffff}
+.h-0c4dfd:hover{transform:translateX(0);background:#C9A94C;color:#1E2D4D}
+.h-79c03f:hover{transform:translateX(0);background:#7385AE;color:#ffffff}
+.h-5faaa6:hover{transform:translateX(0);background:#566A96;color:#ffffff}
+.h-f4f28d:hover{transform:translateX(0);background:#3D5182;color:#ffffff}
+.h-696b32:hover{border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)}
+.h-699071:hover{color:#8F7440}
+.h-c8aff8:hover{background:#EDE8DC;color:#4B5875}
+.h-d32178:hover{background:#D4A930;color:#FFFFFF}
+</style>
+<script>(function(){
+var KL=["endo", "prothetik", "paro", "prophylaxe", "funktion", "aesthetik"];
+function pokaz(){
+  var hs=(location.hash||'').replace('#','');
+  var akt = KL.indexOf(hs)>=0 ? hs : 'overview';
+  document.querySelectorAll('[data-show]').forEach(function(el){
+    var w=el.getAttribute('data-show');
+    var ok = (w==='showOverview' && akt==='overview')
+          || (w==='showArticle'  && akt!=='overview')
+          || (w.toLowerCase()==='show'+akt);
+    el.style.display = ok ? '' : 'none';
+  });
+  if(akt!=='overview'){ var t=document.querySelector('[data-show="showArticle"]'); if(t) t.scrollIntoView({block:'start'}); }
+}
+addEventListener('hashchange',pokaz);
+if(document.readyState==='loading') addEventListener('DOMContentLoaded',pokaz); else pokaz();
+})();</script>
 </head>
 <body>
-<x-dc>
-<helmet data-dc-atomics="">
+
+
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 
 <style>
@@ -83,7 +112,7 @@ a.sbl:hover{color:#E2C26A !important}
 .ndrop:hover>.nmenu{visibility:visible;opacity:1}
 
 </style>
-</helmet>
+
 
 <div style="min-height:100vh;background:#ffffff;font-family:'Plus Jakarta Sans',sans-serif">
 
@@ -92,16 +121,16 @@ a.sbl:hover{color:#E2C26A !important}
   <header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding:18px clamp(20px,3vw,44px);background:#ffffff;max-width:1440px;margin:0 auto;box-sizing:border-box" data-screen-label="Nav">
     <a href="index.html" style="display:flex;align-items:center;flex:none"><img src="assets/logo.svg" alt="FRYDENT — Zahnärzte in Bonndorf" style="height:42px;width:auto;display:block"></a>
     <nav style="display:flex;align-items:center;gap:clamp(12px,1.8vw,26px);font-size:clamp(11px,1vw,13px);font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#1E2D4D;white-space:nowrap">
-      <a href="index.html" style="color:#1E2D4D;" style-hover="color:#3D5A98">Start</a>
-      <span class="ndrop"><a href="praxis-team.html" style="color:#1E2D4D;display:inline-flex;align-items:center;gap:5px" style-hover="color:#3D5A98">Praxis &amp; Team<svg width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="m1 1 4 4 4-4"></path></svg></a><span class="nmenu"><span style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #E4E6EB;border-radius:12px;padding:8px 0;box-shadow:0 14px 34px -10px rgba(30,45,77,.28);min-width:230px"><a href="praxis-team.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Unser Team</a><a href="philosophie.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Unsere Philosophie</a><a href="geschichte.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Unsere Geschichte</a><a href="rundgang.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Praxisrundgang</a></span></span></span>
-      <span class="ndrop"><a href="leistungen.html" style="color:#3D5A98;border-bottom:2px solid #C4A44E;padding-bottom:3px;display:inline-flex;align-items:center;gap:5px" style-hover="color:#3D5A98">Leistungen<svg width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="m1 1 4 4 4-4"></path></svg></a><span class="nmenu"><span style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #E4E6EB;border-radius:12px;padding:8px 0;box-shadow:0 14px 34px -10px rgba(30,45,77,.28);min-width:230px"><a href="leistungen.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Alle Leistungen</a><a href="leistungen.html#prophylaxe" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Prophylaxe &amp; Prävention</a><a href="leistungen.html#endo" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Endodontie</a><a href="leistungen.html#prothetik" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Zahnersatz &amp; Prothetik</a><a href="leistungen.html#paro" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Parodontologie</a><a href="leistungen.html#funktion" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Funktionen &amp; Zahnschienen</a><a href="leistungen.html#aesthetik" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" style-hover="background:#F4F6FA;color:#3D5A98">Ästhetische Zahnmedizin</a></span></span></span>
-      <a href="neu-bei-uns.html" style="color:#1E2D4D;" style-hover="color:#3D5A98">Neu bei uns?</a>
-      <a href="service.html" style="color:#1E2D4D;" style-hover="color:#3D5A98">Service</a>
-      <a href="jobs.html" style="color:#1E2D4D;" style-hover="color:#3D5A98">Jobs</a>
-      <a href="news.html" style="color:#1E2D4D;" style-hover="color:#3D5A98">News</a>
+      <a href="index.html" style="color:#1E2D4D;" class="h-421b75">Start</a>
+      <span class="ndrop"><a href="praxis-team.html" style="color:#1E2D4D;display:inline-flex;align-items:center;gap:5px" class="h-421b75">Praxis &amp; Team<svg width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="m1 1 4 4 4-4"></path></svg></a><span class="nmenu"><span style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #E4E6EB;border-radius:12px;padding:8px 0;box-shadow:0 14px 34px -10px rgba(30,45,77,.28);min-width:230px"><a href="praxis-team.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Unser Team</a><a href="philosophie.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Unsere Philosophie</a><a href="geschichte.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Unsere Geschichte</a><a href="rundgang.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Praxisrundgang</a></span></span></span>
+      <span class="ndrop"><a href="leistungen.html" style="color:#3D5A98;border-bottom:2px solid #C4A44E;padding-bottom:3px;display:inline-flex;align-items:center;gap:5px" class="h-421b75">Leistungen<svg width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="m1 1 4 4 4-4"></path></svg></a><span class="nmenu"><span style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #E4E6EB;border-radius:12px;padding:8px 0;box-shadow:0 14px 34px -10px rgba(30,45,77,.28);min-width:230px"><a href="leistungen.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Alle Leistungen</a><a href="leistungen.html#prophylaxe" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Prophylaxe &amp; Prävention</a><a href="leistungen.html#endo" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Endodontie</a><a href="leistungen.html#prothetik" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Zahnersatz &amp; Prothetik</a><a href="leistungen.html#paro" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Parodontologie</a><a href="leistungen.html#funktion" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Funktionen &amp; Zahnschienen</a><a href="leistungen.html#aesthetik" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Ästhetische Zahnmedizin</a></span></span></span>
+      <a href="neu-bei-uns.html" style="color:#1E2D4D;" class="h-421b75">Neu bei uns?</a>
+      <a href="service.html" style="color:#1E2D4D;" class="h-421b75">Service</a>
+      <a href="jobs.html" style="color:#1E2D4D;" class="h-421b75">Jobs</a>
+      <a href="news.html" style="color:#1E2D4D;" class="h-421b75">News</a>
     </nav>
     <div style="display:flex;align-items:center;gap:16px;flex:none">
-<a class="hbtn-outline" data-drflex="" href="javascript:toggleDrFlexAppointments()" style="color:#1E2D4D;padding:12px 24px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;border:1.5px solid #1E2D4D" style-hover="background:#1E2D4D;color:#ffffff">Online buchen</a>
+<a class="hbtn-outline h-d39dbe" data-drflex="" href="javascript:toggleDrFlexAppointments()" style="color:#1E2D4D;padding:12px 24px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;border:1.5px solid #1E2D4D">Online buchen</a>
 <span class="hd-soc-grp"><a href="https://www.instagram.com/frydent.bonndorf/" target="_blank" rel="noopener" class="hd-soc" title="FRYDENT auf Instagram" aria-label="FRYDENT auf Instagram"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/people/Frydent-Zahnärzte-in-Bonndorf/61592102931720/" target="_blank" rel="noopener" class="hd-soc" title="FRYDENT auf Facebook" aria-label="FRYDENT auf Facebook"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a></span>
     </div>
   </header>
@@ -110,19 +139,19 @@ a.sbl:hover{color:#E2C26A !important}
 
   <!-- schnellkontakt seitentabs -->
   <div style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:95;display:flex;flex-direction:column;gap:14px" data-screen-label="Schnellkontakt">
-    <a href="javascript:toggleDrFlexAppointments()" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#D2B156;color:#1E2D4D" style-hover="transform:translateX(0);background:#C9A94C;color:#1E2D4D">
+    <a href="javascript:toggleDrFlexAppointments()" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#D2B156;color:#1E2D4D" class="h-0c4dfd">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       <span>Termin online buchen</span>
     </a>
-    <a href="tel:+497703284" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#8495BE;color:#ffffff" style-hover="transform:translateX(0);background:#7385AE;color:#ffffff">
+    <a href="tel:+497703284" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#8495BE;color:#ffffff" class="h-79c03f">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       <span>07703 284</span>
     </a>
-    <a href="mailto:info@frydent.de" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#6478A4;color:#ffffff" style-hover="transform:translateX(0);background:#566A96;color:#ffffff">
+    <a href="mailto:info@frydent.de" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#6478A4;color:#ffffff" class="h-5faaa6">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
       <span>info@frydent.de</span>
     </a>
-    <a href="https://maps.google.com/?q=Martinstraße+21+79848+Bonndorf" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#485C90;color:#ffffff" style-hover="transform:translateX(0);background:#3D5182;color:#ffffff">
+    <a href="https://maps.google.com/?q=Martinstraße+21+79848+Bonndorf" style="display:flex;align-items:center;gap:12px;padding:19px 30px 19px 22px;border-radius:16px 0 0 16px;font-size:15.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap;transform:translateX(calc(100% - 62px));transition:transform .25s ease,background .25s ease;box-shadow:0 4px 14px rgba(30,45,77,.22);background:#485C90;color:#ffffff" class="h-f4f28d">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
       <span>Anfahrt</span>
     </a>
@@ -139,56 +168,56 @@ a.sbl:hover{color:#E2C26A !important}
   </div>
 
   <!-- übersicht -->
-  <sc-if value="{{ showOverview }}" hint-placeholder-val="{{ true }}">
+  <div data-show="showOverview">
   <div id="leistungen" style="background:#ffffff" data-screen-label="Schwerpunkte">
   <div style="padding:44px 56px 70px;max-width:1340px;margin:0 auto;box-sizing:border-box">
     <div style="position:relative;width:100%;height:360px;margin-bottom:34px">
-      <image-slot id="lst-hero" shape="rounded" radius="16" src="assets/img-lst-hero.webp" placeholder="Behandlung in der Zahnarztpraxis FRYDENT"></image-slot>
+      <img id="lst-hero" src="assets/img-lst-hero.webp" alt="Behandlung in der Zahnarztpraxis FRYDENT" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px">
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openEndo }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#endo" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Endodontie</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Wurzelbehandlungen: schonend und präzise</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Der Erhalt natürlicher Zähne steht für uns an erster Stelle, mit Erfahrung, moderner Technik und ruhiger Hand.</p>
         </a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openProthetik }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#prothetik" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Zahnersatz und Prothetik</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Fast wie Ihre eigenen Zähne!</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Zahnersatz soll vor allem eines: sich gut anfühlen. Funktional, natürlich und alltagstauglich.</p>
         </a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openParo }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#paro" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Parodontologie</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Gesundes Zahnfleisch, stabile Zähne</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Gesundes Zahnfleisch ist die Grundlage dafür, dass Ihre Zähne langfristig fest und gesund bleiben.</p>
         </a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openProphylaxe }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#prophylaxe" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Prophylaxe &amp; Prävention</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Für langfristige Zahngesundheit!</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Regelmäßige Vorsorge kann helfen, größere Behandlungen zu vermeiden, gründlich, schonend und individuell.</p>
         </a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openFunktion }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#funktion" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Funktionen &amp; Zahnschienen</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Kiefer und Zähne? Im Gleichgewicht.</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Verspannungen, Knirschen oder Kieferbeschwerden bleiben oft lange unbemerkt, wir bringen Ihr Lächeln wieder ins Gleichgewicht.</p>
         </a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" style-hover="border-color:#3D5A98;box-shadow:0 6px 20px rgba(61,90,152,.10)">
-        <a href="#leistungen" onClick="{{ openAesthetik }}" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <a href="#leistungen" href="#aesthetik" style="padding:30px 32px 32px;display:flex;flex-direction:column;gap:8px;height:100%;box-sizing:border-box"><span style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:block;width:36px;height:2px;background:#C4A44E"></span><span style="display:block;width:6px;height:6px;border-radius:50%;background:#C4A44E"></span></span>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Ästhetische Zahnmedizin</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Zeigen Sie Ihr natürlich schönes Lächeln.</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Ästhetik bedeutet für uns nicht Perfektion, sondern Harmonie. Ein Lächeln, das zu Ihnen passt.</p>
@@ -363,20 +392,20 @@ a.sbl:hover{color:#E2C26A !important}
     </div>
   </div>
   </div>
-  </sc-if>
+  </div>
 
   <!-- artikel + sidebar -->
-  <sc-if value="{{ showArticle }}" hint-placeholder-val="{{ false }}">
+  <div data-show="showArticle">
   <div id="artikel" style="background:#ffffff" data-screen-label="Artikel">
   <div style="display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;padding:44px 56px 76px;align-items:start;max-width:1340px;margin:0 auto;box-sizing:border-box">
 
     <div style="min-width:0">
-      <a href="#leistungen" onClick="{{ openOverview }}" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" style-hover="color:#8F7440">← Zu allen Leistungen</a>
+      <a href="#leistungen" href="#leistungen" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zu allen Leistungen</a>
 
-      <sc-if value="{{ showEndo }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showEndo">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-endo" shape="rounded" radius="16" src="assets/img-lsta-endo.webp" placeholder="Wurzelbehandlung mit modernem Endodontie-System"></image-slot>
+            <img id="lsta-endo" src="assets/img-lsta-endo.webp" alt="Wurzelbehandlung mit modernem Endodontie-System" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Endodontie</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Erhalten, was am besten zu Ihnen passt!</h2>
@@ -387,7 +416,7 @@ a.sbl:hover{color:#E2C26A !important}
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Aufbereitet mit präziser Technik</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Bei unseren Wurzelbehandlungen setzen wir auf moderne Aufbereitungstechniken, wie das maschinelle RECIPROC®-Verfahren, Laser und Ultraschall, und digitale Röntgendiagnostik, um die Behandlung exakt zu planen und umzusetzen. Wenn nötig führen wir Revisionsbehandlungen durch. So schaffen wir die Voraussetzung dafür, dass der behandelte Zahn wieder belastbar und langfristig stabil bleibt.</p>
 
-          <a href="https://info.frydent.de/wurzelbehandlung_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/wurzelbehandlung_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zur Wurzelkanalbehandlung finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -418,12 +447,12 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Wenn der Zahnnerv irreversibel geschädigt ist, ist die Wurzelbehandlung meist die einzige Möglichkeit, den Zahn zu erhalten. Alternativ bliebe in solchen Fällen häufig nur die Entfernung des Zahns. Ob es andere sinnvolle Optionen gibt, hängt immer von der individuellen Situation ab. Bei uns besprechen wir alle Möglichkeiten offen und verständlich, damit Sie eine gut informierte Entscheidung treffen können.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{ showProthetik }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showProthetik">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-prothetik" shape="rounded" radius="16" src="assets/lst-prothetik.webp" placeholder="Zahnersatz: Kronen, Brücken und Prothesen"></image-slot>
+            <img id="lsta-prothetik" src="assets/lst-prothetik.webp" alt="Zahnersatz: Kronen, Brücken und Prothesen" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Zahnersatz und Prothetik</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Fast wie Ihre eigenen Zähne!</h2>
@@ -434,7 +463,7 @@ a.sbl:hover{color:#E2C26A !important}
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Präzise geplant, schonend eingesetzt.</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Moderne Technik und hochwertige Materialien sind für uns ein Muss. Mit dem digitalen CEREC-Verfahren können wir Zahnersatz in vielen Fällen direkt in unserer Praxis präzise herstellen. Implantatgetragene Versorgungen realisieren wir in enger Zusammenarbeit mit Dr. Dorow in der Klinik Dogern, wo der chirurgische Teil erfolgt. Die anschließende prothetische Versorgung übernehmen wir bei FRYDENT, sodass Sie auch hier eine verlässliche Betreuung aus einer Hand erhalten. Ergänzend kommen hochwertige Compositfüllungen zum Einsatz, um Zähne funktionell und ästhetisch zu stabilisieren.</p>
 
-          <a href="https://info.frydent.de/kronen_bruecken_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/kronen_bruecken_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zu Kronen &amp; Brücken finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -465,12 +494,12 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Die Haltbarkeit von Zahnersatz hängt von mehreren Faktoren ab, etwa von Material, Verarbeitung, Mundhygiene und regelmäßiger Kontrolle. Hochwertig gefertigter Zahnersatz kann viele Jahre zuverlässig funktionieren. Regelmäßige Prophylaxe und Kontrolltermine tragen wesentlich zur Langlebigkeit bei. Bei FRYDENT begleiten wir Sie auch nach der Versorgung langfristig.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{ showParo }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showParo">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-paro" shape="rounded" radius="16" src="assets/img-lsta-paro.webp" placeholder="Parodontologische Behandlung des Zahnfleischs"></image-slot>
+            <img id="lsta-paro" src="assets/img-lsta-paro.webp" alt="Parodontologische Behandlung des Zahnfleischs" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Parodontologie</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Gesundes Zahnfleisch, stabile Zähne</h2>
@@ -481,7 +510,7 @@ a.sbl:hover{color:#E2C26A !important}
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Moderne Therapie mit schonenden Verfahren</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Die Behandlung der Parodontitis zielt darauf ab, bakterielle Beläge unterhalb des Zahnfleischrandes gründlich zu entfernen. Hierfür führen wir eine Tiefenreinigung der Zahnfleischtaschen durch, angepasst an den Schweregrad der Erkrankung. Je nach Bedarf verwenden wir auch Verfahren wie Ultraschall- und Airflow-Technologie, die eine effektive und zugleich schonende Reinigung ermöglichen. Ergänzend nutzen wir einen Diodenlaser, um entzündetes Gewebe gezielt zu behandeln und die Heilung zu unterstützen.</p>
 
-          <a href="https://info.frydent.de/parodontologie_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/parodontologie_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zur Parodontitis-Behandlung finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -512,12 +541,12 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Parodontitis ist eine chronische Erkrankung und erfordert eine regelmäßige Nachsorge. Durch Kontrollen und unterstützende Prophylaxe lassen sich Entzündungen frühzeitig erkennen und erneute Verschlechterungen vermeiden. Wir nehmen Sie in unser strukturiertes Nachsorgeprogramm auf (UPT) und unterstützen Sie auch mit einer Beratung zur passenden Mundhygiene zuhause. Gemeinsam sorgen wir dafür, dass das Behandlungsergebnis langfristig stabil bleibt.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{ showProphylaxe }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showProphylaxe">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-prophylaxe" shape="rounded" radius="16" src="assets/img-lsta-prophylaxe.webp" placeholder="Professionelle Zahnreinigung in der Prophylaxe"></image-slot>
+            <img id="lsta-prophylaxe" src="assets/img-lsta-prophylaxe.webp" alt="Professionelle Zahnreinigung in der Prophylaxe" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Prophylaxe &amp; Prävention</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Für langfristige Zahngesundheit!</h2>
@@ -526,7 +555,7 @@ a.sbl:hover{color:#E2C26A !important}
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Jede Zahnsituation ist anders. Deshalb stimmen wir prophylaktische Maßnahmen bei FRYDENT individuell auf Ihre Bedürfnisse ab. Ob Kinder, Erwachsene oder Seniorinnen und Senioren: Bei uns zählen eine schonende Vorgehensweise, die persönliche Beratung zu Ihrer Mundhygiene und unsere besondere Atmosphäre mit Humor und guter Laune. So wird Prophylaxe zu einem festen, entspannten Bestandteil Ihrer Zahnpflege.</p>
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Professionelle Zahnreinigung: wirksam &amp; schonend</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Die professionelle Zahnreinigung, kurz PZR, ist ein wichtiger Bestandteil der Prophylaxe und der Nachsorge bei Parodontitis. Dabei entfernen wir gründlich Beläge und Ablagerungen, die mit der täglichen Zahnpflege nicht vollständig erreicht werden. Zum Einsatz kommen moderne Verfahren wie Airflow, um Zähne und Zahnzwischenräume effektiv zu reinigen. Das Ergebnis: glatte, saubere Zähne und ein spürbar frisches Mundgefühl.</p>
-          <a href="https://info.frydent.de/pzr_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin-top:4px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/pzr_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin-top:4px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr dazu finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>, mit ausführlichen Infos zur professionellen Zahnreinigung.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -559,19 +588,19 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Airflow ist ein schonendes Verfahren, mit dem weiche Beläge und Verfärbungen besonders effektiv entfernt werden können. Auch an Stellen, die sonst schwer erreichbar sind. Viele empfinden Airflow als angenehm, weil es häufig weniger „kratzend" wirkt als klassische Methoden. Bei FRYDENT setzen wir Airflow gezielt dort ein, wo es sinnvoll ist, zum Beispiel in den Zahnzwischenräumen oder bei Belägen entlang des Zahnfleischrands.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{ showFunktion }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showFunktion">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-funktion" shape="rounded" radius="16" src="" placeholder="Transparente Aligner-Zahnschienen"></image-slot>
+            <img id="lsta-funktion" src="" alt="Transparente Aligner-Zahnschienen" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Funktionen &amp; Zahnschienen</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Kiefer und Zähne? Im Gleichgewicht.</h2>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Beschwerden im Kiefergelenk, Verspannungen, Kopfschmerzen oder nächtliches Zähneknirschen haben oft eine gemeinsame Ursache: eine gestörte Funktion des Kausystems. Zähne, Kiefergelenke und Muskulatur müssen harmonisch zusammenarbeiten, damit sie langfristig gesund bleiben. Bei FRYDENT betrachten wir Funktion ganzheitlich. Ziel ist es, Ursachen zu erkennen, ganzkörperliche Beschwerden zu lindern und Zähne sowie Kiefer dauerhaft zu entlasten.</p>
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">CMD? Ursachen gemeinsam angehen</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Funktionelle Störungen des Kausystems werden häufig unter dem Begriff CMD (Craniomandibuläre Dysfunktion) zusammengefasst. Sie können sich sehr unterschiedlich äußern, etwa durch Kieferknacken, Schmerzen beim Kauen, Nacken- oder Schulterverspannungen. Eine sorgfältige Funktionsanalyse ist entscheidend, um Zusammenhänge zu erkennen. Wir nehmen uns Zeit für eine genaue Untersuchung und besprechen verständlich, welche Behandlung zu Ihnen und Ihren Beschwerden passt.</p>
-          <a href="https://info.frydent.de/cmd_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin-top:4px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/cmd_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin-top:4px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zum Thema CMD finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -605,12 +634,12 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Die Kostenübernahme hängt von der Art der Schiene und der jeweiligen Krankenkasse ab. Gesetzliche Kassen übernehmen in bestimmten Fällen eine Grundversorgung. Individuelle Schienen oder spezielle Therapiekonzepte können zusätzliche Kosten verursachen. Selbstverständlich informieren wir Sie transparent über mögliche Kosten und Alternativen.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
-      <sc-if value="{{ showAesthetik }}" hint-placeholder-val="{{ false }}">
+      <div data-show="showAesthetik">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-aesthetik" shape="rounded" radius="16" src="assets/img-lsta-aesthetik.webp" placeholder="Ästhetische Zahnmedizin: Veneers und Bleaching"></image-slot>
+            <img id="lsta-aesthetik" src="assets/img-lsta-aesthetik.webp" alt="Ästhetische Zahnmedizin: Veneers und Bleaching" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Ästhetische Zahnmedizin</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Zeigen Sie Ihr natürlich schönes Lächeln.</h2>
@@ -620,7 +649,7 @@ a.sbl:hover{color:#E2C26A !important}
           <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">So sorgen wir für natürliche Ergebnisse</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In der ästhetischen Zahnmedizin setzen wir auf bewährte und schonende Verfahren. Dazu gehören unter anderem Bleaching zur schonenden Aufhellung der Zähne, Veneers für Form- und Farbkorrekturen sowie Aligner-Therapien zur unauffälligen Korrektur leichter Zahnfehlstellungen. Ergänzend führen wir Feinkorrekturen durch Konturierung und Politur durch, um das natürliche Erscheinungsbild der Zähne zu optimieren. Alle Maßnahmen erfolgen mit Blick auf Funktion, Langlebigkeit und ein harmonisches Gesamtbild.</p>
 
-          <a href="https://info.frydent.de/bleaching_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" style-hover="background:#EDE8DC;color:#4B5875">
+          <a href="https://info.frydent.de/bleaching_patienten.html" style="display:flex;align-items:center;gap:16px;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zu Bleaching und Veneers finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Patientenportal</strong>.</span>
             <span style="flex:none;margin-left:auto;color:#AD8720;font-weight:600;font-size:14px;white-space:nowrap">Zum Portal →</span>
@@ -651,19 +680,19 @@ a.sbl:hover{color:#E2C26A !important}
             <p style="margin:10px 0 0;font-size:14.5px;line-height:1.7;color:#4B5875">Die Haltbarkeit hängt von der gewählten Behandlung, der Mundhygiene und regelmäßigen Kontrollen ab. Bleaching-Ergebnisse können je nach Lebensgewohnheiten variieren, während Veneers oder Aligner-Ergebnisse langfristig stabil sein können. Mit guter Pflege und regelmäßiger Prophylaxe lassen sich ästhetische Ergebnisse lange erhalten. Wir begleiten Sie dabei auch nach der Behandlung.</p>
           </details>
         </div>
-      </sc-if>
+      </div>
 
     </div>
 
     <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;position:sticky;top:96px;margin-top:39px;align-self:start" data-screen-label="Sidebar">
       <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#ffffff">Unsere Schwerpunkte:</div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <a href="#leistungen" onClick="{{ openEndo }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Endodontie &amp; Wurzelbehandlungen</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
-        <a href="#leistungen" onClick="{{ openProthetik }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Zahnersatz und Prothetik</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
-        <a href="#leistungen" onClick="{{ openParo }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Parodontologie</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
-        <a href="#leistungen" onClick="{{ openProphylaxe }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Prophylaxe &amp; Prävention</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
-        <a href="#leistungen" onClick="{{ openFunktion }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Funktionen &amp; Zahnschienen</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
-        <a href="#leistungen" onClick="{{ openAesthetik }}" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Ästhetische Zahnmedizin</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#endo" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Endodontie &amp; Wurzelbehandlungen</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#prothetik" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Zahnersatz und Prothetik</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#paro" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Parodontologie</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#prophylaxe" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Prophylaxe &amp; Prävention</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#funktion" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Funktionen &amp; Zahnschienen</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
+        <a href="#leistungen" href="#aesthetik" class="sbl" style="display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:600;color:#ffffff;padding:4px 0"><span>Ästhetische Zahnmedizin</span><span style="color:#E2C26A;font-size:16px;flex:none">→</span></a>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Fragen zu einer Behandlung? Wir beraten Sie gerne persönlich.</p>
@@ -673,7 +702,7 @@ a.sbl:hover{color:#E2C26A !important}
 
   </div>
   </div>
-  </sc-if>
+  </div>
 
   <!-- onlineservice band -->
   <div style="background-color:#414E77;background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.015) 0 1px, transparent 1px 5px)" data-screen-label="Onlineservice">
@@ -682,7 +711,7 @@ a.sbl:hover{color:#E2C26A !important}
       <div style="font-family:'Quicksand',sans-serif;font-size:24px;font-weight:400;color:#ffffff">Sehr praktisch: Ihr FRYDENT-Onlineservice</div>
       <div style="font-size:15px;color:#C9D6EC">Termin, Anamnesebogen, Downloads und Antworten auf Ihre Fragen, vieles erledigen Sie bequem von zu Hause.</div>
     </div>
-    <a href="service.html" style="background:#D2B156;color:#FFFFFF;padding:13px 26px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" style-hover="background:#D4A930;color:#FFFFFF">Zum Servicebereich</a>
+    <a href="service.html" style="background:#D2B156;color:#FFFFFF;padding:13px 26px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" class="h-d32178">Zum Servicebereich</a>
   </div>
   </div>
 
@@ -733,63 +762,5 @@ a.sbl:hover{color:#E2C26A !important}
 
 </div>
 
-<div style="width:0;height:0;overflow:hidden;position:absolute"><x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="0,0"></x-import></div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;hintergrundTon&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;kühl&quot;,&quot;pergamin&quot;],&quot;default&quot;:&quot;pergamin&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Stimmung&quot;},&quot;kartenStil&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;rahmen&quot;,&quot;schatten&quot;,&quot;flach&quot;],&quot;default&quot;:&quot;schatten&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Stimmung&quot;},&quot;portalKachel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;pergamin&quot;,&quot;gold&quot;,&quot;granat&quot;],&quot;default&quot;:&quot;gold&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Patientenportal&quot;}}">
-class Component extends DCLogic {
-  state = { active: 'overview' };
-  componentDidMount() {
-    const valid = ['endo','prothetik','paro','prophylaxe','funktion','aesthetik'];
-    const apply = () => {
-      const h = (location.hash || '').replace('#','');
-      if (valid.includes(h)) this.setState({ active: h });
-      else if (h === 'leistungen' || h === '') this.setState({ active: 'overview' });
-    };
-    apply();
-    window.addEventListener('hashchange', apply);
-    this.applyTweaks();
-  }
-  componentDidUpdate() { this.applyTweaks(); }
-  applyTweaks() {
-    const ton = this.props.hintergrundTon ?? 'kühl';
-    const karten = this.props.kartenStil ?? 'rahmen';
-    const kachel = this.props.portalKachel ?? 'pergamin';
-    let css = '';
-    if (ton === 'pergamin') css += '[style*="background:#F7F8FA"]{background:#F5F2EA !important}';
-    if (karten === 'schatten') css += '[style*="border:1px solid #E4E6EB"][style*="border-radius:14px"]{border-color:transparent !important;box-shadow:0 10px 28px rgba(30,45,77,.10) !important}';
-    if (karten === 'flach') css += '[style*="border:1px solid #E4E6EB"][style*="border-radius:14px"]{border-color:transparent !important;background:#EFF1F5 !important}';
-    if (kachel === 'gold') css += 'a[style*="#E2D9C4"]{background:#F8F0DC !important;border-color:#E2C26A !important}';
-    if (kachel === 'granat') css += 'a[style*="#E2D9C4"]{background:#EAEEF6 !important;border-color:#C3CEE3 !important}';
-    let el = document.getElementById('tw-ov');
-    if (!el) { el = document.createElement('style'); el.id = 'tw-ov'; document.head.appendChild(el); }
-    el.textContent = css;
-  }
-  renderVals() {
-    const a = this.state.active;
-    const open = (k) => (e) => {
-      if (e && e.target && e.target.closest && e.target.closest('image-slot')) { if (e.preventDefault) e.preventDefault(); return; }
-      if (e && e.preventDefault) e.preventDefault();
-      this.setState({ active: k });
-    };
-    return {
-      showOverview: a === 'overview',
-      showArticle: a !== 'overview',
-      showEndo: a === 'endo',
-      showProthetik: a === 'prothetik',
-      showParo: a === 'paro',
-      showProphylaxe: a === 'prophylaxe',
-      showFunktion: a === 'funktion',
-      showAesthetik: a === 'aesthetik',
-      openOverview: open('overview'),
-      openEndo: open('endo'),
-      openProthetik: open('prothetik'),
-      openParo: open('paro'),
-      openProphylaxe: open('prophylaxe'),
-      openFunktion: open('funktion'),
-      openAesthetik: open('aesthetik')
-    };
-  }
-}
-</script>
 </body>
 </html>

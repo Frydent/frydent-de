@@ -22,12 +22,13 @@
 <script src="consent.js"></script>
 <style>
 .lst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.lst-flip{perspective:1200px;height:240px;cursor:pointer}
+.lst-flip{perspective:1200px;height:265px;cursor:pointer}
 .lst-flip-in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
 .lst-flip:hover .lst-flip-in,.lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
 .lst-front,.lst-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;padding:30px 26px 26px;box-sizing:border-box;display:flex;flex-direction:column}
 .lst-front{background:#EDEAE0;border:1px solid #DBD6C7}
 .lst-back{transform:rotateY(180deg);background:#2C4170;border:1px solid #2C4170;justify-content:center}
+.lst-ico{width:34px;height:34px;color:#D9BC6A;margin:0 0 15px;flex:none}
 .lst-front h3{margin:0 0 11px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;line-height:1.35}
 .lst-front p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;line-height:1.65;color:#4B5875}
 .lst-back p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;line-height:1.75;color:#E3EAF6}
@@ -198,6 +199,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="7" r="3.2"/><path d="M5.5 21v-1.5a6.5 6.5 0 0113 0V21"/><path d="M17.5 12.5c1.6 0 2.9 1.3 2.9 2.9v1"/><path d="M20.4 13.2l1.6-1.6"/></svg>
             <p>Wir nehmen uns Zeit, berücksichtigen Vorerkrankungen und Medikamente und behandeln schonend. Auch Prothesen, Haftprobleme und trockene Mundschleimhaut gehören zu unserem Alltag.</p>
           </div>
         </div>
@@ -211,6 +213,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.6c-1.3-1.5-3.4-1.9-5-1a4 4 0 00-1.4 1.3l-.4.6-.4-.6a4 4 0 00-1.4-1.3c-1.6-.9-3.7-.5-5 1a4.6 4.6 0 00-.3 5.6c1.5 2.3 4.4 4.7 7.1 6.6 2.7-1.9 5.6-4.3 7.1-6.6a4.6 4.6 0 00-.3-5.6z"/></svg>
             <p>Viele unserer Patienten kennen dieses Gefühl. Wir erklären jeden Schritt, hören zu und arbeiten in Ihrem Tempo. Sie entscheiden, wann es weitergeht, und Sie dürfen jederzeit unterbrechen.</p>
           </div>
         </div>
@@ -224,6 +227,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8.5 10.5l2 2 4.5-4.5"/></svg>
             <p>Inlays, Kronen und Teilkronen aus Keramik fertigen wir digital in unserer Praxis an. Sie gehen mit dem fertigen Zahn nach Hause, in Farbe und Form auf Ihr Gebiss abgestimmt.</p>
           </div>
         </div>
@@ -237,6 +241,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v6"/><path d="M9.5 5.5h5"/><path d="M9 9h6l-.6 5.5a3 3 0 01-2.4 2.6 3 3 0 01-2.4-2.6L9 9z"/><path d="M12 17v4"/></svg>
             <p>Das Setzen der Implantate übernehmen erfahrene Chirurgen, mit denen wir seit Jahren zusammenarbeiten. Planung, Krone, Brücke oder Prothese darauf und die weitere Betreuung liegen in unserer Hand.</p>
           </div>
         </div>
@@ -250,6 +255,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v5"/><path d="M12 9.5l-2.5 9a2.6 2.6 0 005 0L12 9.5z"/><path d="M6.5 5L8 6.5M17.5 5L16 6.5"/></svg>
             <p>Mit dem Diodenlaser behandeln wir Aphten und Herpesbläschen punktgenau. Die Beschwerden lassen meist deutlich schneller nach, auch entzündetes Zahnfleisch profitiert davon.</p>
           </div>
         </div>
@@ -263,6 +269,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 4.5c-2 0-3.5 1.8-3.5 4 0 3.5 1.5 8 3 10.5.8 1.3 2.5 1 2.8-.4l.9-4c.2-1 1.4-1 1.6 0l.9 4c.3 1.4 2 1.7 2.8.4 1.5-2.5 3-7 3-10.5 0-2.2-1.5-4-3.5-4-1.4 0-2.3.7-3 1.3-.7-.6-1.6-1.3-3-1.3z"/><path d="M15.5 8.5l3.5-3.5M19 5v3M19 5h-3"/></svg>
             <p>Amalgamfüllungen tauschen wir unter Schutzmaßnahmen gegen zahnfarbene Materialien aus: Komposit, Keramik oder Gold. Wir beraten Sie in Ruhe, welche Lösung für Sie sinnvoll ist.</p>
           </div>
         </div>
@@ -276,6 +283,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M4 12h13M4 18h7"/><path d="M17.5 18.5l1.8 1.8 3.2-3.6"/></svg>
             <p>Was ist dringend, was hat Zeit, was gehört zusammen? Sie bekommen einen klaren Behandlungs- und Kostenplan, bevor wir beginnen. Und Sie bestimmen das Tempo.</p>
           </div>
         </div>
@@ -289,6 +297,7 @@ a.sbl:hover{color:#E2C26A !important}
             <span class="lst-hint">Mehr erfahren →</span>
           </div>
           <div class="lst-back">
+            <svg class="lst-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 007 0"/><circle cx="9" cy="9.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15" cy="9.5" r=".9" fill="currentColor" stroke="none"/></svg>
             <p>Wir erklären alles in Ruhe und machen aus der Untersuchung kein Drama. Im Patientenportal wartet außerdem eine eigene Kinderecke mit Quiz, Putz-Timer und Diplom.</p>
           </div>
         </div>

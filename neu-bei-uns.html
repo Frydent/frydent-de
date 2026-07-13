@@ -195,7 +195,7 @@ input,textarea{font-family:'Plus Jakarta Sans',sans-serif}
 
   <!-- so finden sie uns -->
   <div style="background-color:#F2EFE8;background-image:repeating-linear-gradient(0deg,rgba(143,116,64,.05) 0px,rgba(143,116,64,.05) 1px,transparent 1px,transparent 1.6px),repeating-linear-gradient(90deg,rgba(143,116,64,.035) 0px,rgba(143,116,64,.035) 1px,transparent 1px,transparent 1.6px),linear-gradient(180deg,#F2EFE8 0%,#F7F4EC 100%);border-bottom:1px solid #E0D7C2" data-screen-label="So finden Sie uns">
-  <div style="display:grid;grid-template-columns:{{ findenCols }};gap:{{ findenGap }};padding:28px 56px 24px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+  <div style="display:grid;grid-template-columns:{{ findenCols }};gap:{{ findenGap }};padding:40px 60px 36px;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <sc-if value="{{ showFoto }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex;flex-direction:column;gap:20px;order:2;align-items:center;margin-top:48px">
       <div style="position:relative;width:100%;height:330px">
@@ -255,8 +255,8 @@ input,textarea{font-family:'Plus Jakarta Sans',sans-serif}
       introTitle: herzlich ? "Schön, dass Sie zu uns finden. Um den Rest kümmern wir uns." : "Ihr erster Termin bei FRYDENT. Unkompliziert.",
       granatTextur: leinen ? "repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0 1px, transparent 1px 5px)" : "none",
       showFoto: foto,
-      findenCols: foto ? "minmax(0,1fr) 300px" : "minmax(0,1fr)",
-      findenGap: foto ? "120px" : "0px"
+      findenCols: foto ? "minmax(0,1fr) 340px" : "minmax(0,1fr)",
+      findenGap: foto ? "72px" : "0px"
     };
   }
 }</script>

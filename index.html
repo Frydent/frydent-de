@@ -238,15 +238,20 @@
 <script src="consent.js"></script>
 <style>
 @media(max-width:768px){
- .hero-txt{padding:22px 20px 0 !important;transform:none !important;gap:9px !important;max-width:100% !important}
- .hero-txt h1{font-size:29px !important;line-height:1.12 !important}
- .hero-kicker{font-size:11px !important;letter-spacing:1.6px !important;text-shadow:0 1px 6px rgba(255,255,255,.85)}
- .hero-sub{font-size:14px !important;color:#3D5A98 !important;text-shadow:0 1px 6px rgba(255,255,255,.9)}
- .hero-txt h1{text-shadow:0 1px 8px rgba(255,255,255,.75)}
+ .hero-txt{padding:16px 18px 0 !important;transform:none !important;gap:6px !important;max-width:100% !important;justify-content:flex-start !important}
+ .hero-txt h1{font-size:27px !important;line-height:1.1 !important;margin:0 !important;text-shadow:0 2px 10px rgba(255,255,255,.9),0 1px 3px rgba(255,255,255,.95)}
+ .hero-kicker{font-size:10.5px !important;letter-spacing:1.4px !important;text-shadow:0 2px 10px rgba(255,255,255,.9),0 1px 3px rgba(255,255,255,.95)}
+ .hero-sub{font-size:13px !important;color:#3D5A98 !important;margin:6px 0 0 !important;text-shadow:0 2px 10px rgba(255,255,255,.9),0 1px 3px rgba(255,255,255,.95)}
+ .hero-txt > div:last-child{margin-top:14px !important}
+ image-slot#c-hero img,image-slot#c-hero picture img,image-slot#c-hero > *{object-position:78% center !important}
+ image-slot#c-hero{--obj-pos:78% center}
 }
 @media(max-width:420px){
- .hero-txt h1{font-size:25px !important}
- .hero-kicker{font-size:10px !important}
+ .hero-txt{padding:14px 16px 0 !important}
+ .hero-txt h1{font-size:24px !important}
+ .hero-kicker{font-size:9.5px !important;letter-spacing:1.2px !important}
+ .hero-sub{font-size:12px !important}
+ image-slot#c-hero img,image-slot#c-hero picture img,image-slot#c-hero > *{object-position:84% center !important}
 }
 </style>
 </head>

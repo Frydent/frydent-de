@@ -20,15 +20,180 @@
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dentist",
-"name":"Zahnarztpraxis FRYDENT","url":"https://frydent.github.io/frydent-de/","telephone":"+49 7703 284","email":"info@frydent.de",
-"image":"https://frydent.github.io/frydent-de/assets/img/og-image.jpg",
-"address":{"@type":"PostalAddress","streetAddress":"Martinstraße 21","postalCode":"79848","addressLocality":"Bonndorf im Schwarzwald","addressRegion":"Baden-Württemberg","addressCountry":"DE"},
-"geo":{"@type":"GeoCoordinates","latitude":47.8186,"longitude":8.3417},
-"openingHoursSpecification":[
-{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday"],"opens":"08:00","closes":"12:00"},
-{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday"],"opens":"14:00","closes":"19:00"},
-{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Friday"],"opens":"08:00","closes":"12:30"}]}
+{
+ "@context": "https://schema.org",
+ "@type": "Dentist",
+ "@id": "https://frydent.github.io/frydent-de/#praxis",
+ "name": "Zahnarztpraxis FRYDENT",
+ "alternateName": "FRYDENT · Zahnärzte in Bonndorf",
+ "description": "Zahnarztpraxis in Bonndorf im Schwarzwald. Prophylaxe, Zahnerhaltung, Wurzelbehandlung, Zahnersatz, Aligner und ästhetische Zahnmedizin. Seit 1925, in vierter Generation.",
+ "url": "https://frydent.github.io/frydent-de/",
+ "telephone": "+49 7703 284",
+ "email": "info@frydent.de",
+ "image": "https://frydent.github.io/frydent-de/assets/img/og-image.jpg",
+ "logo": "https://frydent.github.io/frydent-de/assets/logo.png",
+ "priceRange": "$$",
+ "currenciesAccepted": "EUR",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Martinstraße 21",
+  "postalCode": "79848",
+  "addressLocality": "Bonndorf im Schwarzwald",
+  "addressRegion": "Baden-Württemberg",
+  "addressCountry": "DE"
+ },
+ "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": 47.8186,
+  "longitude": 8.3417
+ },
+ "hasMap": "https://maps.google.com/?q=Martinstraße+21+79848+Bonndorf",
+ "areaServed": [
+  {
+   "@type": "City",
+   "name": "Bonndorf im Schwarzwald"
+  },
+  {
+   "@type": "City",
+   "name": "Wutach"
+  },
+  {
+   "@type": "City",
+   "name": "Stühlingen"
+  },
+  {
+   "@type": "City",
+   "name": "Löffingen"
+  },
+  {
+   "@type": "City",
+   "name": "Grafenhausen"
+  },
+  {
+   "@type": "AdministrativeArea",
+   "name": "Landkreis Waldshut"
+  }
+ ],
+ "availableLanguage": [
+  {
+   "@type": "Language",
+   "name": "Deutsch"
+  },
+  {
+   "@type": "Language",
+   "name": "Englisch"
+  },
+  {
+   "@type": "Language",
+   "name": "Polnisch"
+  },
+  {
+   "@type": "Language",
+   "name": "Türkisch"
+  },
+  {
+   "@type": "Language",
+   "name": "Russisch"
+  },
+  {
+   "@type": "Language",
+   "name": "Rumänisch"
+  },
+  {
+   "@type": "Language",
+   "name": "Arabisch"
+  }
+ ],
+ "medicalSpecialty": "Dentistry",
+ "availableService": [
+  {
+   "@type": "MedicalProcedure",
+   "name": "Prophylaxe und professionelle Zahnreinigung"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Zahnerhaltung und Füllungstherapie"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Wurzelbehandlung (Endodontie)"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Parodontologie"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Zahnersatz: Kronen, Brücken und Prothesen"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Aligner und Zahnschienen"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Ästhetische Zahnmedizin: Veneers und Bleaching"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Kinderzahnheilkunde"
+  },
+  {
+   "@type": "MedicalProcedure",
+   "name": "Behandlung von Angstpatienten"
+  }
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Thursday"
+   ],
+   "opens": "08:00",
+   "closes": "12:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Thursday"
+   ],
+   "opens": "14:00",
+   "closes": "19:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Wednesday",
+    "Friday"
+   ],
+   "opens": "08:00",
+   "closes": "12:30"
+  }
+ ],
+ "potentialAction": {
+  "@type": "ReserveAction",
+  "target": {
+   "@type": "EntryPoint",
+   "urlTemplate": "https://frydent.github.io/frydent-de/",
+   "actionPlatform": [
+    "https://schema.org/DesktopWebPlatform",
+    "https://schema.org/MobileWebPlatform"
+   ]
+  },
+  "result": {
+   "@type": "Reservation",
+   "name": "Zahnarzttermin"
+  }
+ },
+ "sameAs": [
+  "TODO-INSTAGRAM",
+  "TODO-GOOGLE-PROFIL"
+ ]
+}
 </script>
 <script src="consent.js"></script>
 </head>

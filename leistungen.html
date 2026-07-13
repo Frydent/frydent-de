@@ -23,7 +23,7 @@
 <style>
 .lst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .lst-flip{perspective:1200px;height:265px;cursor:pointer}
-.lst-flip-in{position:relative;width:100%;height:100%;transition:transform 1.4s cubic-bezier(.22,.7,.25,1);transform-style:preserve-3d}
+.lst-flip-in{position:relative;width:100%;height:100%;transition:transform 2s cubic-bezier(.2,.65,.25,1);transform-style:preserve-3d}
 .lst-flip:hover .lst-flip-in,.lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
 .lst-front,.lst-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;padding:30px 26px 26px;box-sizing:border-box;display:flex;flex-direction:column}
 .lst-front{background:#EDEAE0;border:1px solid #DBD6C7}
@@ -38,6 +38,7 @@
 @media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
 @media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
 @media(max-width:900px){.lst-flip{height:250px}
+ .lst-flip-in{transition:transform 1.2s cubic-bezier(.2,.65,.25,1)}
  .lst-flip:hover .lst-flip-in{transform:none}
  .lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
  .lst-front,.lst-back{padding:24px 22px}

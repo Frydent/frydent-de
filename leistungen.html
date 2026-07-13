@@ -20,6 +20,27 @@
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <script src="consent.js"></script>
+<style>
+.lst-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.lst-flip{perspective:1200px;height:240px;cursor:pointer}
+.lst-flip-in{position:relative;width:100%;height:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}
+.lst-flip:hover .lst-flip-in,.lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
+.lst-front,.lst-back{position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;padding:30px 26px 26px;box-sizing:border-box;display:flex;flex-direction:column}
+.lst-front{background:#F2EFE8;border:1px solid #DFD5BF}
+.lst-back{transform:rotateY(180deg);background:#2C4170;border:1px solid #2C4170;justify-content:center}
+.lst-front h3{margin:0 0 11px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;line-height:1.35}
+.lst-front p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;line-height:1.65;color:#4B5875}
+.lst-back p{margin:0;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;line-height:1.75;color:#E3EAF6}
+.lst-hint{position:absolute;bottom:22px;left:26px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#B09154;letter-spacing:.03em}
+@media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
+@media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
+@media(max-width:900px){.lst-flip{height:auto;perspective:none}
+ .lst-flip-in{transform:none !important;transform-style:flat}
+ .lst-front,.lst-back{position:static;transform:none !important;backface-visibility:visible}
+ .lst-back{margin-top:-1px;border-radius:0 0 14px 14px;padding:22px 26px 26px}
+ .lst-front{border-radius:14px 14px 0 0;padding-bottom:22px}
+ .lst-hint{display:none}}
+</style>
 </head>
 <body>
 <x-dc>
@@ -165,43 +186,112 @@ a.sbl:hover{color:#E2C26A !important}
   <div style="padding:56px 56px 60px;max-width:1340px;margin:0 auto;box-sizing:border-box">
     <div style="font-family:'Quicksand',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;margin-bottom:12px">Weitere Leistungen</div>
     <h2 style="margin:0 0 12px;font-family:'Quicksand',sans-serif;font-size:28px;font-weight:400;color:#33416E">Was wir außerdem für Sie tun</h2>
-    <p style="margin:0 0 34px;font-size:16px;line-height:1.7;color:#4B5875;max-width:760px">Neben unseren Schwerpunkten decken wir das gesamte Spektrum der Zahnmedizin ab, von der Vorsorge bis zur umfassenden Sanierung.</p>
+    <p style="margin:0 0 36px;font-size:16px;line-height:1.7;color:#4B5875;max-width:760px">Neben unseren Schwerpunkten decken wir das gesamte Spektrum der Zahnmedizin ab, von der Vorsorge bis zur umfassenden Sanierung. Fahren Sie über eine Karte, um mehr zu erfahren.</p>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
+    <div class="lst-grid">
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Seniorenzahnmedizin</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Zahnmedizin, die sich dem Menschen anpasst, nicht umgekehrt. Wir nehmen uns Zeit, berücksichtigen Vorerkrankungen und Medikamente und behandeln schonend. Auch Prothesen, Haftprobleme und trockene Mundschleimhaut gehören zu unserem Alltag.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Seniorenzahnmedizin</h3>
+            <p>Zahnmedizin, die sich dem Menschen anpasst, nicht umgekehrt.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Wir nehmen uns Zeit, berücksichtigen Vorerkrankungen und Medikamente und behandeln schonend. Auch Prothesen, Haftprobleme und trockene Mundschleimhaut gehören zu unserem Alltag.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">CEREC: Zahnersatz in einer Sitzung</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Inlays, Kronen und Teilkronen aus Keramik fertigen wir digital in unserer Praxis an. Das bedeutet: ein Termin statt zwei, kein Abdruck mit Löffel, kein Provisorium. Sie gehen mit dem fertigen Zahn nach Hause.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Angstpatienten</h3>
+            <p>Sie müssen sich für Ihre Angst nicht rechtfertigen.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Viele unserer Patienten kennen dieses Gefühl. Wir erklären jeden Schritt, hören zu und arbeiten in Ihrem Tempo. Sie entscheiden, wann es weitergeht, und Sie dürfen jederzeit unterbrechen.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Laserbehandlung</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Mit dem Diodenlaser behandeln wir Aphten und Herpesbläschen gezielt und nahezu schmerzfrei. Die Beschwerden lassen meist deutlich schneller nach, auch entzündetes Zahnfleisch profitiert davon.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>CEREC: Zahnersatz in einer Sitzung</h3>
+            <p>Ein Termin statt zwei, ohne Abdruck und Provisorium.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Inlays, Kronen und Teilkronen aus Keramik fertigen wir digital in unserer Praxis an. Sie gehen mit dem fertigen Zahn nach Hause, in Farbe und Form auf Ihr Gebiss abgestimmt.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Amalgamsanierung</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Alte Amalgamfüllungen tauschen wir unter Schutzmaßnahmen gegen moderne, zahnfarbene Materialien aus: Komposit, Keramik oder Gold. Wir beraten Sie in Ruhe, welche Lösung für Sie sinnvoll ist.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Implantatgetragener Zahnersatz</h3>
+            <p>Chirurgie beim Spezialisten, Prothetik und Betreuung bei uns.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Das Setzen der Implantate übernehmen erfahrene Chirurgen, mit denen wir seit Jahren zusammenarbeiten. Planung, Krone, Brücke oder Prothese darauf und die weitere Betreuung liegen in unserer Hand.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Komplette Zahnsanierung</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Wenn vieles auf einmal ansteht, planen wir Schritt für Schritt: Was ist dringend, was hat Zeit, was gehört zusammen. Sie bekommen einen klaren Behandlungs- und Kostenplan, bevor wir beginnen.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Laserbehandlung</h3>
+            <p>Aphten und Herpes gezielt und nahezu schmerzfrei behandeln.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Mit dem Diodenlaser behandeln wir Aphten und Herpesbläschen punktgenau. Die Beschwerden lassen meist deutlich schneller nach, auch entzündetes Zahnfleisch profitiert davon.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Implantatgetragener Zahnersatz</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Das Setzen der Implantate übernehmen erfahrene Chirurgen, mit denen wir seit Jahren eng zusammenarbeiten. Planung, Krone, Brücke oder Prothese darauf und die weitere Betreuung liegen bei uns. So bleiben Sie in vertrauten Händen, auch wenn ein Spezialist hinzukommt.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Amalgamsanierung</h3>
+            <p>Alte Füllungen raus, moderne Materialien rein.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Amalgamfüllungen tauschen wir unter Schutzmaßnahmen gegen zahnfarbene Materialien aus: Komposit, Keramik oder Gold. Wir beraten Sie in Ruhe, welche Lösung für Sie sinnvoll ist.</p>
+          </div>
+        </div>
       </div>
 
-      <div style="background:#fff;border:1px solid #E4DFD3;border-radius:14px;padding:26px 26px 24px">
-        <h3 style="margin:0 0 10px;font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Kinderzahnheilkunde</h3>
-        <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Der erste Zahnarztbesuch prägt. Wir lassen Kindern Zeit, erklären alles in Ruhe und machen aus der Untersuchung kein Drama. Im Patientenportal finden Sie dazu eine eigene Kinderecke.</p>
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Komplette Zahnsanierung</h3>
+            <p>Wenn vieles auf einmal ansteht, planen wir Schritt für Schritt.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Was ist dringend, was hat Zeit, was gehört zusammen? Sie bekommen einen klaren Behandlungs- und Kostenplan, bevor wir beginnen. Und Sie bestimmen das Tempo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lst-flip">
+        <div class="lst-flip-in">
+          <div class="lst-front">
+            <h3>Kinderzahnheilkunde</h3>
+            <p>Der erste Zahnarztbesuch prägt. Wir lassen Kindern Zeit.</p>
+            <span class="lst-hint">Mehr erfahren →</span>
+          </div>
+          <div class="lst-back">
+            <p>Wir erklären alles in Ruhe und machen aus der Untersuchung kein Drama. Im Patientenportal wartet außerdem eine eigene Kinderecke mit Quiz, Putz-Timer und Diplom.</p>
+          </div>
+        </div>
       </div>
 
     </div>

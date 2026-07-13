@@ -38,8 +38,10 @@
 @media(max-width:900px){.lst-flip{height:auto;perspective:none}
  .lst-flip-in{transform:none !important;transform-style:flat}
  .lst-front,.lst-back{position:static;transform:none !important;backface-visibility:visible}
- .lst-back{margin-top:-1px;border-radius:0 0 14px 14px;padding:22px 26px 26px}
- .lst-front{border-radius:14px 14px 0 0;padding-bottom:22px}
+ .lst-front{border-radius:14px 14px 0 0;border-bottom:none;padding:24px 24px 20px}
+ .lst-back{border-radius:0 0 14px 14px;padding:22px 24px 24px;flex-direction:row;align-items:flex-start;gap:16px}
+ .lst-back .lst-ico{margin:2px 0 0;width:28px;height:28px}
+ .lst-back p{flex:1}
  .lst-hint{display:none}}
 </style>
 </head>

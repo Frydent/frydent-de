@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <title>Leistungen · FRYDENT Bonndorf</title>
 <meta name="description" content="Unsere Schwerpunkte: Prophylaxe, Endodontie, Zahnersatz, Parodontologie, Zahnschienen und ästhetische Zahnmedizin.">
-<link rel="stylesheet" href="mobile.css?v=5"><script defer src="https://dr-flex.de/embed.js?medicalPracticeId=60190"></script><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script></head>
+<link rel="stylesheet" href="mobile.css?v=5"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="canonical" href="https://frydent.github.io/frydent-de/leistungen.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leistungen · FRYDENT Bonndorf">
+<meta property="og:description" content="Unser Behandlungsspektrum: Prophylaxe, Zahnerhaltung, Endodontie, Parodontologie, Zahnersatz und Ästhetik.">
+<meta property="og:image" content="https://frydent.github.io/frydent-de/assets/img/og-image.jpg">
+<meta property="og:url" content="https://frydent.github.io/frydent-de/leistungen.html">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<script src="consent.js"></script>
+</head>
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<script>if(!window.toggleDrFlexAppointments){window.toggleDrFlexAppointments=function(){};}</script>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#ffffff;font-family:'Plus Jakarta Sans',sans-serif}
 a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
@@ -193,7 +204,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showEndo }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-endo" shape="rounded" radius="16" src="assets/img-lsta-endo.webp" placeholder="Zdjęcie — Endodontie"></image-slot>
+            <image-slot id="lsta-endo" shape="rounded" radius="16" src="assets/img-lsta-endo.webp" placeholder="Wurzelbehandlung mit modernem Endodontie-System"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Endodontie</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Erhalten, was am besten zu Ihnen passt!</h2>
@@ -240,7 +251,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showProthetik }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-prothetik" shape="rounded" radius="16" src="assets/lst-prothetik.webp" placeholder="Zdjęcie — Zahnersatz"></image-slot>
+            <image-slot id="lsta-prothetik" shape="rounded" radius="16" src="assets/lst-prothetik.webp" placeholder="Zahnersatz: Kronen, Brücken und Prothesen"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Zahnersatz und Prothetik</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Fast wie Ihre eigenen Zähne!</h2>
@@ -287,7 +298,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showParo }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-paro" shape="rounded" radius="16" src="assets/img-lsta-paro.webp" placeholder="Zdjęcie — Parodontologie"></image-slot>
+            <image-slot id="lsta-paro" shape="rounded" radius="16" src="assets/img-lsta-paro.webp" placeholder="Parodontologische Behandlung des Zahnfleischs"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Parodontologie</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Gesundes Zahnfleisch, stabile Zähne</h2>
@@ -334,7 +345,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showProphylaxe }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-prophylaxe" shape="rounded" radius="16" src="assets/img-lsta-prophylaxe.webp" placeholder="Zdjęcie — Prophylaxe"></image-slot>
+            <image-slot id="lsta-prophylaxe" shape="rounded" radius="16" src="assets/img-lsta-prophylaxe.webp" placeholder="Professionelle Zahnreinigung in der Prophylaxe"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Prophylaxe &amp; Prävention</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Für langfristige Zahngesundheit!</h2>
@@ -381,7 +392,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showFunktion }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-funktion" shape="rounded" radius="16" src="" placeholder="Zdjęcie — Zahnschienen"></image-slot>
+            <image-slot id="lsta-funktion" shape="rounded" radius="16" src="" placeholder="Transparente Aligner-Zahnschienen"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Funktionen &amp; Zahnschienen</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Kiefer und Zähne? Im Gleichgewicht.</h2>
@@ -427,7 +438,7 @@ a.sbl:hover{color:#E2C26A !important}
       <sc-if value="{{ showAesthetik }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="position:relative;width:100%;height:320px">
-            <image-slot id="lsta-aesthetik" shape="rounded" radius="16" src="assets/img-lsta-aesthetik.webp" placeholder="Zdjęcie — Ästhetik"></image-slot>
+            <image-slot id="lsta-aesthetik" shape="rounded" radius="16" src="assets/img-lsta-aesthetik.webp" placeholder="Ästhetische Zahnmedizin: Veneers und Bleaching"></image-slot>
           </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Schwerpunkt Ästhetische Zahnmedizin</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Zeigen Sie Ihr natürlich schönes Lächeln.</h2>

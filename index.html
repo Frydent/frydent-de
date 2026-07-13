@@ -323,7 +323,7 @@ document.addEventListener('click',function(e){
 var a=e.target.closest('.ndrop>a');
 if(a&&mq.matches){var nd=a.parentElement;if(!nd.classList.contains('open')){e.preventDefault();document.querySelectorAll('.ndrop.open').forEach(function(x){x.classList.remove('open')});nd.classList.add('open');return}}
 if(!e.target.closest('.ndrop'))document.querySelectorAll('.ndrop.open').forEach(function(x){x.classList.remove('open')});
-var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').forEach(function(x){if(x!==fl)x.classList.remove('is-flipped')});
+var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').forEach(function(x){if(x!==fl)x.classList.remove('is-flipped')});if(fl&&mq.matches)fl.classList.toggle('is-flipped');
 },true);
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();if(mq.addEventListener)mq.addEventListener('change',tg);

@@ -49,6 +49,24 @@
 }
 </style>
 
+<style>
+.hyg-fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:34px}
+.hyg-kachel{position:relative;width:100%;height:270px;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(44,65,112,.10)}
+.hyg-kachel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hyg-box{display:grid;grid-template-columns:minmax(0,0.42fr) minmax(0,1fr);background:#2C4170;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(44,65,112,.16)}
+.hyg-inna{position:relative;min-height:330px}
+.hyg-inna img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% center;display:block}
+.hyg-txt{padding:46px 48px 46px 44px}
+@media(max-width:1100px){.hyg-fotos{grid-template-columns:repeat(2,1fr)}.hyg-kachel{height:230px}}
+@media(max-width:900px){
+ .hyg-box{grid-template-columns:1fr}
+ .hyg-inna{min-height:260px}
+ .hyg-inna img{object-position:center 22%}
+ .hyg-txt{padding:32px 26px 36px}
+ .hyg-txt h3{font-size:23px !important}
+}
+@media(max-width:560px){.hyg-fotos{grid-template-columns:1fr;gap:16px}.hyg-kachel{height:220px}}
+</style>
 </head>
 <body>
 
@@ -221,7 +239,39 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   </div>
 
   <!-- kontakt kurz -->
-  <div id="kinderecke" style="background:#F5EFDC;border-top:1px solid #E5DBC0" data-screen-label="Kinderecke">
+  <div id="hygiene" style="background:#E9EFF7;border-top:1px solid #D4DEEC" data-screen-label="Hygiene">
+  <div style="padding:64px 56px 70px;max-width:1440px;margin:0 auto;box-sizing:border-box">
+
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+      <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#B09154;font-weight:600;white-space:nowrap">Hinter den Kulissen</span>
+      <span style="width:96px;height:1px;background:#C9A961"></span>
+      <span style="width:6px;height:6px;border-radius:50%;background:#C4A44E"></span>
+    </div>
+
+    <h2 style="margin:0 0 16px;font-family:'Quicksand',sans-serif;font-size:32px;font-weight:400;line-height:1.25;color:#33416E">Hygiene, auf die Sie sich verlassen können</h2>
+    <p style="margin:0 0 40px;font-size:16px;line-height:1.75;color:#4B5875;max-width:900px">Es gibt einen Bereich unserer Praxis, den Sie im Alltag nie zu sehen bekommen, der für Ihre Sicherheit aber ganz entscheidend ist. Wir möchten Sie einladen, einen Blick hinter die Kulissen zu werfen und zu sehen, wie wir hier alles für Sie vorbereiten.</p>
+
+    <div class="hyg-fotos">
+      <div class="hyg-kachel"><img src="assets/hyg-1.webp" alt="Instrumente werden im Thermodesinfektor eingeräumt" loading="lazy"></div>
+      <div class="hyg-kachel"><img src="assets/hyg-2.webp" alt="Gereinigte Instrumente werden in Sterilisationskassetten sortiert" loading="lazy"></div>
+      <div class="hyg-kachel"><img src="assets/hyg-3.webp" alt="Instrumente werden einzeln in Sterilgutverpackungen eingeschweißt" loading="lazy"></div>
+      <div class="hyg-kachel"><img src="assets/hyg-4.webp" alt="Jede Verpackung wird gescannt und digital dokumentiert" loading="lazy"></div>
+    </div>
+
+    <div class="hyg-box">
+      <div class="hyg-inna"><img src="assets/hyg-inna.webp" alt="Inna Horn, Hygienebeauftragte der Praxis FRYDENT, am Sterilisator" loading="lazy"></div>
+      <div class="hyg-txt">
+        <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#E2C26A;font-weight:600">Damit Sie sich sicher fühlen</span>
+        <h3 style="margin:14px 0 18px;font-family:'Quicksand',sans-serif;font-size:27px;font-weight:400;line-height:1.3;color:#ffffff">Alles nach Plan. Und lückenlos kontrolliert.</h3>
+        <p style="margin:0 0 16px;font-size:15.5px;line-height:1.8;color:#D6DEF0">Jedes Instrument, das bei Ihnen zum Einsatz kommt, durchläuft einen genau festgelegten Ablauf: gereinigt, desinfiziert, sterilisiert und dokumentiert. Und das nicht nur von Hand geprüft, sondern <strong style="color:#E2C26A;font-weight:600">vollständig digital überwacht</strong>.</p>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#D6DEF0">Über all das wacht unermüdlich <strong style="color:#E2C26A;font-weight:600">Frau Inna Horn</strong>, unsere Hygienebeauftragte.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="kinderecke" style="background:#F5EFDC;border-top:1px solid #E5DBC0" data-screen-label="Kinderecke">
   <div style="padding:64px 56px 68px;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <div class="ke-grid">
 

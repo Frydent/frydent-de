@@ -49,6 +49,14 @@ function pokaz(){
     var ok = (w==='showOverview' && akt==='overview')
           || (w==='showArticle'  && akt!=='overview')
           || (w.toLowerCase()==='show'+akt);
+    if(!ok && el.querySelector('[data-always]')){
+      el.style.display='';
+      [].forEach.call(el.children,function(c){
+        if(!c.querySelector('[data-always]') && !c.hasAttribute('data-always')) c.style.display='none';
+      });
+      return;
+    }
+    [].forEach.call(el.children,function(c){ c.style.display=''; });
     el.style.display = ok ? '' : 'none';
   });
   if(akt!=='overview'){ var t=document.querySelector('[data-show="showArticle"]'); if(t) t.scrollIntoView({block:'start'}); }
@@ -149,7 +157,7 @@ a.pp:hover{color:#8F7440 !important}
         <div style="position:relative;width:100%;height:240px">
           <img id="nwc-airflow" src="assets/img-nwc-airflow.webp" alt="Airflow-Gerät zur schonenden Zahnreinigung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
-        <a href="#news" href="#airflow" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
+        <a href="#airflow" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
           <div style="font-size:12.5px;color:#9AA3B5">17.02.2026</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Airflow: gründlich, schonend, up to date</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Feinste Partikel sorgen dafür, dass Ihre Zahnoberflächen gründlich gereinigt werden.</p>
@@ -160,7 +168,7 @@ a.pp:hover{color:#8F7440 !important}
         <div style="position:relative;width:100%;height:240px">
           <img id="nwc-cerec" src="assets/img-nwc-cerec.webp" alt="CEREC: Keramikrestauration aus eigener Herstellung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
-        <a href="#news" href="#cerec" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
+        <a href="#cerec" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
           <div style="font-size:12.5px;color:#9AA3B5">16.02.2026</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Diesen Komfort bringt CEREC für Sie</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Digitale Verfahren unterstützen unsere tägliche Arbeit und verkürzen Ihre Behandlungszeit.</p>
@@ -171,7 +179,7 @@ a.pp:hover{color:#8F7440 !important}
         <div style="position:relative;width:100%;height:240px">
           <img id="nwc-cmd" src="assets/img-nwc-cmd.webp" alt="CMD" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
-        <a href="#news" href="#cmd" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
+        <a href="#cmd" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
           <div style="font-size:12.5px;color:#9AA3B5">12.02.2026</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Wenn der Kiefer Stress macht</div>
           <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Kopf-, Nacken- oder Kieferschmerzen? CMD kann eine mögliche Ursache sein.</p>
@@ -200,7 +208,7 @@ a.pp:hover{color:#8F7440 !important}
   <div style="display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;padding:44px 56px 76px;align-items:start;max-width:1340px;margin:0 auto;box-sizing:border-box">
 
     <div style="min-width:0">
-      <a href="#news" href="#news" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur News-Übersicht</a>
+      <a href="#news" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur News-Übersicht</a>
 
       <div data-show="showAirflow">
         <div style="display:flex;flex-direction:column;gap:16px">
@@ -260,25 +268,25 @@ a.pp:hover{color:#8F7440 !important}
 
     </div>
 
-    <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:20px;position:sticky;top:110px" data-screen-label="Sidebar">
+    <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:20px;position:sticky;top:110px" data-screen-label="Sidebar" data-always>
       <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#ffffff">Weitere Beiträge, die Sie interessieren könnten:</div>
 
       <div style="display:flex;flex-direction:column;gap:6px">
-        <a href="#news" href="#airflow" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Airflow: gründlich, schonend, up to date</a>
+        <a href="#airflow" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Airflow: gründlich, schonend, up to date</a>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Feinste Partikel sorgen dafür, dass Ihre Zahnoberflächen gründlich gereinigt werden.</p>
-        <a href="#news" href="#airflow" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
+        <a href="#airflow" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px">
-        <a href="#news" href="#cerec" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Diesen Komfort bringt CEREC für Sie</a>
+        <a href="#cerec" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Diesen Komfort bringt CEREC für Sie</a>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Digitale Verfahren unterstützen unsere tägliche Arbeit und verkürzen Ihre Behandlungszeit.</p>
-        <a href="#news" href="#cerec" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
+        <a href="#cerec" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:6px">
-        <a href="#news" href="#cmd" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Wenn der Kiefer Stress macht</a>
+        <a href="#cmd" style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Wenn der Kiefer Stress macht</a>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Kopf-, Nacken- oder Kieferschmerzen? CMD kann eine mögliche Ursache sein.</p>
-        <a href="#news" href="#cmd" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
+        <a href="#cmd" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Weiterlesen</a>
       </div>
 
       <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">

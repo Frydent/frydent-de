@@ -76,6 +76,13 @@ image-slot::part(empty){color:#9C8C74}
   /* Timeline-Jahreszahlen und „Heute" mitskalieren */
   [data-screen-label="Historie Timeline"] div[style*="font-size:46px"]{font-size:30px !important}
   [data-screen-label="Historie Timeline"] div[style*="font-size:34px"]{font-size:26px !important}
+  /* Deko-Stempel auf Mobil: kleiner und im sichtbaren Bereich halten */
+  svg[data-stamp]{width:150px !important;height:150px !important;opacity:.3 !important}
+  [data-screen-label="Historie Timeline"] svg[data-stamp]{left:auto !important;right:12px !important;bottom:24px !important}
+  [data-screen-label="Zwischenwort"] svg[data-stamp]{right:auto !important;left:12px !important;top:auto !important;bottom:20px !important}
+  [data-screen-label="Schlusswort"] svg[data-stamp]{left:auto !important;right:12px !important;top:140px !important}
+  /* iOS: background-attachment:fixed ist unzuverlässig — auf Mobil scroll */
+  header, #historie, [data-screen-label="Zwischenwort"]{background-attachment:scroll !important}
 }
 
 </style>

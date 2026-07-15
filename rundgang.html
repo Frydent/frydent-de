@@ -19,6 +19,7 @@
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
 <script src="consent.js"></script>
+<script src="menu.js" defer></script>
 <style>
 .hd-soc-grp{display:inline-flex;align-items:center;gap:2px;flex:none}
 .hd-soc{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:#8A93A6;border:1px solid transparent;transition:all .2s ease;flex:none}
@@ -92,6 +93,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   <div style="position:sticky;top:0;z-index:100;background:#ffffff">
   <header style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding:24px clamp(20px,3vw,44px);background:#ffffff;max-width:1440px;margin:0 auto;box-sizing:border-box" data-screen-label="Nav">
     <a href="index.html" style="display:flex;align-items:center;flex:none"><img src="assets/logo.svg" alt="FRYDENT — Zahnärzte in Bonndorf" style="height:42px;width:auto;display:block"></a>
+    <button class="hamburger-btn" aria-label="Menü" aria-expanded="false" onclick="toggleMenu(this)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="hb-open" d="M3 6h18M3 12h18M3 18h18"/><path class="hb-close" d="M6 6l12 12M6 18L18 6" style="display:none"/></svg></button>
     <nav style="display:flex;align-items:center;gap:clamp(12px,1.8vw,26px);font-size:clamp(12px,1.1vw,14.5px);font-weight:500;letter-spacing:.5px;text-transform:uppercase;color:#1E2D4D;white-space:nowrap">
       <a href="index.html" style="color:#1E2D4D;" class="h-421b75">Start</a>
       <span class="ndrop"><a href="praxis-team.html" style="color:#3D5A98;border-bottom:2px solid #C4A44E;padding-bottom:3px;display:inline-flex;align-items:center;gap:5px" class="h-421b75">Praxis &amp; Team<svg width="9" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="flex:none"><path d="m1 1 4 4 4-4"></path></svg></a><span class="nmenu"><span style="display:flex;flex-direction:column;background:#ffffff;border:1px solid #E4E6EB;border-radius:12px;padding:8px 0;box-shadow:0 14px 34px -10px rgba(30,45,77,.28);min-width:230px"><a href="praxis-team.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Unser Team</a><a href="geschichte.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Unsere Geschichte</a><a href="rundgang.html" style="display:block;padding:10px 18px;color:#1E2D4D;font-size:13px;text-transform:none;letter-spacing:.3px;font-weight:500;white-space:nowrap" class="h-d953e7">Praxisrundgang</a></span></span></span>

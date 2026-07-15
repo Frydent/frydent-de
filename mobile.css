@@ -16,11 +16,53 @@
       proporcje samej fotografii (widać całość).
    4. [2c/2d] miejsca na przesunięcia kadrów per zdjęcie — po kierunkach od Tatiany. */
 
+/* Hamburger-Button: standardmäßig (Desktop) versteckt, nur auf Mobil sichtbar */
+.hamburger-btn {
+  display: none;
+  align-items: center; justify-content: center;
+  flex: none; width: 44px; height: 44px; padding: 0;
+  background: none; border: none; cursor: pointer; color: #1E2D4D;
+}
+.hamburger-btn svg { display: block; }
+
 @media (max-width: 900px) {
 
-  /* Logo auf Mobil zentriert; Kopfleiste kompakter (Desktop-Padding 24px ist mobil zu hoch) */
-  header[data-screen-label="Nav"] > a:first-child { width: 100%; justify-content: center !important; }
-  header[data-screen-label="Nav"] { padding-top: 12px !important; padding-bottom: 12px !important; gap: 8px 20px !important; }
+  /* ===== Mobiles Hamburger-Menü ===== */
+  /* Kopfleiste: eine schlanke Zeile — Logo links, Hamburger rechts */
+  header[data-screen-label="Nav"] {
+    padding-top: 12px !important; padding-bottom: 12px !important;
+    flex-wrap: nowrap !important; justify-content: space-between !important; gap: 12px !important;
+    position: relative;
+  }
+  header[data-screen-label="Nav"] > a:first-child { width: auto !important; justify-content: flex-start !important; flex: 0 1 auto; }
+  /* Hamburger-Button sichtbar auf Mobil */
+  .hamburger-btn { display: flex !important; }
+  /* Menü (nav) und Aktionsleiste standardmäßig versteckt, klappen unter den Header */
+  header[data-screen-label="Nav"] > nav,
+  header[data-screen-label="Nav"] > div:last-child {
+    display: none !important;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column !important; align-items: stretch !important;
+    background: #ffffff; border-top: 1px solid #ECE7DC;
+    box-shadow: 0 18px 30px -12px rgba(30,45,77,.22);
+    padding: 8px 0 14px !important; gap: 0 !important; margin: 0 !important;
+    z-index: 200; white-space: normal !important;
+  }
+  /* Geöffneter Zustand */
+  header[data-screen-label="Nav"].menu-open > nav,
+  header[data-screen-label="Nav"].menu-open > div:last-child { display: flex !important; }
+  header[data-screen-label="Nav"].menu-open > div:last-child { top: auto; box-shadow: none; border-top: none; padding-top: 0 !important; }
+  /* Menüpunkte als volle Zeilen */
+  header[data-screen-label="Nav"] > nav > a,
+  header[data-screen-label="Nav"] > nav > .ndrop { width: 100%; padding: 13px 22px !important; font-size: 15px !important; border-bottom: 1px solid #F1EDE3; }
+  header[data-screen-label="Nav"] > nav > .ndrop > a { padding: 0 !important; border: none !important; }
+  /* Dropdown-Untermenüs auf Mobil immer ausklappen (kein Hover) */
+  header[data-screen-label="Nav"] > nav .nmenu { position: static !important; visibility: visible !important; opacity: 1 !important; display: block !important; }
+  header[data-screen-label="Nav"] > nav .nmenu > span { box-shadow: none !important; border: none !important; padding: 0 !important; min-width: 0 !important; }
+  header[data-screen-label="Nav"] > nav .nmenu a { padding: 9px 22px 9px 38px !important; font-size: 13.5px !important; }
+  /* „Online buchen" als Block, Social ausgeblendet */
+  header[data-screen-label="Nav"] > div:last-child a[data-drflex] { margin: 12px 22px 0 !important; text-align: center; }
+  header[data-screen-label="Nav"] > div:last-child .hd-soc-grp { display: none !important; }
 
   /* ========== 1. STOP pływaniu strony ========== */
   html, body { overflow-x: hidden; overflow-x: clip; max-width: 100vw; }

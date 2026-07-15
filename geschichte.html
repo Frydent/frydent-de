@@ -58,6 +58,15 @@ image-slot::part(empty){color:#9C8C74}
 .ndrop>.nmenu{visibility:hidden;opacity:0;position:absolute;top:100%;left:-16px;padding-top:12px;z-index:130;transition:opacity .15s ease}
 .ndrop:hover>.nmenu{visibility:visible;opacity:1}
 
+/* geschichte: konvertierte hover/pseudo-Regeln + Polaroid */
+.g-hover-4bf25a:hover{transform:rotate(0) translateY(-6px);box-shadow:0 26px 40px -14px rgba(70,45,20,.5)}
+.g-before-b4f2cd::before{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 5px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,10px 4px}
+.g-hover-cdcf90:hover{background:#2C4170;color:#ffffff}
+.g-before-07fe85::before{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 75px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,0 4px}
+.g-after-b2b66c::after{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 5px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,10px 4px}
+.g-after-9251d5::after{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 75px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,0 4px}
+.polaroid{cursor:default}
+
 </style>
 
 
@@ -121,7 +130,7 @@ image-slot::part(empty){color:#9C8C74}
     <div style="display:flex;flex-direction:column;gap:16px;order:2">
       <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1.25;font-weight:600;color:#8F7440">Lächeln mit Geschichte.<br>Behandlung mit Zukunft.</h2>
       <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:52ch">Diese Räume haben schon viel gesehen. Seit 1925 wird hier Zahnmedizin praktiziert, im selben Haus, mitten in Bonndorf. Generation um Generation hat die Praxis geführt, jede mit ihrer eigenen Handschrift und alle mit demselben Anspruch.</p>
-      <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:52ch;font-weight:600">100 Jahre Zahnmedizin in Bonndorf — und Sie sind ein Teil dieser Geschichte.</p>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:52ch;font-weight:600">100 Jahre Zahnmedizin in Bonndorf, und Sie sind ein Teil dieser Geschichte.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;order:1">
       <div style="position:relative;width:100%;height:460px;filter:drop-shadow(0 20px 24px rgba(30,45,77,.25))">
@@ -216,20 +225,251 @@ image-slot::part(empty){color:#9C8C74}
   </div>
   </div>
 
-  <!-- traditionen -->
-  <div style="background:#EFE4CE" data-screen-label="Zwei Traditionen">
-  <div style="display:grid;grid-template-columns:460px minmax(0,1fr);gap:56px;padding:70px 56px;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
-    <div style="position:relative;width:100%;height:360px">
-      <img id="h-eurochair" src="assets/historie-wartezimmer.webp" alt="Wartezimmer mit Eurochair-Stühlen von Girsberger" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
+  <!-- wer erkennt sich wieder -->
+  <div id="fotoalbum" style="border-top: 1px solid rgba(169,143,92,.55); border-bottom: 1px solid rgba(169,143,92,.55); background-color: #E2D5BB; border-color: #A98F5CAA; position: relative" data-screen-label="Wer erkennt sich wieder">
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,0.85fr); gap: 84px; align-items: center; padding: 64px 56px 70px; max-width: 1180px; margin: 0 auto; box-sizing: border-box; position: relative">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:46px 42px;justify-items:center;order:1">
+
+      <figure class="g-hover-4bf25a polaroid" style="margin:0;width:100%;max-width:250px;background:#FFFDF8;padding:12px 12px 6px;border-radius:3px;box-shadow:0 18px 30px -14px rgba(70,45,20,.42);transform:rotate(-2.4deg);transition:transform .25s ease,box-shadow .25s ease"><span aria-hidden="true" style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-2.5deg); width: 104px; height: 27px; background: linear-gradient(180deg, #FFFDF7A2, rgba(242,235,221,.82)); box-shadow: 0 3px 7px -1px rgba(70,45,20,.22); z-index: 3"></span>
+        
+        <div style="position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#E7DCC4;box-shadow:inset 0 0 34px rgba(70,45,20,.16)">
+          <img src="assets/historie-team-1983.webp" alt="" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <figcaption style="padding:10px 6px 5px;text-align:center;font-family:'Caveat',cursive;font-size:21px;line-height:1.15;color:#37538E">Das Team, Sommer 1983</figcaption>
+      </figure>
+
+      <figure class="g-hover-4bf25a polaroid" style="margin:0;width:100%;max-width:250px;background:#FFFDF8;padding:12px 12px 6px;border-radius:3px;box-shadow:0 18px 30px -14px rgba(70,45,20,.42);transform:rotate(1.8deg);transition:transform .25s ease,box-shadow .25s ease"><span aria-hidden="true" style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-2.5deg); width: 104px; height: 27px; background: linear-gradient(180deg, #FFFDF7A1, rgba(242,235,221,.82)); box-shadow: 0 3px 7px -1px rgba(70,45,20,.22); z-index: 3"></span>
+        
+        <div style="position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#E7DCC4;box-shadow:inset 0 0 34px rgba(70,45,20,.16)">
+          <img src="assets/historie-team-1986.webp" alt="" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <figcaption style="padding:10px 6px 5px;text-align:center;font-family:'Caveat',cursive;font-size:21px;line-height:1.15;color:#37538E">Praxisteam, Herbst 1986</figcaption>
+      </figure>
+
+      <figure class="g-hover-4bf25a polaroid" style="margin:0;width:100%;max-width:250px;background:#FFFDF8;padding:12px 12px 6px;border-radius:3px;box-shadow:0 18px 30px -14px rgba(70,45,20,.42);transform:rotate(-1.4deg);transition:transform .25s ease,box-shadow .25s ease"><span aria-hidden="true" style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-2.5deg); width: 104px; height: 27px; background: linear-gradient(180deg, #FFFDF7A6, rgba(242,235,221,.82)); box-shadow: 0 3px 7px -1px rgba(70,45,20,.22); z-index: 3"></span>
+        
+        <div style="position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#E7DCC4;box-shadow:inset 0 0 34px rgba(70,45,20,.16)">
+          <img src="assets/historie-team-1992.webp" alt="" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <figcaption style="padding:10px 6px 5px;text-align:center;font-family:'Caveat',cursive;font-size:21px;line-height:1.15;color:#37538E">„Die starke Truppe", 1992</figcaption>
+      </figure>
+
+      <figure class="g-hover-4bf25a polaroid" style="margin:0;width:100%;max-width:250px;background:#FFFDF8;padding:12px 12px 6px;border-radius:3px;box-shadow:0 18px 30px -14px rgba(70,45,20,.42);transform:rotate(2.6deg);transition:transform .25s ease,box-shadow .25s ease"><span aria-hidden="true" style="position: absolute; top: -11px; left: 50%; transform: translateX(-50%) rotate(-2.5deg); width: 104px; height: 27px; background: linear-gradient(180deg, #FFFDF7A2, rgba(242,235,221,.82)); box-shadow: 0 3px 7px -1px rgba(70,45,20,.22); z-index: 3"></span>
+        
+        <div style="position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;background:#E7DCC4;box-shadow:inset 0 0 34px rgba(70,45,20,.16)">
+          <img src="assets/historie-team-album-4.webp" alt="" loading="lazy" style="width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <figcaption style="padding:10px 6px 5px;text-align:center;font-family:'Caveat',cursive;font-size:21px;line-height:1.15;color:#37538E">Vertraute Gesichter, damals wie heute</figcaption>
+      </figure>
+
     </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#8F7440">Wenn zwei Traditionen sich begegnen</h2>
-      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">In unserem Wartezimmer stehen Stühle der Schweizer Traditionsfirma Girsberger — Modell „Eurochair", ein Designklassiker der 1970er Jahre.</p>
-      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">Gekauft im Jahr 1973, gefertigt im Werk in Endingen am Kaiserstuhl, begleiten sie unsere Praxis nun seit über 50 Jahren.</p>
+
+    <div style="display:flex;flex-direction:column;gap:16px;order:2">
+      <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Aus dem Fotoalbum</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1.15;font-weight:600;color:#2C4170">Wer erkennt sich wieder?</h2>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:44ch">Vier Jahrzehnte, viele Gesichter, ein Ort. Vielleicht entdecken Sie auf einem dieser Bilder ein bekanntes Lächeln, eine frühere Kollegin, einen Nachbarn oder <br>sich selbst.</p>
+      <p style="margin:4px 0 0;font-size:15.5px;line-height:1.7;color:#5E5241;max-width:44ch">Sie erkennen jemanden oder haben selbst noch Fotos aus dieser Zeit? Erzählen Sie es uns, wir sammeln die Geschichte unserer Praxis weiter.</p>
+      <a class="g-hover-cdcf90" href="neu-bei-uns.html#kontakt" style="display:inline-block;align-self:flex-start;margin-top:6px;background:#37538E;color:#ffffff;padding:13px 28px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif">Geschichte teilen</a>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- archiv: räume von damals -->
+  <div id="archiv" style="background:#FAF4E8;border-top:1px solid #E0D7C2;border-bottom:1px solid #E0D7C2" data-screen-label="Archiv Räume">
+  <div style="max-width:1180px;margin:0 auto;padding:60px 56px 100px;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;margin-bottom:34px">
+      <div class="g-before-07fe85 g-after-b2b66c" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Aus dem Archiv</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1.15;font-weight:600;color:#2C4170;text-wrap:balance">Ein Blick in die Räume von damals</h2>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4F5157; max-width: 56ch">Drei Aufnahmen aus dem Archiv, und dieselben Räume, wie sie heute aussehen.</p>
+      <div style="display:flex;align-items:center;gap:9px;margin-top:6px;margin-bottom:26px;color:#8F7440">
+        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="#8F7440" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 1 1 6l4 5M17 1l4 5-4 5M1 6h20"></path></svg>
+        <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:2px">ZIEHEN ZUM VERGLEICHEN</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;max-width:1180px;margin:0 auto">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+          <ba-slider before="assets/archiv-raum-1.webp" after="assets/zimmer4-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+        </div>
+        <figcaption style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Behandlungszimmer 4, früher und heute</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+          <ba-slider before="assets/archiv-raum-2.webp" after="assets/zimmer1-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+        </div>
+        <figcaption style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Behandlungszimmer 1, früher und heute</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
+        <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+          <ba-slider before="assets/steri-damals-alt.webp" after="assets/steri-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+        </div>
+        <figcaption style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Unsere Aufbereitung, früher und heute</figcaption>
+      </figure>
     </div>
   </div>
   </div>
 
+  <!-- traditionen -->
+  
+
+  <!-- damals & heute: labor-lampe -->
+  <div id="damals-heute" style="background: #EFE4CE; position: relative" data-screen-label="Zwei Traditionen">
+  
+  <div style="display: grid; grid-template-columns: minmax(0,1fr) 460px; gap: 110px; padding: 56px 56px; align-items: center; max-width: 1180px; margin: 0 auto; box-sizing: border-box; position: relative">
+    <div style="display:flex;flex-direction:column;gap:12px;order:2">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/stuhl-damals.webp" after="assets/stuhl-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Unsere Stühle, 1973 und heute</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;order:1">
+      <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170">Wenn zwei Traditionen sich begegnen</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">In unserem Wartezimmer stehen Stühle der Schweizer Traditionsfirma Girsberger, Modell „Eurochair", ein Designklassiker der 1970er Jahre.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">Gekauft 1973, gefertigt in Endingen am Kaiserstuhl, begleiten sie unsere Praxis seit über 50 Jahren. Auf dem Etikett im Inneren steht noch die ursprüngliche Garantie: gültig bis zum 30. Juni 1977.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">Statt sie zu ersetzen, haben wir sie fachgerecht neu polstern lassen, von Girsberger selbst, demselben Haus, aus dem sie vor über fünf Jahrzehnten kamen. Form, Stabilität und Sitzkomfort suchen bis heute ihresgleichen.</p>
+      <div style="display:flex;gap:22px;margin-top:10px;align-items:flex-start">
+        <figure style="margin:0;width:126px;background:#FFFDF8;padding:7px 7px 4px;border-radius:2px;box-shadow:0 10px 18px -10px rgba(70,45,20,.4);transform:rotate(-2deg)">
+          <img src="assets/stuhl-blau.webp" alt="Frisch gepolsterter Girsberger-Stuhl" style="width:100%;height:auto;display:block">
+          <figcaption style="padding:6px 2px 3px;text-align:center;font-family:'Caveat',cursive;font-size:16px;line-height:1.1;color:#37538E">Frisch gepolstert</figcaption>
+        </figure>
+        <figure style="margin:0;width:126px;background:#FFFDF8;padding:7px 7px 4px;border-radius:2px;box-shadow:0 10px 18px -10px rgba(70,45,20,.4);transform:rotate(1.8deg)">
+          <img src="assets/stuhl-etikett.webp" alt="Original-Etikett mit Garantie bis 30.06.1977" style="width:100%;height:auto;display:block">
+          <figcaption style="padding:6px 2px 3px;text-align:center;font-family:'Caveat',cursive;font-size:16px;line-height:1.1;color:#37538E">Garantie bis 30.06.1977</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div></div><div style="background:#FAF4E8" data-screen-label="Damals &amp; Heute">
+  <div style="display:grid;grid-template-columns:460px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;gap:14px;order:2">
+      <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Dieselbe Lampe. Ein halbes Jahrhundert Arbeit.</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Über der Werkbank in unserem Labor hängt seit 1973 dieselbe Scherenlampe. Wo früher Waage und Handstück den Ton angaben, arbeiten wir heute mit moderner Technik. Das Licht ist geblieben.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;order:1">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/labor-damals-alt.webp" after="assets/labor-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Unser Labor, früher und heute</div>
+    </div>
+  </div>
+  </div>
+
+
+
+  <!-- zwischenwort -->
+  
+
+  <!-- damals & heute: empfang -->
+  <div style="border-top: 1px solid #E0D7C2; border-bottom: 1px solid #E0D7C2; background-color: #E2D5BB; position: relative" data-screen-label="Zwischenwort">
+  <div style="max-width:860px;margin:0 auto;padding:64px 56px 88px;text-align:center;box-sizing:border-box">
+    <h2 style="margin:0 0 26px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte gehört zu unserer Identität.</h2>
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:62ch;margin:0 auto;text-align:left">
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#5E5241">Unsere Praxis ist über viele Jahrzehnte gewachsen. Generationen von Mitarbeiterinnen und Mitarbeitern haben diesen Ort geprägt und das Vertrauen aufgebaut, das uns bis heute trägt.</p>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#5E5241">Deshalb haben wir uns bei der Modernisierung bewusst entschieden, nicht alles Alte zu ersetzen. In vielen Behandlungszimmern sind liebevoll aufgearbeitete Schränke aus früheren Zeiten erhalten geblieben. Auch unsere historischen Stühle wurden sorgfältig restauriert und begleiten unsere Praxis bis heute.</p>
+      <p style="margin:0;font-size:16px;line-height:1.8;color:#5E5241">Für uns sind sie weit mehr als Möbelstücke. Sie erinnern daran, dass moderne Zahnmedizin und der respektvolle Umgang mit der eigenen Geschichte wunderbar zusammenpassen.</p>
+    </div>
+    <div style="display:flex;justify-content:flex-end;align-items:baseline;margin-top:26px;padding-right:48px">
+      <span style="display: inline-block; font-family: 'Great Vibes',cursive; font-size: 30px; line-height: 1; color: #37538E">Tatiana Frydrych</span>
+    </div>
+  </div>
+    <svg data-stamp="" width="230" height="230" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 70px; transform: rotate(-10deg); opacity: .5; pointer-events: none; left: 1337px">
+      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
+      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
+      <defs><path id="stArc3" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
+      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc3">MIT HERZ UND TRADITION</textPath></text>
+      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
+      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
+    </svg></div>
+
+  <!-- damals & heute: behandlungszimmer -->
+  <div style="background:#FAF4E8" data-screen-label="Damals &amp; Heute, Empfang">
+  <div style="display:grid;grid-template-columns:480px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;gap:14px;order:2">
+      <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Ankommen und willkommen sein</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Der erste Eindruck zählt, damals wie heute. Wo einst Karteikarten und Terminbuch den Empfang bestimmten, begrüßen wir Sie heute an einer hellen, offenen Rezeption, mit demselben freundlichen Blick.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Und eine schöne Kontinuität: Am Empfang von heute sitzt Frau Anette Gantert, die Sie auch auf den Teamfotos weiter oben entdecken können.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Übrigens: Einige Schränke aus jener Zeit sind bis heute im Einsatz, inzwischen mehrfach neu lackiert. Auf den Bildern können Sie sie wiederentdecken.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;order:1">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/empfang-damals.webp" after="assets/empfang-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Unser Empfang, früher und heute</div>
+    </div>
+  </div>
+  </div><div style="background: #EFE4CE; position: relative" data-screen-label="Damals &amp; Heute, Behandlungszimmer">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 480px;gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;gap:12px;order:2">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/behandlung-damals-alt.webp" after="assets/behandlung-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Behandlungszimmer 2, früher und heute</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;order:1">
+      <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty">Wo aus Sorge Vertrauen wird</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:56ch">Der Behandlungsstuhl von einst hat viele Generationen begleitet. Heute arbeiten wir in einem lichten Raum mit moderner Technik, einer freundlichen Wandgestaltung und viel Blick nach draußen.</p>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:56ch">Geblieben ist, was zählt: Zeit, Ruhe und eine Behandlung, die den Menschen sieht.</p>
+    </div>
+  </div>
+  </div>
+
+  <!-- damals & heute: behandlungsraum -->
+  <div style="background: #FAF4E8; position: relative" data-screen-label="Damals &amp; Heute, Behandlungsraum">
+  <div style="display:grid;grid-template-columns:480px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;gap:14px;order:2">
+      <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Vom Sprechzimmer zum lichten Raum</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Wo früher schwere Vorhänge und dunkles Mobiliar den Raum prägten, sorgen heute helle Farben, ein florales Wandbild und moderne Geräte für eine Atmosphäre, in der man sich wohlfühlt.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;order:1">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/zimmer-damals-alt.webp" after="assets/zimmer-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Behandlungsraum 3, früher und heute</div>
+    </div>
+  </div>
+  </div>
+
+  <!-- damals & heute: röntgen -->
+  
+
+  <!-- schlusswort -->
+  <div style="background: #EFE4CE; position: relative" data-screen-label="Damals &amp; Heute, Röntgen">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;flex-direction:column;gap:12px;order:2">
+      <div style="position:relative;width:100%;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:8px solid #FBF6EC;box-shadow:0 0 0 1px rgba(143,116,64,.5),0 14px 28px -14px rgba(70,45,20,.42)">
+        <ba-slider before="assets/roentgen-damals.webp" after="assets/roentgen-heute.webp" before-label="Gestern" before-sub="1973–1975" after-label="Heute" after-sub="2024–2026" start="100"></ba-slider>
+      </div>
+      <div style="font-size:13.5px;color:#9C8C74;text-align:center;font-style:italic">Der Röntgenbereich, früher und heute</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;order:1">
+      <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:18ch">Ein klareres Bild, in jeder Hinsicht</h2>
+      <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Die alte Röntgeneinheit an ihrem Stativ hat über Jahrzehnte gute Dienste geleistet. Heute liefert moderne, strahlungsarme Technik in Sekunden präzise Aufnahmen, schonend für Sie und genau für uns.</p>
+    </div>
+  </div>
+  </div><div style="border-top: 1px solid #E0D7C2; background-color: #F4EFE2; position: relative" data-screen-label="Schlusswort">
+  <div style="max-width:860px;margin:0 auto;padding:64px 56px 58px;text-align:center;box-sizing:border-box">
+    <h2 style="margin:0 0 22px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte verpflichtet.</h2>
+    <p style="margin:0 auto 36px;font-size:16px;line-height:1.8;color:#5E5241;max-width:62ch;text-align:left">Seit 1925 verändert sich die Zahnmedizin ständig. Was geblieben ist, ist unsere Haltung: Menschen mit Respekt zu begegnen, sorgfältig zu arbeiten und Verantwortung über Generationen hinweg zu übernehmen. Genau deshalb schreiben wir diese Geschichte bis heute weiter.</p>
+    <div aria-hidden="true" style="width:80px;height:9px;margin:0 auto 32px;background-image:radial-gradient(circle at 40px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,5px 4px"></div>
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:31px;line-height:1.45;font-weight:500;font-style:italic;color:#2C4170;text-wrap:balance">„100 Jahre, vier Generationen, ein Haus. Das nächste Kapitel schreiben wir mit Ihnen."</p>
+  </div>
+  <svg data-stamp="" width="230" height="230" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 178px; transform: rotate(-10deg); opacity: .5; pointer-events: none; left: 120px">
+      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
+      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
+      <defs><path id="stArc2" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
+      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc2">VIER GENERATIONEN</textPath></text>
+      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
+      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
+    </svg></div>
+
+  
   <!-- kontakt kurz -->
   <div id="kontakt" style="background-color:#414E77;background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.015) 0 1px, transparent 1px 5px)" data-screen-label="Kontakt">
   <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;color:#E8EEF8;padding:44px 56px;max-width:1440px;margin:0 auto;box-sizing:border-box">
@@ -287,6 +527,9 @@ image-slot::part(empty){color:#9C8C74}
   </div>
 
 </div>
+
+<div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.5;mix-blend-mode:multiply;background-image:url('assets/paper-grain.png');background-size:220px 220px"></div>
+<script src="beforeafter.js" defer></script>
 
 <script>(function(){var mq=matchMedia('(max-width: 900px)');
 document.addEventListener('click',function(e){

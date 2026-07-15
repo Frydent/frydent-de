@@ -173,6 +173,37 @@
   [style*="height:360px"], [style*="height: 360px"],
   [style*="height:340px"], [style*="height: 340px"],
   [style*="height:330px"], [style*="height: 330px"] { height: auto !important; aspect-ratio: 3/2 !important; }
+
+  /* ========== geschichte.html: Timeline ========== */
+  /* Desktop-Raster [Jahr | Punkt+Linie | Text] → einspaltig, Jahr zentriert über dem Punkt */
+  [data-screen-label="Historie Timeline"] [style*="grid-template-columns:132px 40px minmax(0,1fr)"] {
+    display: flex !important; flex-direction: column !important;
+    align-items: center !important; text-align: center !important;
+    gap: 6px !important; padding-bottom: 40px !important;
+  }
+  /* Jahr / Generation-Label: zentriert, nicht mehr rechtsbündig */
+  [data-screen-label="Historie Timeline"] [style*="grid-template-columns:132px 40px minmax(0,1fr)"] > div:first-child {
+    text-align: center !important;
+  }
+  /* Punkt-Spalte: nur der Punkt bleibt, die vertikale Linie entfällt einspaltig */
+  [data-screen-label="Historie Timeline"] [style*="grid-template-columns:132px 40px minmax(0,1fr)"] > div:nth-child(2) > div:last-child {
+    display: none !important;
+  }
+  [data-screen-label="Historie Timeline"] [style*="grid-template-columns:132px 40px minmax(0,1fr)"] > div:nth-child(2) > div:first-child {
+    margin-top: 4px !important;
+  }
+  /* Textblock: zentriert, linkes Einrück-Padding weg */
+  [data-screen-label="Historie Timeline"] [style*="grid-template-columns:132px 40px minmax(0,1fr)"] > div:last-child {
+    align-items: center !important; text-align: center !important;
+    padding: 4px 0 0 0 !important;
+  }
+
+  /* ========== geschichte.html: Damals & Heute konsequent Text oben, Bild unten ========== */
+  /* In allen Slider-Sektionen: Textblock (mit h2) zuerst, Slider/Bild darunter, unabhängig vom Desktop-order */
+  [data-screen-label^="Damals"] > div > div:has(> h2),
+  [data-screen-label="Zwei Traditionen"] > div > div:has(> h2) { order: 0 !important; }
+  [data-screen-label^="Damals"] > div > div:has(ba-slider),
+  [data-screen-label="Zwei Traditionen"] > div > div:has(ba-slider) { order: 1 !important; }
 }
 
 @media (max-width: 600px) {

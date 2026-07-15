@@ -82,7 +82,7 @@ image-slot::part(empty){color:#9C8C74}
   [data-screen-label="Zwischenwort"] svg[data-stamp]{right:auto !important;left:-70px !important;top:auto !important;bottom:20px !important}
   [data-screen-label="Schlusswort"] svg[data-stamp]{left:auto !important;right:-70px !important;top:120px !important}
   /* iOS: background-attachment:fixed ist unzuverlässig — auf Mobil scroll */
-  #historie, [data-screen-label="Zwischenwort"]{background-attachment:scroll !important}
+  #historie, [data-screen-label="Zwischenwort"], [data-screen-label="Intro"]{background-attachment:scroll !important}
 }
 
 </style>
@@ -133,7 +133,7 @@ image-slot::part(empty){color:#9C8C74}
 
 
   <!-- intro -->
-  <div style="position:relative;overflow:hidden;background-color:#F2EFE8;background-image:repeating-linear-gradient(0deg,rgba(143,116,64,.05) 0px,rgba(143,116,64,.05) 1px,transparent 1px,transparent 1.6px),repeating-linear-gradient(90deg,rgba(143,116,64,.035) 0px,rgba(143,116,64,.035) 1px,transparent 1px,transparent 1.6px),linear-gradient(180deg,#F2EFE8 0%,#F1E7D5 70%,#EFE3CE 100%)" data-screen-label="Intro">
+  <div style="position:relative;overflow:hidden;background-color:#F2EFE8;background-image:url('assets/linen-tex.png'),repeating-linear-gradient(0deg,rgba(143,116,64,.05) 0px,rgba(143,116,64,.05) 1px,transparent 1px,transparent 1.6px),repeating-linear-gradient(90deg,rgba(143,116,64,.035) 0px,rgba(143,116,64,.035) 1px,transparent 1px,transparent 1.6px),linear-gradient(180deg,#F2EFE8 0%,#F1E7D5 70%,#EFE3CE 100%);background-size:160px 160px,auto,auto,auto;background-attachment:fixed,scroll,scroll,scroll" data-screen-label="Intro">
     <img src="assets/historie-schloss-sepia.webp" alt="Schloss Bonndorf" aria-hidden="true" style="position:absolute;top:6%;right:-4%;transform:none;height:auto;width:min(1480px,104%);max-width:none;opacity:.58;mix-blend-mode:multiply;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 8%,rgba(0,0,0,.35) 42%,#000 78%,#000 100%);mask-image:linear-gradient(90deg,transparent 8%,rgba(0,0,0,.35) 42%,#000 78%,#000 100%)">
   <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;padding:76px 56px 80px;align-items:flex-start;text-align:left;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="font-size:16px;letter-spacing:3px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Seit 1925</div>

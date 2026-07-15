@@ -57,6 +57,7 @@ image-slot::part(empty){color:#9C8C74}
 .ndrop{position:relative;display:inline-flex}
 .ndrop>.nmenu{visibility:hidden;opacity:0;position:absolute;top:100%;left:-16px;padding-top:12px;z-index:130;transition:opacity .15s ease}
 .ndrop:hover>.nmenu{visibility:visible;opacity:1}
+.g-intronav:hover{color:#37538E !important;border-bottom-color:#37538E !important}
 
 /* geschichte: konvertierte hover/pseudo-Regeln + Polaroid */
 .g-hover-4bf25a:hover{transform:rotate(0) translateY(-6px);box-shadow:0 26px 40px -14px rgba(70,45,20,.5)}
@@ -66,6 +67,17 @@ image-slot::part(empty){color:#9C8C74}
 .g-after-b2b66c::after{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 5px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,10px 4px}
 .g-after-9251d5::after{content:'';flex:none;width:80px;height:9px;background-image:radial-gradient(circle at 75px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,0 4px}
 .polaroid{cursor:default}
+
+/* Mobil: vergrößerte Titel auf schmalen Screens zurücknehmen (nur diese Seite) */
+@media (max-width: 600px){
+  h1[style*="font-size:56px"]{font-size:32px !important;line-height:1.12 !important}
+  h2[style*="font-size:46px"]{font-size:28px !important;line-height:1.2 !important}
+  h2[style*="font-size:44px"]{font-size:27px !important;line-height:1.2 !important}
+  h2[style*="font-size:40px"]{font-size:26px !important}
+  /* Timeline-Jahreszahlen und „Heute" mitskalieren */
+  [data-screen-label="Historie Timeline"] div[style*="font-size:46px"]{font-size:30px !important}
+  [data-screen-label="Historie Timeline"] div[style*="font-size:34px"]{font-size:26px !important}
+}
 
 </style>
 
@@ -116,11 +128,20 @@ image-slot::part(empty){color:#9C8C74}
 
   <!-- intro -->
   <div style="position:relative;overflow:hidden;background-color:#F2EFE8;background-image:repeating-linear-gradient(0deg,rgba(143,116,64,.05) 0px,rgba(143,116,64,.05) 1px,transparent 1px,transparent 1.6px),repeating-linear-gradient(90deg,rgba(143,116,64,.035) 0px,rgba(143,116,64,.035) 1px,transparent 1px,transparent 1.6px),linear-gradient(180deg,#F2EFE8 0%,#F1E7D5 70%,#EFE3CE 100%)" data-screen-label="Intro">
-    <img src="assets/historie-schloss-sepia.webp" alt="Schloss Bonndorf" aria-hidden="true" style="position:absolute;top:44%;right:-7%;transform:translateY(-50%);height:auto;width:min(1020px,84%);max-width:none;opacity:.52;mix-blend-mode:multiply;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 26%,#000 72%,#000 100%);mask-image:linear-gradient(90deg,transparent 26%,#000 72%,#000 100%)">
+    <img src="assets/historie-schloss-sepia.webp" alt="Schloss Bonndorf" aria-hidden="true" style="position:absolute;top:42%;right:-4%;transform:translateY(-50%);height:auto;width:min(1240px,92%);max-width:none;opacity:.58;mix-blend-mode:multiply;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent 8%,rgba(0,0,0,.35) 42%,#000 78%,#000 100%);mask-image:linear-gradient(90deg,transparent 8%,rgba(0,0,0,.35) 42%,#000 78%,#000 100%)">
   <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;padding:76px 56px 80px;align-items:flex-start;text-align:left;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Seit 1925</div>
-    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:48px;line-height:1.12;font-weight:600;color:#8F7440;text-wrap:pretty;max-width:15ch">Verwurzelt im Schwarzwald. Seit 1925.</h1>
+    <h1 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:56px;line-height:1.12;font-weight:600;color:#8F7440;text-wrap:pretty;max-width:15ch">Verwurzelt im Schwarzwald. Seit 1925.</h1>
     <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:46ch">Zwischen Tannenwäldern, klarer Luft und der gewachsenen Gemeinschaft von Bonndorf begann 1925 eine zahnmedizinische Geschichte, die bis heute weitergeschrieben wird. FRYDENT ist mehr als eine Zahnarztpraxis: Wir sind Teil dieser Region. Teil ihrer Menschen. Teil ihrer Geschichte.</p>
+    <nav style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:14px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase">
+      <a href="#historie" class="g-intronav" style="color:#8F7440;text-decoration:none;border-bottom:1px solid rgba(143,116,64,.35);padding-bottom:3px">Chronik</a>
+      <span aria-hidden="true" style="width:5px;height:5px;border-radius:50%;background:#C4A44E;flex:none"></span>
+      <a href="#fotoalbum" class="g-intronav" style="color:#8F7440;text-decoration:none;border-bottom:1px solid rgba(143,116,64,.35);padding-bottom:3px">Fotoalbum</a>
+      <span aria-hidden="true" style="width:5px;height:5px;border-radius:50%;background:#C4A44E;flex:none"></span>
+      <a href="#archiv" class="g-intronav" style="color:#8F7440;text-decoration:none;border-bottom:1px solid rgba(143,116,64,.35);padding-bottom:3px">Aus dem Archiv</a>
+      <span aria-hidden="true" style="width:5px;height:5px;border-radius:50%;background:#C4A44E;flex:none"></span>
+      <a href="#damals-heute" class="g-intronav" style="color:#8F7440;text-decoration:none;border-bottom:1px solid rgba(143,116,64,.35);padding-bottom:3px">Damals &amp; Heute</a>
+    </nav>
   </div>
   </div>
 
@@ -128,7 +149,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="background:#FAF4E8;position:relative;overflow:hidden" data-screen-label="Lächeln mit Geschichte">
   <div style="display:grid;grid-template-columns:480px minmax(0,1fr);gap:64px;padding:40px 56px 76px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:16px;order:2">
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1.25;font-weight:600;color:#8F7440">Lächeln mit Geschichte.<br>Behandlung mit Zukunft.</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:44px;line-height:1.25;font-weight:600;color:#8F7440">Lächeln mit Geschichte.<br>Behandlung mit Zukunft.</h2>
       <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:52ch">Diese Räume haben schon viel gesehen. Seit 1925 wird hier Zahnmedizin praktiziert, im selben Haus, mitten in Bonndorf. Generation um Generation hat die Praxis geführt, jede mit ihrer eigenen Handschrift und alle mit demselben Anspruch.</p>
       <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:52ch;font-weight:600">100 Jahre Zahnmedizin in Bonndorf, und Sie sind ein Teil dieser Geschichte.</p>
     </div>
@@ -146,7 +167,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="padding:74px 56px 84px;max-width:940px;margin:0 auto;box-sizing:border-box">
     <div style="text-align:center;margin:0 0 56px">
       <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif;margin-bottom:10px">Vier Generationen</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#8F7440">Unsere Historie</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#8F7440">Unsere Historie</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:0">
 
@@ -218,7 +239,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="display:grid;grid-template-columns:minmax(0,1fr) 540px;gap:64px;padding:72px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:16px">
       <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Menschlichkeit</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.25;font-weight:600;color:#8F7440">Ein Lächeln, das Generationen verbindet.</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.25;font-weight:600;color:#2C4170">Ein Lächeln, das Generationen verbindet.</h2>
       <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:50ch">Zwischen Behandlung und Gespräch war immer Platz für ein Lachen. Was diese Praxis seit jeher ausmacht, ist nicht allein die Medizin, sondern die Nähe zu den Menschen, die ihr vertrauen.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px">
@@ -272,7 +293,7 @@ image-slot::part(empty){color:#9C8C74}
 
     <div style="display:flex;flex-direction:column;gap:16px;order:2">
       <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Aus dem Fotoalbum</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:40px;line-height:1.15;font-weight:600;color:#2C4170">Wer erkennt sich wieder?</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.15;font-weight:600;color:#2C4170">Wer erkennt sich wieder?</h2>
       <p style="margin:0;font-size:16px;line-height:1.75;color:#5E5241;max-width:44ch">Vier Jahrzehnte, viele Gesichter, ein Ort. Vielleicht entdecken Sie auf einem dieser Bilder ein bekanntes Lächeln, eine frühere Kollegin, einen Nachbarn oder <br>sich selbst.</p>
       <p style="margin:4px 0 0;font-size:15.5px;line-height:1.7;color:#5E5241;max-width:44ch">Sie erkennen jemanden oder haben selbst noch Fotos aus dieser Zeit? Erzählen Sie es uns, wir sammeln die Geschichte unserer Praxis weiter.</p>
       <a class="g-hover-cdcf90" href="neu-bei-uns.html#kontakt" style="display:inline-block;align-self:flex-start;margin-top:6px;background:#37538E;color:#ffffff;padding:13px 28px;border-radius:999px;font-size:14.5px;font-weight:600;font-family:'Quicksand',sans-serif">Geschichte teilen</a>
@@ -286,7 +307,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="max-width:1180px;margin:0 auto;padding:60px 56px 100px;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;margin-bottom:34px">
       <div class="g-before-07fe85 g-after-b2b66c" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Aus dem Archiv</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:36px;line-height:1.15;font-weight:600;color:#2C4170;text-wrap:balance">Ein Blick in die Räume von damals</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.15;font-weight:600;color:#2C4170;text-wrap:balance">Ein Blick in die Räume von damals</h2>
       <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #4F5157; max-width: 56ch">Drei Aufnahmen aus dem Archiv, und dieselben Räume, wie sie heute aussehen.</p>
       <div style="display:flex;align-items:center;gap:9px;margin-top:6px;margin-bottom:26px;color:#8F7440">
         <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="#8F7440" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 1 1 6l4 5M17 1l4 5-4 5M1 6h20"></path></svg>
@@ -331,7 +352,7 @@ image-slot::part(empty){color:#9C8C74}
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;order:1">
       <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170">Wenn zwei Traditionen sich begegnen</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170">Wenn zwei Traditionen sich begegnen</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">In unserem Wartezimmer stehen Stühle der Schweizer Traditionsfirma Girsberger, Modell „Eurochair", ein Designklassiker der 1970er Jahre.</p>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">Gekauft 1973, gefertigt in Endingen am Kaiserstuhl, begleiten sie unsere Praxis seit über 50 Jahren. Auf dem Etikett im Inneren steht noch die ursprüngliche Garantie: gültig bis zum 30. Juni 1977.</p>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:60ch">Statt sie zu ersetzen, haben wir sie fachgerecht neu polstern lassen, von Girsberger selbst, demselben Haus, aus dem sie vor über fünf Jahrzehnten kamen. Form, Stabilität und Sitzkomfort suchen bis heute ihresgleichen.</p>
@@ -350,7 +371,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="display:grid;grid-template-columns:460px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:14px;order:2">
       <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Dieselbe Lampe. Ein halbes Jahrhundert Arbeit.</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Dieselbe Lampe. Ein halbes Jahrhundert Arbeit.</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Über der Werkbank in unserem Labor hängt seit 1973 dieselbe Scherenlampe. Wo früher Waage und Handstück den Ton angaben, arbeiten wir heute mit moderner Technik. Das Licht ist geblieben.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;order:1">
@@ -370,7 +391,7 @@ image-slot::part(empty){color:#9C8C74}
   <!-- damals & heute: empfang -->
   <div style="border-top: 1px solid #E0D7C2; border-bottom: 1px solid #E0D7C2; background-color: #E2D5BB; position: relative" data-screen-label="Zwischenwort">
   <div style="max-width:860px;margin:0 auto;padding:64px 56px 88px;text-align:center;box-sizing:border-box">
-    <h2 style="margin:0 0 26px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte gehört zu unserer Identität.</h2>
+    <h2 style="margin:0 0 26px;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte gehört zu unserer Identität.</h2>
     <div style="display:flex;flex-direction:column;gap:16px;max-width:62ch;margin:0 auto;text-align:left">
       <p style="margin:0;font-size:16px;line-height:1.8;color:#5E5241">Unsere Praxis ist über viele Jahrzehnte gewachsen. Generationen von Mitarbeiterinnen und Mitarbeitern haben diesen Ort geprägt und das Vertrauen aufgebaut, das uns bis heute trägt.</p>
       <p style="margin:0;font-size:16px;line-height:1.8;color:#5E5241">Deshalb haben wir uns bei der Modernisierung bewusst entschieden, nicht alles Alte zu ersetzen. In vielen Behandlungszimmern sind liebevoll aufgearbeitete Schränke aus früheren Zeiten erhalten geblieben. Auch unsere historischen Stühle wurden sorgfältig restauriert und begleiten unsere Praxis bis heute.</p>
@@ -394,7 +415,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="display:grid;grid-template-columns:480px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:14px;order:2">
       <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Ankommen und willkommen sein</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Ankommen und willkommen sein</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Der erste Eindruck zählt, damals wie heute. Wo einst Karteikarten und Terminbuch den Empfang bestimmten, begrüßen wir Sie heute an einer hellen, offenen Rezeption, mit demselben freundlichen Blick.</p>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Und eine schöne Kontinuität: Am Empfang von heute sitzt Frau Anette Gantert, die Sie auch auf den Teamfotos weiter oben entdecken können.</p>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Übrigens: Einige Schränke aus jener Zeit sind bis heute im Einsatz, inzwischen mehrfach neu lackiert. Auf den Bildern können Sie sie wiederentdecken.</p>
@@ -416,7 +437,7 @@ image-slot::part(empty){color:#9C8C74}
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;order:1">
       <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty">Wo aus Sorge Vertrauen wird</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170;text-wrap:pretty">Wo aus Sorge Vertrauen wird</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:56ch">Der Behandlungsstuhl von einst hat viele Generationen begleitet. Heute arbeiten wir in einem lichten Raum mit moderner Technik, einer freundlichen Wandgestaltung und viel Blick nach draußen.</p>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:56ch">Geblieben ist, was zählt: Zeit, Ruhe und eine Behandlung, die den Menschen sieht.</p>
     </div>
@@ -428,7 +449,7 @@ image-slot::part(empty){color:#9C8C74}
   <div style="display:grid;grid-template-columns:480px minmax(0,1fr);gap:110px;padding:56px 56px;align-items:center;max-width:1180px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:14px;order:2">
       <div class="g-before-b4f2cd" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Vom Sprechzimmer zum lichten Raum</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:20ch">Vom Sprechzimmer zum lichten Raum</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Wo früher schwere Vorhänge und dunkles Mobiliar den Raum prägten, sorgen heute helle Farben, ein florales Wandbild und moderne Geräte für eine Atmosphäre, in der man sich wohlfühlt.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;order:1">
@@ -454,13 +475,13 @@ image-slot::part(empty){color:#9C8C74}
     </div>
     <div style="display:flex;flex-direction:column;gap:14px;order:1">
       <div class="g-after-9251d5" style="display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Damals &amp; Heute</div>
-      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:18ch">Ein klareres Bild, in jeder Hinsicht</h2>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:600;color:#2C4170;text-wrap:pretty;max-width:18ch">Ein klareres Bild, in jeder Hinsicht</h2>
       <p style="margin:0;font-size:15.5px;line-height:1.75;color:#5E5241;max-width:52ch">Die alte Röntgeneinheit an ihrem Stativ hat über Jahrzehnte gute Dienste geleistet. Heute liefert moderne, strahlungsarme Technik in Sekunden präzise Aufnahmen, schonend für Sie und genau für uns.</p>
     </div>
   </div>
   </div><div style="border-top: 1px solid #E0D7C2; background-color: #F4EFE2; position: relative" data-screen-label="Schlusswort">
   <div style="max-width:860px;margin:0 auto;padding:64px 56px 58px;text-align:center;box-sizing:border-box">
-    <h2 style="margin:0 0 22px;font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte verpflichtet.</h2>
+    <h2 style="margin:0 0 22px;font-family:'Cormorant Garamond',serif;font-size:46px;line-height:1.3;font-weight:600;color:#2C4170;text-wrap:balance">Geschichte verpflichtet.</h2>
     <p style="margin:0 auto 36px;font-size:16px;line-height:1.8;color:#5E5241;max-width:62ch;text-align:left">Seit 1925 verändert sich die Zahnmedizin ständig. Was geblieben ist, ist unsere Haltung: Menschen mit Respekt zu begegnen, sorgfältig zu arbeiten und Verantwortung über Generationen hinweg zu übernehmen. Genau deshalb schreiben wir diese Geschichte bis heute weiter.</p>
     <div aria-hidden="true" style="width:80px;height:9px;margin:0 auto 32px;background-image:radial-gradient(circle at 40px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,5px 4px"></div>
     <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:31px;line-height:1.45;font-weight:500;font-style:italic;color:#2C4170;text-wrap:balance">„100 Jahre, vier Generationen, ein Haus. Das nächste Kapitel schreiben wir mit Ihnen."</p>

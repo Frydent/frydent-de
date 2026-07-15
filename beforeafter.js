@@ -30,7 +30,7 @@
         'position:absolute;bottom:14px;display:flex;flex-direction:column;align-items:center;' +
         'line-height:1;padding:0;pointer-events:none;z-index:4;transition:opacity .25s ease';
       const wordStyle =
-        "font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#FBF6EC;letter-spacing:.5px;" +
+        "font-family:'Quicksand',sans-serif;font-size:17px;font-weight:600;color:#FBF6EC;letter-spacing:1.5px;" +
         'text-shadow:0 1px 3px rgba(30,45,77,.55),0 2px 12px rgba(30,45,77,.45)';
       const subStyle =
         "font-family:'Quicksand',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;" +

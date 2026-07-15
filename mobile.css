@@ -18,6 +18,10 @@
 
 @media (max-width: 900px) {
 
+  /* Kopfleiste auf Mobil: durchgehendes Pergament (volle Breite), trennt den Kopfbereich ab */
+  div[style*="position:sticky"][style*="z-index:100"] { background: #F1EFE9 !important; }
+  header[data-screen-label="Nav"] { background: #F1EFE9 !important; }
+
   /* ========== 1. STOP pływaniu strony ========== */
   html, body { overflow-x: hidden; overflow-x: clip; max-width: 100vw; }
 

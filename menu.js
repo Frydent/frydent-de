@@ -1,37 +1,42 @@
 /* FRYDENT – mobiles Hamburger-Menü */
 (function () {
-  function header() {
+  function getHeader() {
     var b = document.querySelector('.hamburger-btn');
     return b ? b.closest('header') : null;
   }
+  function setIcon(btn, open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var o = btn.querySelector('.hb-open');
+    var c = btn.querySelector('.hb-close');
+    if (o && c) {
+      o.style.display = open ? 'none' : '';
+      c.style.display = open ? '' : 'none';
+    }
+  }
+  function closeMenu() {
+    var h = getHeader();
+    if (!h || !h.classList.contains('menu-open')) return;
+    h.classList.remove('menu-open');
+    var btn = h.querySelector('.hamburger-btn');
+    if (btn) setIcon(btn, false);
+  }
+
   window.toggleMenu = function (btn) {
     var h = btn.closest('header');
     if (!h) return;
     var open = h.classList.toggle('menu-open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    var oIcon = btn.querySelector('.hb-open');
-    var cIcon = btn.querySelector('.hb-close');
-    if (oIcon && cIcon) {
-      oIcon.style.display = open ? 'none' : '';
-      cIcon.style.display = open ? '' : 'none';
-    }
+    setIcon(btn, open);
   };
-  // Klick außerhalb schließt das Menü
+
   document.addEventListener('click', function (e) {
-    var h = header();
+    var h = getHeader();
     if (!h || !h.classList.contains('menu-open')) return;
-    if (h.contains(e.target)) return;
-    h.classList.remove('menu-open');
-    var btn = h.querySelector('.hamburger-btn');
-    if (btn) {
-      btn.setAttribute('aria-expanded', 'false');
-      var o = btn.querySelector('.hb-open'), c = btn.querySelector('.hb-close');
-      if (o && c) { o.style.display = ''; c.style.display = 'none'; }
-    }
+    if (e.target.closest('.hamburger-btn')) return;      // Button: toggleMenu regelt das
+    if (!h.contains(e.target)) { closeMenu(); return; }  // außerhalb -> zu
+    if (e.target.closest('a[href]')) { closeMenu(); }    // Link angetippt -> zu
   });
-  // Menü schließen, wenn ein Link angetippt wird (außer Dropdown-Eltern)
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('header .menu-open a, header.menu-open a');
-    // handled via header check below
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
   });
 })();

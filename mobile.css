@@ -19,15 +19,11 @@
 /* Hamburger-Button: standardmäßig (Desktop) versteckt, nur auf Mobil sichtbar */
 .hamburger-btn {
   display: none;
-  align-items: center; justify-content: center; gap: 7px;
-  flex: none; height: 40px; padding: 0 12px;
-  background: none; border: 1.5px solid #D9D2C4; border-radius: 999px;
-  cursor: pointer; color: #1E2D4D;
-  font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-  font-family: 'Quicksand', sans-serif;
+  align-items: center; justify-content: center;
+  flex: none; width: 44px; height: 44px; padding: 0;
+  background: none; border: none; cursor: pointer; color: #1E2D4D;
 }
-.hamburger-btn svg { display: block; flex: none; }
-.hamburger-btn .hb-label { line-height: 1; }
+.hamburger-btn svg { display: block; }
 
 @media (max-width: 900px) {
 
@@ -67,9 +63,24 @@
   header[data-screen-label="Nav"] > nav > a:last-child,
   header[data-screen-label="Nav"] > nav > .ndrop:last-child > a { border-bottom: none !important; }
   header[data-screen-label="Nav"] > nav > .ndrop { width: 100%; display: block !important; }
-  /* Dropdown-Pfeile ausblenden; Untermenüs (Unterseiten) auf Mobil NICHT anzeigen — nur Hauptseiten */
-  header[data-screen-label="Nav"] > nav > .ndrop > a svg { display: none !important; }
+  /* Dropdown-Eltern: Pfeil sichtbar, dreht beim Aufklappen */
+  header[data-screen-label="Nav"] > nav > .ndrop > a { display: flex !important; align-items: center; justify-content: space-between; }
+  header[data-screen-label="Nav"] > nav > .ndrop > a svg { display: block !important; transition: transform .2s ease; flex: none; width: 16px !important; height: 16px !important; margin: -8px -8px -8px 8px; padding: 8px; box-sizing: content-box; }
+  header[data-screen-label="Nav"] > nav > .ndrop.expanded > a svg { transform: rotate(180deg); }
+  /* Untermenüs: standardmäßig zu, aufgeklappt bei .expanded */
   header[data-screen-label="Nav"] > nav .nmenu { display: none !important; }
+  header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu {
+    display: block !important; position: static !important; visibility: visible !important; opacity: 1 !important;
+  }
+  header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu > span {
+    display: block !important; box-shadow: none !important; border: none !important;
+    border-radius: 0 !important; padding: 0 !important; min-width: 0 !important; background: #FBFAF6 !important;
+  }
+  header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu a {
+    display: block !important; padding: 11px 20px 11px 34px !important;
+    font-size: 13px !important; color: #3D5A98 !important;
+    border-bottom: 1px solid #F3EFE6 !important; text-transform: none !important; white-space: normal;
+  }
   /* Aktionsleiste ganz aus (Buchen unten in der Schnellkontakt-Leiste vorhanden) */
   header[data-screen-label="Nav"] > div:last-child { display: none !important; }
 

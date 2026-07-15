@@ -4,28 +4,31 @@
     var b = document.querySelector('.hamburger-btn');
     return b ? b.closest('header') : null;
   }
-  function setIcon(btn, open) {
+  function setState(btn, open) {
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     var o = btn.querySelector('.hb-open');
     var c = btn.querySelector('.hb-close');
     if (o && c) {
       o.style.display = open ? 'none' : '';
       c.style.display = open ? '' : 'none';
     }
+    var lbl = btn.querySelector('.hb-label');
+    if (lbl) lbl.textContent = open ? 'Schließen' : 'Menü';
   }
   function closeMenu() {
     var h = getHeader();
     if (!h || !h.classList.contains('menu-open')) return;
     h.classList.remove('menu-open');
     var btn = h.querySelector('.hamburger-btn');
-    if (btn) setIcon(btn, false);
+    if (btn) setState(btn, false);
   }
 
   window.toggleMenu = function (btn) {
     var h = btn.closest('header');
     if (!h) return;
     var open = h.classList.toggle('menu-open');
-    setIcon(btn, open);
+    setState(btn, open);
   };
 
   document.addEventListener('click', function (e) {

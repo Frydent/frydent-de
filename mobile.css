@@ -19,11 +19,15 @@
 /* Hamburger-Button: standardmäßig (Desktop) versteckt, nur auf Mobil sichtbar */
 .hamburger-btn {
   display: none;
-  align-items: center; justify-content: center;
-  flex: none; width: 44px; height: 44px; padding: 0;
-  background: none; border: none; cursor: pointer; color: #1E2D4D;
+  align-items: center; justify-content: center; gap: 7px;
+  flex: none; height: 40px; padding: 0 12px;
+  background: none; border: 1.5px solid #D9D2C4; border-radius: 999px;
+  cursor: pointer; color: #1E2D4D;
+  font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
 }
-.hamburger-btn svg { display: block; }
+.hamburger-btn svg { display: block; flex: none; }
+.hamburger-btn .hb-label { line-height: 1; }
 
 @media (max-width: 900px) {
 
@@ -37,36 +41,37 @@
   header[data-screen-label="Nav"] > a:first-child { width: auto !important; justify-content: flex-start !important; flex: 0 1 auto; }
   /* Hamburger-Button sichtbar auf Mobil */
   .hamburger-btn { display: flex !important; }
-  /* Menü (nav) und Aktionsleiste standardmäßig versteckt, klappen als schlanke Liste unter den Header */
+  /* Menü klappt als schlanke Liste unter dem Icon (rechts) auf */
   header[data-screen-label="Nav"] > nav,
   header[data-screen-label="Nav"] > div:last-child {
     display: none !important;
-    position: absolute; top: 100%; left: 0; right: 0;
+    position: absolute; top: calc(100% + 6px); right: 16px; left: auto;
+    width: 240px; max-width: calc(100vw - 32px);
     flex-direction: column !important; align-items: stretch !important;
-    background: #ffffff; border-top: 1px solid #ECE7DC;
-    box-shadow: 0 8px 12px -8px rgba(30,45,77,.14);
-    padding: 0 !important; gap: 0 !important; margin: 0 !important;
-    z-index: 200; white-space: normal !important;
+    background: #ffffff; border: 1px solid #E7E1D3; border-radius: 12px;
+    box-shadow: 0 16px 30px -12px rgba(30,45,77,.28);
+    padding: 6px 0 !important; gap: 0 !important; margin: 0 !important;
+    z-index: 200; white-space: normal !important; overflow: hidden;
   }
   /* Geöffneter Zustand */
-  header[data-screen-label="Nav"].menu-open > nav,
-  header[data-screen-label="Nav"].menu-open > div:last-child { display: flex !important; }
-  header[data-screen-label="Nav"].menu-open > div:last-child { top: auto; box-shadow: 0 8px 12px -8px rgba(30,45,77,.14); border-top: 1px solid #F1EDE3; }
-  /* Menüpunkte als schlichte Zeilen — ein Seitentitel pro Zeile */
+  header[data-screen-label="Nav"].menu-open > nav { display: flex !important; }
+  header[data-screen-label="Nav"].menu-open > div:last-child { display: none !important; } /* Aktionsleiste bleibt zu; Buchen ist in der Schnellkontakt-Leiste unten */
+  /* Menüpunkte: eine Hauptseite pro Zeile */
   header[data-screen-label="Nav"] > nav > a,
   header[data-screen-label="Nav"] > nav > .ndrop > a {
-    display: block !important; width: 100%;
-    padding: 15px 22px !important; font-size: 15px !important;
-    border-bottom: 1px solid #F1EDE3; text-align: left !important;
-    border-top: none !important;
+    display: block !important; width: 100%; box-sizing: border-box;
+    padding: 13px 20px !important; font-size: 14.5px !important;
+    border-bottom: 1px solid #F3EFE6; text-align: left !important;
+    border-top: none !important; white-space: nowrap;
   }
+  header[data-screen-label="Nav"] > nav > a:last-child,
+  header[data-screen-label="Nav"] > nav > .ndrop:last-child > a { border-bottom: none !important; }
   header[data-screen-label="Nav"] > nav > .ndrop { width: 100%; display: block !important; }
-  /* Dropdown-Pfeile ausblenden und Untermenüs NICHT aufklappen — nur die Hauptseiten als Liste */
+  /* Dropdown-Pfeile ausblenden; Untermenüs (Unterseiten) auf Mobil NICHT anzeigen — nur Hauptseiten */
   header[data-screen-label="Nav"] > nav > .ndrop > a svg { display: none !important; }
   header[data-screen-label="Nav"] > nav .nmenu { display: none !important; }
-  /* „Online buchen" als Block unten, Social ausgeblendet */
-  header[data-screen-label="Nav"] > div:last-child a[data-drflex] { margin: 14px 22px !important; text-align: center; }
-  header[data-screen-label="Nav"] > div:last-child .hd-soc-grp { display: none !important; }
+  /* Aktionsleiste ganz aus (Buchen unten in der Schnellkontakt-Leiste vorhanden) */
+  header[data-screen-label="Nav"] > div:last-child { display: none !important; }
 
   /* ========== 1. STOP pływaniu strony ========== */
   html, body { overflow-x: hidden; overflow-x: clip; max-width: 100vw; }

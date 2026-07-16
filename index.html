@@ -266,7 +266,7 @@
 <script src="consent.js"></script>
 <script src="menu.js" defer></script>
 <style>
-@media(min-width:901px){#c-praxis{max-width:none !important;width:185.5% !important;height:135% !important;left:62.14% !important;top:65.5% !important;right:auto !important;bottom:auto !important;transform:translate(-50%,-50%) !important;object-fit:fill}}
+
 @media(min-width:769px){#c-hero{object-position:50% 30%}.hero-sub{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}}
 @media(max-width:768px){
  .hero-txt{padding:18px 18px 2px !important;transform:none !important;gap:7px !important;max-width:100% !important;justify-content:space-between !important}
@@ -641,13 +641,11 @@ function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*=
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
 <script>
-/* Desktop: getreue Reproduktion des C.Design-Ausschnitts fuer #c-soticken (image-slot s/x/y).
-   Mobil (<901px): normales object-fit:cover. */
+/* Alle Viewports: getreue Reproduktion des C.Design-Ausschnitts fuer #c-praxis und #c-soticken (image-slot s/x/y),
+   berechnet aus den Live-Rahmenmassen (Desktop + Mobil). */
 (function(){
-  var V={"c-soticken":{s:1.5651728579109356,x:-27.536115963360167,y:1.0570587039245147}};
+  var V={"c-praxis":{s:1.3495554324239494,x:12.135100346740943,y:15.50053881460367},"c-soticken":{s:1.5651728579109356,x:-27.536115963360167,y:1.0570587039245147}};
   function apply(img,v){
-    var desk=matchMedia("(min-width:901px)").matches;
-    if(!desk){img.style.position="absolute";img.style.inset="0";img.style.width="100%";img.style.height="100%";img.style.left="";img.style.top="";img.style.right="";img.style.bottom="";img.style.transform="";img.style.removeProperty("max-width");img.style.objectFit="cover";return;}
     var f=img.parentElement,iw=img.naturalWidth,ih=img.naturalHeight,fw=f.clientWidth,fh=f.clientHeight;
     if(!iw||!ih||!fw||!fh)return;
     var base=Math.max(fw/iw,fh/ih),k=base*v.s;

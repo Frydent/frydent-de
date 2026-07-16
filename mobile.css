@@ -221,6 +221,9 @@
   /* v8: obrót kart — desktop zwolniony na 1,25s (Basis), Mobil bleibt 0,95s */
   .flip-inner { transition: transform .95s cubic-bezier(.4,.15,.2,1) !important; }
 
+  /* v9: Notdienst-Zeile auf Mobil in zwei Zeilen (Umbruch nach dem Doppelpunkt) */
+  .nd-br { display: inline !important; }
+
   /* v6.1: akapity z zafiksowaną wysokością z edytora (np. 83px pod Teamfoto)
      wylewały się na kolejne bloki */
   p[style*="height:"] { height: auto !important; }

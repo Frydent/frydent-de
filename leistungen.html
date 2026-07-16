@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leistungen · FRYDENT Bonndorf</title>
 <meta name="description" content="Unser Leistungsspektrum in Bonndorf: Prophylaxe, Endodontie, Zahnersatz und CEREC, Parodontologie, Aligner, Ästhetik, Seniorenzahnmedizin, Kinderzahnheilkunde und implantatgetragener Zahnersatz.">
-<link rel="stylesheet" href="mobile.css?v=20"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
+<link rel="stylesheet" href="mobile.css?v=21"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -37,13 +37,13 @@
 .lst-hint{position:absolute;bottom:22px;left:26px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#B09154;letter-spacing:.03em}
 @media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
 @media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
-@media(max-width:900px){.lst-flip{height:205px}
+@media(max-width:900px){.lst-grid .lst-flip{aspect-ratio:auto !important;height:225px !important}
  .lst-flip-in{transition:transform 1.2s cubic-bezier(.2,.65,.25,1)}
  .lst-flip:hover .lst-flip-in{transform:none}
  .lst-flip.is-flipped .lst-flip-in{transform:rotateY(180deg)}
- .lst-front,.lst-back{padding:24px 22px}
+ .lst-front,.lst-back{padding:20px 20px}
  .lst-back .lst-ico{width:30px;height:30px;margin-bottom:12px}
- .lst-back p{font-size:13.5px;line-height:1.65}
+ .lst-back p{font-size:12.5px;line-height:1.5}
  .lst-hint{bottom:20px;left:22px}}
 </style>
 <script>(function(){

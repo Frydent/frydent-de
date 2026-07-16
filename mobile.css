@@ -305,6 +305,10 @@
   [style*="width:460px"][style*="height:420px"] { aspect-ratio: 7/6 !important; height: auto !important; }
 
   /* leistungen mobil: Hero (Birgit) flacher 2/1 (Bild ist nativ 2:1, zeigt Person ganz); Artikel-Hero flacher + mehr Abstand zum Text */
-  [style*="height:360px"][style*="margin-bottom:34px"] { aspect-ratio: 2/1 !important; height: auto !important; }
+  [style*="height:360px"][style*="margin-bottom:34px"] { aspect-ratio: 2/1 !important; height: auto !important; overflow: hidden !important; }
   [style*="height:320px"][style*="margin-bottom:20px"] { aspect-ratio: 16/9 !important; height: auto !important; margin-bottom: 30px !important; }
+
+  /* leistungen mobil: Birgit im Hero groesser (Zoom auf die Person), Artikel-Eyebrow etwas Abstand zum Titel */
+  #lst-hero { transform: scale(1.5) !important; transform-origin: 24% 54% !important; }
+  [data-show="showArticle"] [style*="letter-spacing:1.5px"][style*="color:#B09154"] { margin-bottom: 6px !important; }
 }

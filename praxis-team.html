@@ -136,7 +136,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px">
       <div style="min-width:0;background:#ffffff;border:1px solid #E4E6EB;border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="position:relative;width:100%;height:400px">
+        <div style="position:relative;width:100%;height:400px;overflow:hidden">
           <img id="t-tatiana" src="assets/img-t-tatiana.webp" alt="Portret — Tatiana Frydrych" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
         <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:8px">
@@ -147,7 +147,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
         </div>
       </div>
       <div style="min-width:0;background:#ffffff;border:1px solid #E4E6EB;border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
-        <div style="position:relative;width:100%;height:400px">
+        <div style="position:relative;width:100%;height:400px;overflow:hidden">
           <img id="t-max" src="assets/img-t-max.webp" alt="Portret — Max Frydrych" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
         <div style="padding:26px 28px 30px;display:flex;flex-direction:column;gap:8px">
@@ -381,5 +381,52 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
+<script>
+/* Getreue Reproduktion des C.Design-Bildausschnitts (image-slot s/x/y).
+   Skaliert das Bild (s) und verschiebt es (x/y in Frame-Prozent); der Rahmen
+   beschneidet den Ueberstand. Keine externen Abhaengigkeiten. */
+(function(){
+  var V={
+    "team-warm":{s:1,x:0,y:15.053652210259754},
+    "t-tatiana":{s:1.3495554324239494,x:8.125567891131464,y:9.978525670226169},
+    "t-max":{s:1.5677835077374087,x:8.421027317200254,y:13.913756711946814},
+    "t-nikolina":{s:1.5677835077374083,x:24.406260327158076,y:-7.833548875539503},
+    "t-mitarbeiterin-2":{s:1.1617036766852162,x:7.4238636909165185,y:6.306920861781929},
+    "t-mitarbeiterin-3":{s:1.8212998651849928,x:24.4445630072225,y:25.943727518145174},
+    "t-mitarbeiterin-4":{s:1.567783507737408,x:21.163991141423892,y:5.5754223875508835},
+    "t-mitarbeiterin-5":{s:1.567783507737409,x:11.274869152208474,y:4.49418457138543},
+    "t-mitarbeiterin-6":{s:1.3495554324239492,x:1.3316858265598617,y:0.017935091740547193}
+  };
+  function apply(img,v){
+    var f=img.parentElement;
+    var iw=img.naturalWidth, ih=img.naturalHeight;
+    var fw=f.clientWidth, fh=f.clientHeight;
+    if(!iw||!ih||!fw||!fh) return;
+    var base=Math.max(fw/iw, fh/ih);
+    var k=base*v.s;
+    var mx=Math.max(0,(iw*k/fw-1)*50), my=Math.max(0,(ih*k/fh-1)*50);
+    var x=Math.max(-mx,Math.min(mx,v.x)), y=Math.max(-my,Math.min(my,v.y));
+    img.style.position="absolute";
+    img.style.maxWidth="none";
+    img.style.width=(iw*k/fw*100)+"%";
+    img.style.height=(ih*k/fh*100)+"%";
+    img.style.left=(50+x)+"%"; img.style.top=(50+y)+"%";
+    img.style.right="auto"; img.style.bottom="auto";
+    img.style.transform="translate(-50%,-50%)";
+    img.style.objectFit="";
+  }
+  function run(){
+    for(var id in V){(function(id){
+      var img=document.getElementById(id); if(!img) return;
+      var v=V[id];
+      if(img.complete && img.naturalWidth) apply(img,v);
+      else img.addEventListener("load",function(){apply(img,v)});
+    })(id);}
+  }
+  if(document.readyState!=="loading") run();
+  else document.addEventListener("DOMContentLoaded",run);
+  var t; window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(run,120)});
+})();
+</script>
 </body>
 </html>

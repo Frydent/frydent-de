@@ -317,7 +317,7 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
   function apply(img,v){
     var f=img.parentElement,iw=img.naturalWidth,ih=img.naturalHeight,fw=f.clientWidth,fh=f.clientHeight;
     if(!iw||!ih||!fw||!fh)return;
-    var sv=v.s; if(matchMedia("(max-width:900px)").matches){sv=v.s*1.28;}
+    var sv=v.s; if(matchMedia("(max-width:900px)").matches){sv=v.s*1.5;}
     var base=Math.max(fw/iw,fh/ih),k=base*sv;
     var mx=Math.max(0,(iw*k/fw-1)*50),my=Math.max(0,(ih*k/fh-1)*50);
     var x=Math.max(-mx,Math.min(mx,v.x)),y=Math.max(-my,Math.min(my,v.y));

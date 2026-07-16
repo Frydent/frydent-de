@@ -162,20 +162,12 @@
   [style*="height:580px"], [style*="height: 580px"] { height: auto !important; aspect-ratio: 2/1 !important; }
   [style*="height:420px"], [style*="height: 420px"] { height: auto !important; aspect-ratio: 3/2 !important; }
 
-  /* portrety lekarzy — proporcje desktopowe 621:400 */
-  div:has(> image-slot#t-tatiana),
-  div:has(> image-slot#t-max) { width: 100% !important; height: auto !important; aspect-ratio: 621/400 !important; }
+  /* portrety lekarzy — proporcje desktopowe 621:400 (statischer Export: <img>, gezielt ueber die 400px-Rahmen) */
+  [style*="height:400px;overflow:hidden"] { width: 100% !important; height: auto !important; aspect-ratio: 621/400 !important; }
 
-  /* portrety zespołu — proporcje desktopowe 407:320 */
-  div:has(> image-slot#t-nikolina),
-  div:has(> image-slot#t-mitarbeiterin-2),
-  div:has(> image-slot#t-mitarbeiterin-3),
-  div:has(> image-slot#t-mitarbeiterin-4),
-  div:has(> image-slot#t-mitarbeiterin-5),
-  div:has(> image-slot#t-mitarbeiterin-6) { width: 100% !important; height: auto !important; aspect-ratio: 407/320 !important; }
-
-  /* header 2 — CAŁE zdjęcie teamu: rama w proporcjach fotografii (1920×986) */
-  div:has(> image-slot#team-warm) { height: auto !important; aspect-ratio: 1920/986 !important; }
+  /* portrety zespolu — Flip-Kacheln (nur auf praxis-team.html), Desktop-Proportion 407:320 statt fixe 320px */
+  .flip { width: 100% !important; height: auto !important; aspect-ratio: 407/320 !important; }
+  /* Gruppenfoto (height:580px) wird bereits ueber die 2/1-Regel oben geformt und ist ok */
 
   /* [2c] przesunięcia kadru 4 portretów — DO UZUPEŁNIENIA (kierunki od Tatiany) */
   /* [2d] header 1 (c-hero): przesunięcie Nikoliny — DO UZUPEŁNIENIA (kierunek) */

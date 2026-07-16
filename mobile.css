@@ -89,7 +89,7 @@
     border-radius: 0 !important; padding: 0 !important; min-width: 0 !important; background: #FBFAF6 !important;
   }
   header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu a {
-    display: block !important; padding: 11px 20px 11px 34px !important;
+    display: block !important; padding: 11px 20px 11px 24px !important; text-align: left !important;
     font-size: 13px !important; color: #3D5A98 !important;
     border-bottom: 1px solid #F3EFE6 !important; text-transform: none !important; white-space: normal;
   }
@@ -206,7 +206,7 @@
     display: block !important; visibility: visible !important; opacity: 1 !important;
     position: static !important; flex-basis: 100% !important; padding: 8px 0 0 !important;
   }
-  .ndrop.open > .nmenu a { text-align: center !important; }
+  .ndrop.open > .nmenu a { text-align: left !important; }
 
   /* v6.1: hero — cytat tylko na desktopie; na mobile podpis+przyciski na dół zdjęcia */
   [data-screen-label="Hero"] span[style*="clamp(16px"],

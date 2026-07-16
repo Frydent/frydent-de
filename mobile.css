@@ -80,9 +80,14 @@
   header[data-screen-label="Nav"] > nav > .ndrop > a svg { display: block !important; transition: transform .2s ease; flex: none; width: 16px !important; height: 16px !important; margin: -8px -8px -8px 8px; padding: 8px; box-sizing: content-box; }
   header[data-screen-label="Nav"] > nav > .ndrop.expanded > a svg { transform: rotate(180deg); }
   /* Untermenüs: standardmäßig zu, aufgeklappt bei .expanded */
-  header[data-screen-label="Nav"] > nav .nmenu { display: none !important; }
+  header[data-screen-label="Nav"] > nav .nmenu {
+    display: block !important; position: static !important; visibility: visible !important;
+    max-height: 0 !important; overflow: hidden !important; opacity: 0 !important;
+    padding: 0 !important; margin: 0 !important; border: 0 !important;
+    transition: max-height .34s ease, opacity .24s ease !important;
+  }
   header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu {
-    display: block !important; position: static !important; visibility: visible !important; opacity: 1 !important;
+    max-height: 340px !important; opacity: 1 !important;
   }
   header[data-screen-label="Nav"] > nav > .ndrop.expanded .nmenu > span {
     display: block !important; box-shadow: none !important; border: none !important;

@@ -302,5 +302,5 @@
   [style*="align-items:baseline;justify-content:space-between"] { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
 
   /* Start 'Ihre Zahnaerzte' (c-praxis): Kachel mobil etwas hoeher, damit Max' Kopf passt */
-  [style*="width:460px"][style*="height:420px"] { aspect-ratio: 5/4 !important; height: auto !important; }
+  [style*="width:460px"][style*="height:420px"] { aspect-ratio: 7/6 !important; height: auto !important; }
 }

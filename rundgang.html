@@ -132,7 +132,13 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   </div>
 
 
-  <!-- intro -->
+
+<style>.gal-ov:hover{opacity:1 !important}#lb button{font-family:Georgia,serif}
+@media(max-width:900px){
+  [data-screen-label="Galerie"] [style*="grid-column"],
+  [data-screen-label="Hygiene"] [style*="grid-column"],
+  [data-screen-label="Kinderecke"] [style*="grid-column"]{grid-column:auto !important}
+}</style>
   <div style="background:linear-gradient(180deg,#EBEFF5 0%,#F6F8FB 55%,#ffffff 100%)" data-screen-label="Intro">
   <div style="display:flex;flex-direction:column;gap:14px;padding:40px 56px 30px;text-align:center;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Einblicke</div>
@@ -142,166 +148,205 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   </div>
 
   <!-- galerie -->
-  <div id="galerie" style="background:#ffffff" data-screen-label="Galerie">
+  <div id="galerie" style="background: linear-gradient(180deg, #ffffff, #FFFFFF43)" data-screen-label="Galerie">
   <div style="padding:30px 56px 76px;max-width:1440px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:26px">
 
-    <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:26px">
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:640px">
-          <img id="g-empfang" src="assets/img-g-empfang.webp" alt="Behandlung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Behandlung</div>
-        <div style="font-size:14px;color:#6B7280">Im eingespielten Team, konzentriert und ruhig.</div>
+    <!-- neue foto-sektionen -->
+
+    <div style="display:flex;align-items:center;gap:18px;margin-top:26px">
+      <span style="font-family:'Quicksand',sans-serif;font-size:22px;font-weight:500;color:#37538E;white-space:nowrap">Helle Töne</span>
+      <span style="font-size:12.5px;color:#8495BE;white-space:nowrap;font-style:italic">Empfang &amp; Ankommen</span>
+      <span style="flex:1;height:1px;background:rgba(176,145,84,.45)"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E;flex:none"></span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:26px">
+      <div style="position:relative;grid-column:span 4;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-hero-niki-logowand.webp" alt="Empfang" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-hero-niki-logowand.webp" data-gal-label="Empfang" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Empfang</div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:26px;min-width:0">
-        <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:340px">
-          <img id="g-extra-3" src="assets/img-g-extra-3.webp" alt="Wartebereich" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
+      <div style="grid-column:span 2;display:flex;flex-direction:column;justify-content:flex-end;gap:20px">
+        <div style="padding:4px 4px 6px">
+          <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:500;color:#37538E;line-height:1.3">Willkommen in der FRYDENT</div>
+          <div style="font-size:14px;line-height:1.6;color:#4B5875;margin-top:8px;max-width:38ch">Vom ersten Schritt an in ruhiger, heller Atmosphäre, hier fühlen Sie sich gut aufgehoben.</div>
         </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Wartebereich</div>
-        <div style="font-size:14px;color:#6B7280">Unser Wandbild bringt den Schwarzwald herein.</div>
+        <div style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+          <svg viewBox="0 0 4 3" style="display:block;width:100%;height:auto;aspect-ratio:4/3"></svg>
+        <img src="assets/gal-tatiana-max.webp" alt="Außenansicht" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-tatiana-max.webp" data-gal-label="Unser Team" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Unser Team</div></div>
+        </div>
       </div>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px">
-          <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="g-anmeldung" src="assets/gal-extra-2.webp" alt="Empfang" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Empfang</div>
-        <div style="font-size:14px;color:#6B7280">An der Anmeldung werden Sie herzlich begrüßt.</div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-portrait-horn.webp" alt="Empfang" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-portrait-horn.webp" data-gal-label="Unser Team" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Unser Team</div></div>
       </div>
-          <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="g-wandbild" src="assets/img-g-wandbild.webp" alt="Kinderecke" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Für die Kleinen</div>
-        <div style="font-size:14px;color:#6B7280">Die Kinderecke, damit Warten Spaß macht.</div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-portrait-niki.webp" alt="Team" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-portrait-niki.webp" data-gal-label="Unser Team" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Unser Team</div></div>
       </div>
-        </div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-portrait-doris.webp" alt="Wartezimmer" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-portrait-doris.webp" data-gal-label="Unser Team" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Unser Team</div></div>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px">
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-technik" src="assets/gal-prophylaxe.webp" alt="Technik" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Technik</div>
-        <div style="font-size:14px;color:#6B7280">Digitales Röntgen, strahlungsarm und präzise.</div>
+    <div style="display:flex;align-items:center;gap:18px;margin-top:26px">
+      <span style="font-family:'Quicksand',sans-serif;font-size:22px;font-weight:500;color:#37538E;white-space:nowrap">Blaue Ruhe</span>
+      <span style="font-size:12.5px;color:#8495BE;white-space:nowrap;font-style:italic">Unser Team</span>
+      <span style="flex:1;height:1px;background:rgba(176,145,84,.45)"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E;flex:none"></span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:26px">
+      <div style="position:relative;grid-column:1/4;grid-row:1/3;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-empfang-anmeldung2.webp" alt="Anmeldung" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:114%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-empfang-anmeldung2.webp" data-gal-label="Anmeldung" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Anmeldung</div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-platz" src="assets/img/photo-behandlung.webp" alt="Behandlungsplatz" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Am Behandlungsplatz</div>
-        <div style="font-size:14px;color:#6B7280">Moderne Ausstattung in jedem Zimmer.</div>
+      <div style="position:relative;grid-column:4/7;height:min(651px,49vw);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-wartezimmer-mural.webp" alt="Team" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-wartezimmer-mural.webp" data-gal-label="Wartezimmer" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Wartezimmer</div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-flur" src="assets/img-g-flur.webp" alt="Flur" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Unsere Räume</div>
-        <div style="font-size:14px;color:#6B7280">Kurze Wege, viel Tageslicht.</div>
+      <div style="position:relative;grid-column:4/7;height:min(260px,19.6vw);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fenster-gruen.webp" alt="Team" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fenster-gruen.webp" data-gal-label="Grüne Details" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Grüne Details</div></div>
+      </div>
+      <div style="position:relative;grid-column:1/4;height:min(521px,39.2vw);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-korridor-neu.webp" alt="Flur" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-korridor-neu.webp" data-gal-label="Flur" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Flur</div></div>
+      </div>
+      <div style="position:relative;grid-column:4/7;height:min(521px,39.2vw);border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-gantert.webp" alt="Flur" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-gantert.webp" data-gal-label="Empfang" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Empfang</div></div>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px">
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-hygiene" src="assets/gal-sterilisation.webp" alt="Hygiene" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Hygiene</div>
-        <div style="font-size:14px;color:#6B7280">Aufbereitung nach höchsten Standards.</div>
+    <div style="display:flex;align-items:center;gap:18px;margin-top:26px">
+      <span style="font-family:'Quicksand',sans-serif;font-size:22px;font-weight:500;color:#37538E;white-space:nowrap">Tiefe &amp; Akzente</span>
+      <span style="font-size:12.5px;color:#8495BE;white-space:nowrap;font-style:italic">Behandlung &amp; Räume</span>
+      <span style="flex:1;height:1px;background:rgba(176,145,84,.45)"></span>
+      <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E;flex:none"></span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:26px">
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 4" style="display:block;width:100%;height:auto;aspect-ratio:3/4"></svg>
+        <img src="assets/gal-team-birgit.webp" alt="Behandlung" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-team-birgit.webp" data-gal-label="Praxisalltag" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Praxisalltag</div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-menschen" src="assets/gal-extra-1.webp" alt="Menschen" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Menschen</div>
-        <div style="font-size:14px;color:#6B7280">Erfahrung und Sorgfalt, spürbar bei jedem Handgriff.</div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 4" style="display:block;width:100%;height:auto;aspect-ratio:3/4"></svg>
+        <img src="assets/gal-gruen.webp" alt="Behandlung" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-gruen.webp" data-gal-label="Grüne Details" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Grüne Details</div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-        <div style="position:relative;width:100%;height:280px">
-          <img id="g-detail" src="assets/gal-aussenansicht.webp" alt="Detail" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
-</image-slot>
-        </div>
-        <div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif">Detail</div>
-        <div style="font-size:14px;color:#6B7280">Grün und Licht — für eine ruhige Atmosphäre.</div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 4" style="display:block;width:100%;height:auto;aspect-ratio:3/4"></svg>
+        <img src="assets/gal-max-monitor.webp" alt="Behandlung im Team" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-max-monitor.webp" data-gal-label="Behandlung" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Behandlung</div></div>
+      </div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-anette-behandlung.webp" alt="Behandlung" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-anette-behandlung.webp" data-gal-label="Behandlung" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Behandlung</div></div>
+      </div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-max-kontrolle.webp" alt="Behandlung" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-max-kontrolle.webp" data-gal-label="Kontrolle" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Kontrolle</div></div>
+      </div>
+      <div style="position:relative;grid-column:span 2;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(30,45,77,.06);transition:box-shadow .3s ease,transform .3s ease">
+        <svg viewBox="0 0 3 2" style="display:block;width:100%;height:auto;aspect-ratio:3/2"></svg>
+        <img src="assets/gal-behandlung-diskret.webp" alt="Schienentherapie" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-behandlung-diskret.webp" data-gal-label="Behandlungszimmer" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Behandlungszimmer</div></div>
+      </div>
+    </div>
+
+
+    
+
+  </div>
+  </div>
+
+  <!-- sektor: hygiene -->
+  <div data-reveal-scope="" style="background:#E7EEF6;border-top:1px solid rgba(55,83,142,.14);border-bottom:1px solid rgba(55,83,142,.14)" data-screen-label="Hygiene">
+  <div style="padding:80px 56px;max-width:1440px;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:66ch">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#B09154;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap">Hinter den Kulissen</span>
+        <span style="width:70px;height:2px;background:#C4A44E"></span>
+        <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E"></span>
+      </div>
+      <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:33px;font-weight:500;color:#37538E;text-wrap:pretty">Hygiene, auf die Sie sich verlassen können</h2>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#3C4A63">Es gibt einen Bereich unserer Praxis, den Sie im Alltag nie zu sehen bekommen, der für Ihre Sicherheit aber ganz entscheidend ist. Wir möchten Sie einladen, einen Blick hinter die Kulissen zu werfen und zu sehen, wie wir hier alles für Sie vorbereiten.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+      <div data-reveal-tile="" style="position:relative;height:250px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-quad-1.webp" alt="Aufbereitung" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-quad-1.webp" data-gal-label="Sterilisation" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Sterilisation</div></div>
+      </div>
+      <div data-reveal-tile="" style="position:relative;height:250px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-quad-6.webp" alt="Aufbereitung" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-quad-6.webp" data-gal-label="Sterilisation" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Sterilisation</div></div>
+      </div>
+      <div data-reveal-tile="" style="position:relative;height:250px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-quad-7.webp" alt="Sterilisation" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-quad-7.webp" data-gal-label="Sterilisation" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Sterilisation</div></div>
+      </div>
+      <div data-reveal-tile="" style="position:relative;height:250px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-extra-2.webp" alt="Digitale Kontrolle" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-extra-2.webp" data-gal-label="Hygiene" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Hygiene</div></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:320px minmax(0,1fr);gap:0;border-radius:20px;overflow:hidden;background-color:#26395F;background-image:repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0 1px, transparent 1px 6px)">
+      <div style="position:relative;min-height:360px">
+        <img src="assets/gal-fix-inna.webp" alt="Porträt — Inna Horn" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-inna.webp" data-gal-label="Hygienebeauftragte" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Hygienebeauftragte</div></div>
+      </div>
+      <div style="padding:48px 50px;display:flex;flex-direction:column;gap:18px;justify-content:center">
+        <div style="font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;font-family:'Quicksand',sans-serif">Damit Sie sich sicher fühlen</div>
+        <h3 style="margin:0;font-family:'Quicksand',sans-serif;font-size:26px;font-weight:500;color:#ffffff;text-wrap:pretty">Alles nach Plan. Und lückenlos kontrolliert.</h3>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#CBD6EC">Jedes Instrument, das bei Ihnen zum Einsatz kommt, durchläuft einen genau festgelegten Ablauf: gereinigt, desinfiziert, sterilisiert und dokumentiert. Und das nicht nur von Hand geprüft, sondern <span style="color:#E9C978;font-weight:600">vollständig digital überwacht</span>.</p>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#CBD6EC">Über all das wacht unermüdlich <span style="color:#E9C978;font-weight:600">Frau Inna Horn</span>, unsere Hygienebeauftragte.</p>
       </div>
     </div>
 
   </div>
   </div>
 
-  <!-- kontakt kurz -->
-  <div id="hygiene" style="background:#E9EFF7;border-top:1px solid #D4DEEC" data-screen-label="Hygiene">
-  <div style="padding:64px 56px 70px;max-width:1440px;margin:0 auto;box-sizing:border-box">
-
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
-      <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#B09154;font-weight:600;white-space:nowrap">Hinter den Kulissen</span>
-      <span style="width:96px;height:1px;background:#C9A961"></span>
-      <span style="width:6px;height:6px;border-radius:50%;background:#C4A44E"></span>
-    </div>
-
-    <h2 style="margin:0 0 16px;font-family:'Quicksand',sans-serif;font-size:32px;font-weight:400;line-height:1.25;color:#33416E">Hygiene, auf die Sie sich verlassen können</h2>
-    <p style="margin:0 0 40px;font-size:16px;line-height:1.75;color:#4B5875;max-width:900px">Es gibt einen Bereich unserer Praxis, den Sie im Alltag nie zu sehen bekommen, der für Ihre Sicherheit aber ganz entscheidend ist. Wir möchten Sie einladen, einen Blick hinter die Kulissen zu werfen und zu sehen, wie wir hier alles für Sie vorbereiten.</p>
-
-    <div class="hyg-fotos">
-      <div class="hyg-kachel"><img src="assets/hyg-1.webp" alt="Instrumente werden im Thermodesinfektor eingeräumt" loading="lazy"></div>
-      <div class="hyg-kachel"><img src="assets/hyg-2.webp" alt="Gereinigte Instrumente werden in Sterilisationskassetten sortiert" loading="lazy"></div>
-      <div class="hyg-kachel"><img src="assets/hyg-3.webp" alt="Instrumente werden einzeln in Sterilgutverpackungen eingeschweißt" loading="lazy"></div>
-      <div class="hyg-kachel"><img src="assets/hyg-4.webp" alt="Jede Verpackung wird gescannt und digital dokumentiert" loading="lazy"></div>
-    </div>
-
-    <div class="hyg-box">
-      <div class="hyg-inna"><img src="assets/hyg-inna.webp" alt="Inna Horn, Hygienebeauftragte der Praxis FRYDENT, am Sterilisator" loading="lazy"></div>
-      <div class="hyg-txt">
-        <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#E2C26A;font-weight:600">Damit Sie sich sicher fühlen</span>
-        <h3 style="margin:14px 0 18px;font-family:'Quicksand',sans-serif;font-size:27px;font-weight:400;line-height:1.3;color:#ffffff">Alles nach Plan. Und lückenlos kontrolliert.</h3>
-        <p style="margin:0 0 16px;font-size:15.5px;line-height:1.8;color:#D6DEF0">Jedes Instrument, das bei Ihnen zum Einsatz kommt, durchläuft einen genau festgelegten Ablauf: gereinigt, desinfiziert, sterilisiert und dokumentiert. Und das nicht nur von Hand geprüft, sondern <strong style="color:#E2C26A;font-weight:600">vollständig digital überwacht</strong>.</p>
-        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#D6DEF0">Über all das wacht unermüdlich <strong style="color:#E2C26A;font-weight:600">Frau Inna Horn</strong>, unsere Hygienebeauftragte.</p>
+  <!-- sektor: kinderecke -->
+  <div data-reveal-scope="" style="background:#F6EEDB;border-top:1px solid rgba(196,164,78,.4);border-bottom:1px solid rgba(196,164,78,.4)" data-screen-label="Kinderecke">
+  <div style="padding:80px 56px;max-width:1440px;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.45fr);gap:54px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#B08A2E;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap">Für unsere kleinen Patienten</span>
+        <span style="width:70px;height:2px;background:#C4A44E"></span>
+        <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E"></span>
+      </div>
+      <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:33px;font-weight:500;color:#37538E;text-wrap:pretty">Zahnarzt? Kann richtig Spaß machen.</h2>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#5B4E33">Bei uns dürfen die Kleinen nicht nur eine gute Zeit haben. Jeder Besuch wird mit einer ganz besonderen, ganz persönlichen Überraschung gekrönt.</p>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:6px">
+        <span style="width:8px;height:8px;border-radius:50%;background:#C4A44E;flex:none"></span>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:#7A5A1E;font-style:italic">Aber psst … mehr wird nicht verraten. Am schönsten ist es, sich selbst überraschen zu lassen.</p>
       </div>
     </div>
-
-  </div>
-</div>
-
-<div id="kinderecke" style="background:#F9E9C4;border-top:1px solid #ECDDB8" data-screen-label="Kinderecke">
-  <div style="padding:64px 56px 68px;max-width:1440px;margin:0 auto;box-sizing:border-box">
-    <div class="ke-grid">
-
-      <div style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;gap:14px">
-          <span style="font-family:'Quicksand',sans-serif;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#B09154;font-weight:600;white-space:nowrap">Für unsere kleinen Patienten</span>
-          <span style="flex:1;height:1px;background:linear-gradient(90deg,#D6C08A,rgba(214,192,138,0))"></span>
-        </div>
-        <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:31px;font-weight:400;line-height:1.25;color:#33416E">Zahnarzt? Kann richtig Spaß machen.</h2>
-        <p style="margin:8px 0 0;font-size:16px;line-height:1.75;color:#4B5875">Bei uns dürfen die Kleinen nicht nur eine gute Zeit haben. Jeder Besuch wird mit einer ganz besonderen, ganz persönlichen Überraschung gekrönt.</p>
-        <span style="width:7px;height:7px;border-radius:50%;background:#C4A44E;margin:10px 0 2px"></span>
-        <p style="margin:0;font-size:15.5px;line-height:1.7;color:#8A7B5A;font-style:italic">Aber psst … mehr wird nicht verraten. Am schönsten ist es, sich selbst überraschen zu lassen.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px">
+      <div data-reveal-tile="" style="position:relative;height:300px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-kinder-1.webp" alt="Kinderecke" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-kinder-1.webp" data-gal-label="Kinderecke" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Kinderecke</div></div>
       </div>
-
-      <div class="ke-fotos">
-        <div style="position:relative;width:100%;height:300px">
-          <img src="assets/g-kinder-1.webp" alt="Spielzimmer für Kinder mit Maltisch, Eisenbahn und Sitzhockern" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:14px">
-        </div>
-        <div style="position:relative;width:100%;height:300px">
-          <img src="assets/g-kinder-2.webp" alt="Spielecke mit LEGO-Tisch, Motorikwand und Holzeisenbahn" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:14px">
-        </div>
+      <div data-reveal-tile="" style="position:relative;height:300px;border-radius:16px;overflow:hidden;box-shadow:0 3px 12px rgba(30,45,77,.08);transition:box-shadow .3s ease,transform .3s ease">
+        <img src="assets/gal-fix-kinder-2.webp" alt="Kinderecke — noch ein Bild" loading="lazy" style=";object-fit:cover;display:block">
+        <div onclick="galOpen(this)" data-gal-src="assets/gal-fix-kinder-2.webp" data-gal-label="Kinderecke" style="position:absolute;inset:0;cursor:pointer;display:flex;align-items:flex-end;opacity:0;transition:opacity .35s ease;background:linear-gradient(to top,rgba(30,45,77,.55),rgba(30,45,77,0) 42%)" class="gal-ov"><div style="font-family:'Quicksand',sans-serif;font-weight:500;color:#ffffff;font-size:16px;letter-spacing:.05em;padding:14px 18px">Kinderecke</div></div>
       </div>
-
     </div>
   </div>
-</div>
-
+  </div>
 <div id="kontakt" style="background-color:#4D577FFB" data-screen-label="Kontakt">
   <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;color:#E8EEF8;padding:44px 56px;max-width:1440px;margin:0 auto;box-sizing:border-box">
     <div style="display:flex;flex-direction:column;gap:6px">
@@ -367,5 +412,28 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
+
+<!-- Lightbox (Vanilla, statisch) -->
+<div id="lb" style="position:fixed;inset:0;z-index:1000;background:rgba(20,29,50,.93);display:none;align-items:center;justify-content:center;padding:40px" onclick="galClose(event)">
+  <button onclick="galClose(event,true)" aria-label="Schließen" style="position:absolute;top:18px;right:26px;width:46px;height:46px;border-radius:50%;background:rgba(242,239,232,.14);color:#F2EFE8;border:none;font-size:22px;cursor:pointer;line-height:1">✕</button>
+  <button onclick="galNav(event,-1)" aria-label="Zurück" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(242,239,232,.10);color:#F2EFE8;border:none;font-size:30px;cursor:pointer;line-height:1">‹</button>
+  <button onclick="galNav(event,1)" aria-label="Weiter" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(242,239,232,.10);color:#F2EFE8;border:none;font-size:30px;cursor:pointer;line-height:1">›</button>
+  <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px">
+    <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:80vh;object-fit:contain;border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+    <figcaption id="lbCap" style="color:#E8EEF8;font-family:'Quicksand',sans-serif;font-size:15px;letter-spacing:.05em"></figcaption>
+  </figure>
+</div>
+<script>
+(function(){
+  var items=[],idx=0;
+  function box(){return document.getElementById('lb');}
+  window.galOpen=function(el){items=[].slice.call(document.querySelectorAll('[data-gal-src]'));idx=items.indexOf(el);if(idx<0)idx=0;show();box().style.display='flex';document.body.style.overflow='hidden';};
+  function show(){var el=items[idx];if(!el)return;var s=el.getAttribute('data-gal-src'),l=el.getAttribute('data-gal-label')||'';document.getElementById('lbImg').src=s;document.getElementById('lbImg').alt=l;document.getElementById('lbCap').textContent=l;}
+  window.galNav=function(e,d){e.stopPropagation();if(!items.length)return;idx=(idx+d+items.length)%items.length;show();};
+  window.galClose=function(e,force){if(force||e.target.id==='lb'){box().style.display='none';document.body.style.overflow='';}};
+  document.addEventListener('keydown',function(e){if(box().style.display!=='flex')return;if(e.key==='Escape')galClose(e,true);else if(e.key==='ArrowLeft')galNav(e,-1);else if(e.key==='ArrowRight')galNav(e,1);});
+})();
+</script>
+
 </body>
 </html>

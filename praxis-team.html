@@ -423,6 +423,7 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
       if(matchMedia("(max-width:900px)").matches){
         if(id==="team-warm"){ v={s:v.s*1.1, x:v.x+3, y:v.y}; }
         else if(id==="t-tatiana"||id==="t-max"){ v={s:v.s*1.21, x:v.x, y:v.y}; }
+        else if(id==="t-mitarbeiterin-6"){ v={s:v.s*1.15, x:v.x, y:v.y+12}; }
       }
       if(img.complete && img.naturalWidth) apply(img,v);
       else img.addEventListener("load",function(){apply(img,v)});

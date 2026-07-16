@@ -57,7 +57,7 @@ function pokaz(){
       });
       return;
     }
-    [].forEach.call(el.children,function(c){ c.style.display=''; });
+    [].forEach.call(el.children,function(c){ if(c.style.display==='none') c.style.display=''; });
     el.style.display = ok ? '' : 'none';
   });
   if(akt!=='overview'){ var t=document.querySelector('[data-show="showArticle"]'); if(t) t.scrollIntoView({block:'start'}); }
@@ -213,7 +213,7 @@ a.pp:hover{color:#8F7440 !important}
       <a href="#news" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#B09154;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur News-Übersicht</a>
 
       <div data-show="showAirflow">
-        <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:24px">
           <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
             <img id="nw-airflow" src="assets/img-nw-airflow.webp?v=2" alt="Airflow-Gerät zur schonenden Zahnreinigung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
@@ -229,7 +229,7 @@ a.pp:hover{color:#8F7440 !important}
       </div>
 
       <div data-show="showCerec">
-        <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:24px">
           <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
             <img id="nw-cerec" src="assets/img-nw-cerec.webp?v=2" alt="CEREC: Keramikrestauration aus eigener Herstellung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>
@@ -246,7 +246,7 @@ a.pp:hover{color:#8F7440 !important}
       </div>
 
       <div data-show="showCmd">
-        <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-direction:column;gap:24px">
           <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
             <img id="nw-cmd" src="assets/img-nw-cmd.webp?v=2" alt="CMD" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
           </div>

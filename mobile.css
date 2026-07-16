@@ -62,11 +62,18 @@
   header[data-screen-label="Nav"] > nav > .ndrop > a {
     display: block !important; width: 100%; box-sizing: border-box;
     padding: 13px 20px !important; font-size: 14.5px !important;
-    border-bottom: 1px solid #F3EFE6; text-align: left !important;
+    border-bottom: 1px solid #F3EFE6 !important; text-align: left !important;
     border-top: none !important; white-space: nowrap;
   }
   header[data-screen-label="Nav"] > nav > a:last-child,
   header[data-screen-label="Nav"] > nav > .ndrop:last-child > a { border-bottom: none !important; }
+
+  /* Aktive Seite: stabiler goldener Akzent links statt wandernder Unterstrich */
+  header[data-screen-label="Nav"] > nav > a[aria-current="page"],
+  header[data-screen-label="Nav"] > nav > .ndrop > a[aria-current="page"] {
+    border-left: 3px solid #C4A44E !important; padding-left: 17px !important;
+    background: rgba(196,164,78,.07) !important; color: #3D5A98 !important;
+  }
   header[data-screen-label="Nav"] > nav > .ndrop { width: 100%; display: block !important; }
   /* Dropdown-Eltern: Pfeil sichtbar, dreht beim Aufklappen */
   header[data-screen-label="Nav"] > nav > .ndrop > a { display: flex !important; align-items: center; justify-content: space-between; }

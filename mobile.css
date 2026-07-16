@@ -303,4 +303,8 @@
 
   /* Start 'Ihre Zahnaerzte' (c-praxis): Kachel mobil etwas hoeher, damit Max' Kopf passt */
   [style*="width:460px"][style*="height:420px"] { aspect-ratio: 7/6 !important; height: auto !important; }
+
+  /* leistungen mobil: Hero (Birgit) flacher 2/1 (Bild ist nativ 2:1, zeigt Person ganz); Artikel-Hero flacher + mehr Abstand zum Text */
+  [style*="height:360px"][style*="margin-bottom:34px"] { aspect-ratio: 2/1 !important; height: auto !important; }
+  [style*="height:320px"][style*="margin-bottom:20px"] { aspect-ratio: 16/9 !important; height: auto !important; margin-bottom: 30px !important; }
 }

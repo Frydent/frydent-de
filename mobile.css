@@ -297,4 +297,7 @@
   /* So ticken wir: Aufzaehlungs-Punkte nicht umbrechen (+ neben Text), Kuckucksuhr groesser */
   [style*="align-items:baseline"][style*="gap:12px"] { flex-wrap: nowrap !important; }
   svg[viewBox="0 0 200 300"] { width: 360px !important; height: 540px !important; }
+
+  /* Start 'Unsere Leistungen': Titel und Portal-Link mobil untereinander statt nebeneinander */
+  [style*="align-items:baseline;justify-content:space-between"] { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
 }

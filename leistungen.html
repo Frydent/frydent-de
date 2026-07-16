@@ -89,7 +89,7 @@ function pokaz(){
       });
       return;
     }
-    [].forEach.call(el.children,function(c){ c.style.display=''; });
+    [].forEach.call(el.children,function(c){ if(c.style.display==='none') c.style.display=''; });
     el.style.display = ok ? '' : 'none';
   });
   if(akt!=='overview'){ var t=document.querySelector('[data-show="showArticle"]'); if(t) t.scrollIntoView({block:'start'}); }

@@ -648,7 +648,7 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
   function apply(img,v){
     var f=img.parentElement,iw=img.naturalWidth,ih=img.naturalHeight,fw=f.clientWidth,fh=f.clientHeight;
     if(!iw||!ih||!fw||!fh)return;
-    var sv=v.s,yShift=0;if(matchMedia("(max-width:900px)").matches){if(img.id==="c-soticken")sv=v.s*1.15;else if(img.id==="c-praxis"){sv=v.s*1.18;yShift=12;}}var base=Math.max(fw/iw,fh/ih),k=base*sv;
+    var sv=v.s,yShift=0;if(matchMedia("(max-width:900px)").matches){if(img.id==="c-soticken")sv=v.s*1.15;else if(img.id==="c-praxis"){sv=v.s*1.1;yShift=0;}}var base=Math.max(fw/iw,fh/ih),k=base*sv;
     var mx=Math.max(0,(iw*k/fw-1)*50),my=Math.max(0,(ih*k/fh-1)*50);
     var x=Math.max(-mx,Math.min(mx,v.x)),y=Math.max(-my,Math.min(my,v.y+yShift));
     img.style.position="absolute";img.style.setProperty("max-width","none","important");

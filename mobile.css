@@ -27,6 +27,9 @@
 
 @media (max-width: 900px) {
 
+  /* Portal-Banner-Pin (Deko-Nadel) auf Mobil ausblenden — steht dort nur störend ab */
+  [style*="rotate(56deg)"] { display: none !important; }
+
   /* ===== Mobiles Hamburger-Menü ===== */
   /* Kopfleiste: eine schlanke Zeile — Logo links, Hamburger rechts */
   header[data-screen-label="Nav"] {

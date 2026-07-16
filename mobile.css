@@ -29,8 +29,8 @@
 
   /* Portal-Banner-Pin (Deko-Nadel) auf Mobil ausblenden — steht dort nur störend ab */
   [style*="rotate(56deg)"] { display: none !important; }
-  /* Portal-Banner (Link ins Patientenportal) auf Mobil: kein Rest-Gap der Nadel, mehr Luft oben/unten */
-  a[href*="info.frydent.de"][style*="border-radius:14px"] { gap: 0 !important; padding-top: 22px !important; padding-bottom: 22px !important; }
+  /* Portal-Banner (Link ins Patientenportal) auf Mobil: kein Rest-Gap der Nadel, mehr Außenabstand */
+  a[href*="info.frydent.de"][style*="border-radius:14px"] { gap: 0 !important; margin-top: 24px !important; margin-bottom: 28px !important; }
 
   /* ===== Mobiles Hamburger-Menü ===== */
   /* Kopfleiste: eine schlanke Zeile — Logo links, Hamburger rechts */

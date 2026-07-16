@@ -420,7 +420,10 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
     for(var id in V){(function(id){
       var img=document.getElementById(id); if(!img) return;
       var v=V[id];
-      if(matchMedia("(max-width:900px)").matches && (id==="team-warm"||id==="t-tatiana"||id==="t-max")){ v={s:v.s*1.1, x:v.x, y:v.y}; }
+      if(matchMedia("(max-width:900px)").matches){
+        if(id==="team-warm"){ v={s:v.s*1.1, x:v.x+3, y:v.y}; }
+        else if(id==="t-tatiana"||id==="t-max"){ v={s:v.s*1.21, x:v.x, y:v.y}; }
+      }
       if(img.complete && img.naturalWidth) apply(img,v);
       else img.addEventListener("load",function(){apply(img,v)});
     })(id);}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Service · FRYDENT Bonndorf</title>
 <meta name="description" content="Formulare, Downloads, häufige Fragen und praktische Hinweise rund um Ihren Besuch.">
-<link rel="stylesheet" href="mobile.css?v=17"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
+<link rel="stylesheet" href="mobile.css?v=18"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
@@ -51,7 +51,7 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
 .ndrop{position:relative;display:inline-flex}
 .ndrop>.nmenu{visibility:hidden;opacity:0;position:absolute;top:100%;left:-16px;padding-top:12px;z-index:130;transition:opacity .15s ease}
 .ndrop:hover>.nmenu{visibility:visible;opacity:1}
-@media(min-width:901px){#s-nikolina{max-width:none !important;width:245.85% !important;height:134.95% !important;left:56.35% !important;top:36.82% !important;right:auto !important;bottom:auto !important;transform:translate(-50%,-50%) !important;object-fit:fill}}
+
 
 </style>
 
@@ -310,5 +310,26 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
+<script>
+/* getreue Reproduktion des C.Design-Ausschnitts fuer #s-nikolina, alle Viewports */
+(function(){
+  var V={"s-nikolina":{s:1.349555432423949,x:6.346241480537449,y:-13.178865557288825}};
+  function apply(img,v){
+    var f=img.parentElement,iw=img.naturalWidth,ih=img.naturalHeight,fw=f.clientWidth,fh=f.clientHeight;
+    if(!iw||!ih||!fw||!fh)return;
+    var sv=v.s; if(matchMedia("(max-width:900px)").matches){sv=v.s*1.28;}
+    var base=Math.max(fw/iw,fh/ih),k=base*sv;
+    var mx=Math.max(0,(iw*k/fw-1)*50),my=Math.max(0,(ih*k/fh-1)*50);
+    var x=Math.max(-mx,Math.min(mx,v.x)),y=Math.max(-my,Math.min(my,v.y));
+    img.style.position="absolute";img.style.setProperty("max-width","none","important");
+    img.style.width=(iw*k/fw*100)+"%";img.style.height=(ih*k/fh*100)+"%";
+    img.style.left=(50+x)+"%";img.style.top=(50+y)+"%";img.style.right="auto";img.style.bottom="auto";
+    img.style.transform="translate(-50%,-50%)";img.style.objectFit="";
+  }
+  function run(){for(var id in V){(function(id){var img=document.getElementById(id);if(!img)return;var v=V[id];if(img.complete&&img.naturalWidth)apply(img,v);else img.addEventListener("load",function(){apply(img,v)});})(id);}}
+  if(document.readyState!=="loading")run();else document.addEventListener("DOMContentLoaded",run);
+  var t;window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(run,120)});
+})();
+</script>
 </body>
 </html>

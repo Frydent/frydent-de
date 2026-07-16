@@ -138,6 +138,15 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98}
   [data-screen-label="Galerie"] [style*="grid-column"],
   [data-screen-label="Hygiene"] [style*="grid-column"],
   [data-screen-label="Kinderecke"] [style*="grid-column"]{grid-column:auto !important}
+  /* Blaue Ruhe: einheitliche Kacheln statt vw-Streifen */
+  [data-screen-label="Galerie"] [style*="grid-row"]{grid-row:auto !important;height:auto !important;aspect-ratio:3/2}
+  [data-screen-label="Galerie"] [style*="49vw"],
+  [data-screen-label="Galerie"] [style*="19.6vw"],
+  [data-screen-label="Galerie"] [style*="39.2vw"]{height:auto !important;aspect-ratio:3/2}
+  /* Hochformat-Kacheln mobil kompakter */
+  [data-screen-label="Galerie"] svg[style*="aspect-ratio:3/4"]{aspect-ratio:4/5 !important}
+  /* Kinderecke: warmes Buttergelb, nur mobil */
+  [data-screen-label="Kinderecke"]{background:#F9E9C4 !important;border-top-color:#ECDDB8 !important;border-bottom-color:#ECDDB8 !important}
 }</style>
   <div style="background:linear-gradient(180deg,#EBEFF5 0%,#F6F8FB 55%,#ffffff 100%)" data-screen-label="Intro">
   <div style="display:flex;flex-direction:column;gap:14px;padding:40px 56px 30px;text-align:center;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">

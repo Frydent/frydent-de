@@ -218,6 +218,9 @@
   /* v6.1: karty zespołu — "lepki" hover nie może trzymać obrotu (tap steruje klasą) */
   .flip:hover:not(.is-flipped) .flip-inner { transform: none !important; }
 
+  /* v8: obrót kart — desktop zwolniony na 1,25s (Basis), Mobil bleibt 0,95s */
+  .flip-inner { transition: transform .95s cubic-bezier(.4,.15,.2,1) !important; }
+
   /* v6.1: akapity z zafiksowaną wysokością z edytora (np. 83px pod Teamfoto)
      wylewały się na kolejne bloki */
   p[style*="height:"] { height: auto !important; }

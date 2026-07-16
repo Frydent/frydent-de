@@ -407,7 +407,8 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
     var mx=Math.max(0,(iw*k/fw-1)*50), my=Math.max(0,(ih*k/fh-1)*50);
     var x=Math.max(-mx,Math.min(mx,v.x)), y=Math.max(-my,Math.min(my,v.y));
     img.style.position="absolute";
-    img.style.maxWidth="none";
+    img.style.setProperty("max-width","none","important");
+    img.style.setProperty("max-height","none","important");
     img.style.width=(iw*k/fw*100)+"%";
     img.style.height=(ih*k/fh*100)+"%";
     img.style.left=(50+x)+"%"; img.style.top=(50+y)+"%";

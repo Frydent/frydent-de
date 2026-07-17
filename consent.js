@@ -28,13 +28,21 @@
 
   /* Platzhalter: solange keine Einwilligung vorliegt, bleibt der
      Buchungs-Button nutzbar. Ein Klick fragt die Einwilligung ab
-     und laedt den Kalender direkt danach. */
-  window.toggleDrFlexAppointments = function () {
+     und laedt den Kalender direkt danach.
+     WICHTIG: benannte Funktion statt arguments.callee; das ist im
+     strict mode verboten und liess den Klick auf Mobilgeraeten
+     kommentarlos scheitern (Race: embed.js noch nicht uebernommen). */
+  window.toggleDrFlexAppointments = function frydentToggle() {
     if (get() === 'all') {
       loadDrFlex(function () {
-        if (window.toggleDrFlexAppointments !== arguments.callee) {
-          setTimeout(function(){ if (window.toggleDrFlexAppointments) window.toggleDrFlexAppointments(); }, 150);
-        }
+        var tries = 0;
+        (function waitFlex() {
+          if (window.toggleDrFlexAppointments !== frydentToggle) {
+            window.toggleDrFlexAppointments();
+          } else if (++tries < 20) {
+            setTimeout(waitFlex, 150);
+          }
+        })();
       });
       return;
     }

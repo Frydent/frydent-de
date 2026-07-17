@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /danke.html
 
-Sitemap: https://frydent.github.io/frydent-de/sitemap.xml
+Sitemap: https://frydent.de/sitemap.xml

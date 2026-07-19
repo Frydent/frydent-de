@@ -285,6 +285,9 @@
   [data-screen-label="Zwei Traditionen"] > div > div:has(> h2) { order: 0 !important; }
   [data-screen-label^="Damals"] > div > div:has(ba-slider),
   [data-screen-label="Zwei Traditionen"] > div > div:has(ba-slider) { order: 1 !important; }
+  /* Wanderschuhe-Foto bleibt auch auf Tablets im Hochformat */
+  #n-schuhe-rahmen { height: auto !important; aspect-ratio: 1271/1479 !important; }
+
 }
 
 @media (max-width: 600px) {
@@ -312,4 +315,8 @@
   #lst-hero { transform: scale(1.5) !important; transform-origin: 24% 54% !important; }
   [data-show="showArticle"] [style*="letter-spacing:1.5px"][style*="color:#B09154"] { margin-bottom: 8px !important; }
   [data-show="showArticle"] h2[style*="font-size:30px"] { margin-bottom: 8px !important; }
+
+  /* Wanderschuhe-Foto: Hochformat, darf nicht von den generischen
+     Hoehen-Regeln oben auf Querformat gezwungen werden */
+  #n-schuhe-rahmen { height: auto !important; aspect-ratio: 1271/1479 !important; }
 }

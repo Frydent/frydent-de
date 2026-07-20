@@ -57,6 +57,10 @@
   /* Geöffneter Zustand */
   header[data-screen-label="Nav"].menu-open > nav { display: flex !important; }
   header[data-screen-label="Nav"].menu-open > div:last-child { display: none !important; } /* Aktionsleiste bleibt zu; Buchen ist in der Schnellkontakt-Leiste unten */
+  /* Social-Icons im geoeffneten Menue als eigene Zeile zeigen (Buchen bleibt ausgeblendet, liegt in der unteren Leiste) */
+  header[data-screen-label="Nav"].menu-open > div:last-child { display: flex !important; justify-content: center !important; padding: 4px 0 14px !important; gap: 10px !important; }
+  header[data-screen-label="Nav"].menu-open > div:last-child > a.hbtn-outline { display: none !important; }
+  header[data-screen-label="Nav"].menu-open .hd-soc { display: inline-flex !important; width: 42px !important; height: 42px !important; border: 1px solid #D9DFEA !important; color: #2C4170 !important; }
   /* Menüpunkte: eine Hauptseite pro Zeile */
   header[data-screen-label="Nav"] > nav > a,
   header[data-screen-label="Nav"] > nav > .ndrop > a {

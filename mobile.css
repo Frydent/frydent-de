@@ -349,4 +349,8 @@
   #n-schuhe-rahmen { height: auto !important; aspect-ratio: 1271/1479 !important; }
 
 
+
+  /* Nikolina-Signatur im Hero nur mobil ausblenden (dort zu eng, ohne Einladungskontext schwach begruendet) */
+  #hero-sign-nikolina { display: none !important; }
+
 }

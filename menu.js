@@ -28,7 +28,7 @@
     h.classList.add('menu-closing');
     var btn = h.querySelector('.hamburger-btn');
     if (btn) setState(btn, false);
-    window.setTimeout(function () { finishClose(h); }, 400);
+    window.setTimeout(function () { finishClose(h); }, 450);
   }
 
   function moveActionsIntoNav(h, open) {

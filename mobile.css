@@ -56,11 +56,35 @@
   }
   /* Geöffneter Zustand */
   header[data-screen-label="Nav"].menu-open > nav { display: flex !important; }
-  header[data-screen-label="Nav"].menu-open > div:last-child { display: none !important; } /* Aktionsleiste bleibt zu; Buchen ist in der Schnellkontakt-Leiste unten */
-  /* Social-Icons im geoeffneten Menue als eigene Zeile zeigen (Buchen bleibt ausgeblendet, liegt in der unteren Leiste) */
-  header[data-screen-label="Nav"].menu-open > div:last-child { display: flex !important; justify-content: center !important; padding: 4px 0 14px !important; gap: 10px !important; }
-  header[data-screen-label="Nav"].menu-open > div:last-child > a.hbtn-outline { display: none !important; }
-  header[data-screen-label="Nav"].menu-open .hd-soc { display: inline-flex !important; width: 42px !important; height: 42px !important; border: 1px solid #D9DFEA !important; color: #2C4170 !important; }
+  /* Aktionsblock ist bei offenem Menue per JS ans Ende von <nav> verschoben:
+     Infoportal + Online buchen + Social als Stapel unter den Menuepunkten. */
+  header[data-screen-label="Nav"].menu-open nav > div:last-child {
+    display: flex !important; flex-direction: column !important; align-items: stretch !important;
+    position: static !important; width: 100% !important; box-sizing: border-box !important;
+    padding: 12px 16px 14px !important; gap: 9px !important;
+    background: transparent !important; border: none !important; box-shadow: none !important;
+    border-top: 1px solid #F0EBDE !important; margin-top: 4px !important;
+  }
+  /* Infoportal: dezenter Umriss in Gold */
+  header[data-screen-label="Nav"].menu-open nav .ip-pill-out {
+    justify-content: center !important; width: 100% !important; box-sizing: border-box !important;
+    background: transparent !important; color: #8F7440 !important; border: 1.5px solid #C4A44E !important;
+    padding: 12px !important; font-size: 12.5px !important; margin: 0 !important;
+  }
+  /* Online buchen: gefuellt blau (Hauptaktion, da im Menue kein Hero-Button sichtbar ist) */
+  header[data-screen-label="Nav"].menu-open nav a.hbtn-outline {
+    display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box !important;
+    background: #3D5A98 !important; color: #ffffff !important; border: 1.5px solid #3D5A98 !important;
+    padding: 13px !important; font-size: 12.5px !important; margin: 0 !important;
+  }
+  /* Social-Icons als eigene zentrierte Zeile darunter */
+  header[data-screen-label="Nav"].menu-open nav .hd-soc-grp {
+    display: flex !important; justify-content: center !important; gap: 12px !important; margin-top: 3px !important;
+  }
+  header[data-screen-label="Nav"].menu-open nav .hd-soc {
+    display: inline-flex !important; width: 40px !important; height: 40px !important;
+    border: 1px solid #D9DFEA !important; color: #2C4170 !important;
+  }
   /* Menüpunkte: eine Hauptseite pro Zeile */
   header[data-screen-label="Nav"] > nav > a,
   header[data-screen-label="Nav"] > nav > .ndrop > a {
@@ -324,20 +348,5 @@
      Hoehen-Regeln oben auf Querformat gezwungen werden */
   #n-schuhe-rahmen { height: auto !important; aspect-ratio: 1271/1479 !important; }
 
-  /* Header-Aktionen mobil: Infoportal als gefuellte Pille (Umriss geht mobil unter),
-     volle Breite, ueber den Social-Icons. Online buchen liegt bereits gefuellt in der
-     unteren Schnellkontakt-Leiste, bleibt unveraendert. */
-  header[data-screen-label="Nav"].menu-open > div:last-child {
-    flex-direction: column !important; align-items: stretch !important; gap: 10px !important;
-    padding: 8px 14px 16px !important;
-  }
-  header[data-screen-label="Nav"].menu-open .ip-pill-out {
-    background: #C4A44E !important; color: #ffffff !important; border-color: #C4A44E !important;
-    justify-content: center !important; width: 100% !important; box-sizing: border-box !important;
-    padding: 13px 18px !important; font-size: 13px !important;
-  }
-  header[data-screen-label="Nav"].menu-open .hd-soc-grp {
-    display: flex !important; justify-content: center !important; gap: 12px !important; margin-top: 2px;
-  }
 
 }

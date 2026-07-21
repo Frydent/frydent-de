@@ -323,4 +323,21 @@
   /* Wanderschuhe-Foto: Hochformat, darf nicht von den generischen
      Hoehen-Regeln oben auf Querformat gezwungen werden */
   #n-schuhe-rahmen { height: auto !important; aspect-ratio: 1271/1479 !important; }
+
+  /* Header-Aktionen mobil: Infoportal als gefuellte Pille (Umriss geht mobil unter),
+     volle Breite, ueber den Social-Icons. Online buchen liegt bereits gefuellt in der
+     unteren Schnellkontakt-Leiste, bleibt unveraendert. */
+  header[data-screen-label="Nav"].menu-open > div:last-child {
+    flex-direction: column !important; align-items: stretch !important; gap: 10px !important;
+    padding: 8px 14px 16px !important;
+  }
+  header[data-screen-label="Nav"].menu-open .ip-pill-out {
+    background: #C4A44E !important; color: #ffffff !important; border-color: #C4A44E !important;
+    justify-content: center !important; width: 100% !important; box-sizing: border-box !important;
+    padding: 13px 18px !important; font-size: 13px !important;
+  }
+  header[data-screen-label="Nav"].menu-open .hd-soc-grp {
+    display: flex !important; justify-content: center !important; gap: 12px !important; margin-top: 2px;
+  }
+
 }

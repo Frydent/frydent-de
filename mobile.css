@@ -369,4 +369,11 @@
   /* Nikolina-Signatur im Hero nur mobil ausblenden (dort zu eng, ohne Einladungskontext schwach begruendet) */
   #hero-sign-nikolina { display: none !important; }
 
+
+  /* Lange Untermenue-Eintraege (z.B. "Ästhetische Zahnmedizin") duerfen mobil umbrechen
+     statt am Rand abgeschnitten/gequetscht zu wirken */
+  header[data-screen-label="Nav"] > nav .nmenu a {
+    white-space: normal !important; line-height: 1.3 !important;
+  }
+
 }

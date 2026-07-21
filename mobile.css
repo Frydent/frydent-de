@@ -54,8 +54,25 @@
     padding: 6px 0 !important; gap: 0 !important; margin: 0 !important;
     z-index: 200; white-space: normal !important; overflow: hidden;
   }
-  /* Geöffneter Zustand */
-  header[data-screen-label="Nav"].menu-open > nav { display: flex !important; }
+  /* Geöffneter Zustand: nav wird sichtbar und sanft eingeblendet */
+  header[data-screen-label="Nav"].menu-open > nav {
+    display: flex !important;
+    animation: frydentMenuIn .22s ease both;
+  }
+  /* Sanftes Ausblenden beim Schließen (Klasse wird per JS kurz gehalten) */
+  header[data-screen-label="Nav"].menu-closing > nav {
+    display: flex !important;
+    animation: frydentMenuOut .2s ease both;
+    pointer-events: none;
+  }
+  @keyframes frydentMenuIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes frydentMenuOut {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-6px); }
+  }
   /* Aktionsblock ist bei offenem Menue per JS ans Ende von <nav> verschoben:
      Infoportal + Online buchen + Social als Stapel unter den Menuepunkten. */
   header[data-screen-label="Nav"].menu-open nav > div:last-child {

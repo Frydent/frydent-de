@@ -62,7 +62,7 @@
   /* Sanftes Ausblenden beim Schließen (Klasse wird per JS kurz gehalten) */
   header[data-screen-label="Nav"].menu-closing > nav {
     display: flex !important;
-    animation: frydentMenuOut .4s cubic-bezier(.4,0,.2,1) both;
+    animation: frydentMenuOut .45s ease both;
     pointer-events: none;
   }
   @keyframes frydentMenuIn {
@@ -70,8 +70,8 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes frydentMenuOut {
-    from { opacity: 1; transform: translateY(0); }
-    to   { opacity: 0; transform: translateY(-100%); }
+    from { opacity: 1; }
+    to   { opacity: 0; }
   }
   /* Aktionsblock ist bei offenem Menue per JS ans Ende von <nav> verschoben:
      Infoportal + Online buchen + Social als Stapel unter den Menuepunkten. */

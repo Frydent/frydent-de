@@ -96,11 +96,10 @@
   header[data-screen-label="Nav"] > nav > a:last-child,
   header[data-screen-label="Nav"] > nav > .ndrop:last-child > a { border-bottom: none !important; }
 
-  /* Aktive Seite: stabiler goldener Akzent links statt wandernder Unterstrich */
+  /* Aktive Seite: nur goldener Text, wie im Desktop-Menue (kein Balken, kein Hintergrund) */
   header[data-screen-label="Nav"] > nav > a[aria-current="page"],
   header[data-screen-label="Nav"] > nav > .ndrop > a[aria-current="page"] {
-    border-left: 3px solid #C4A44E !important; padding-left: 17px !important;
-    background: rgba(196,164,78,.07) !important; color: #3D5A98 !important;
+    color: #C4A44E !important;
   }
   header[data-screen-label="Nav"] > nav > .ndrop { width: 100%; display: block !important; }
   /* Dropdown-Eltern: Pfeil sichtbar, dreht beim Aufklappen */

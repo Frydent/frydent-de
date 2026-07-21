@@ -88,8 +88,10 @@
     background: transparent !important; color: #8F7440 !important; border: 1.5px solid #C4A44E !important;
     padding: 12px !important; font-size: 12.5px !important; margin: 0 !important;
   }
-  /* Online buchen: gefuellt blau (Hauptaktion, da im Menue kein Hero-Button sichtbar ist) */
-  header[data-screen-label="Nav"].menu-open nav a.hbtn-outline {
+  /* Online buchen: gefuellt blau (Hauptaktion, da im Menue kein Hero-Button sichtbar ist).
+     Selektor deckt beide Button-Varianten ab (hbtn-outline UND h-d39dbe / data-drflex). */
+  header[data-screen-label="Nav"].menu-open nav a.hbtn-outline,
+  header[data-screen-label="Nav"].menu-open nav a[data-drflex] {
     display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box !important;
     background: #3D5A98 !important; color: #ffffff !important; border: 1.5px solid #3D5A98 !important;
     padding: 13px !important; font-size: 12.5px !important; margin: 0 !important;

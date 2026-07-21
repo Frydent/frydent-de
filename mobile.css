@@ -70,8 +70,8 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   @keyframes frydentMenuOut {
-    from { opacity: 1; transform: translateY(0); }
-    to   { opacity: 0; transform: translateY(-6px); }
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to   { opacity: 0; transform: translateY(-12px) scale(.97); }
   }
   /* Aktionsblock ist bei offenem Menue per JS ans Ende von <nav> verschoben:
      Infoportal + Online buchen + Social als Stapel unter den Menuepunkten. */

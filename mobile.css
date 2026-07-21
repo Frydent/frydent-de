@@ -57,12 +57,12 @@
   /* Geöffneter Zustand: nav wird sichtbar und sanft eingeblendet */
   header[data-screen-label="Nav"].menu-open > nav {
     display: flex !important;
-    animation: frydentMenuIn .22s ease both;
+    animation: frydentMenuIn .32s ease both;
   }
   /* Sanftes Ausblenden beim Schließen (Klasse wird per JS kurz gehalten) */
   header[data-screen-label="Nav"].menu-closing > nav {
     display: flex !important;
-    animation: frydentMenuOut .2s ease both;
+    animation: frydentMenuOut .4s ease both;
     pointer-events: none;
   }
   @keyframes frydentMenuIn {

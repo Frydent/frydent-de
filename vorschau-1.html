@@ -291,6 +291,25 @@
 .ip-pill-out:hover{background:#FAF4E8}
 .buchen-blau-full{display:inline-flex;align-items:center;gap:7px;background:#3D5A98 !important;color:#fff !important;padding:13px 26px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;border:1.5px solid #3D5A98 !important;transition:background .2s}
 .buchen-blau-full:hover{background:#31497D !important}
+
+/* Header-Feinschliff: kompaktere Buttons, damit alles in eine Zeile passt */
+.ip-pill-gold,.ip-pill-out,.buchen-blau-full{padding-top:11px !important;padding-bottom:11px !important;font-size:12px !important;letter-spacing:.4px !important}
+.ip-pill-gold,.buchen-blau-full{padding-left:18px !important;padding-right:18px !important}
+.ip-pill-out{padding-left:16px !important;padding-right:16px !important}
+header[data-screen-label="Nav"] > div:last-child{gap:12px !important}
+/* Auf mittleren Bildschirmen Social-Icons ausblenden, damit die Zeile ruhig bleibt */
+@media (max-width:1330px) and (min-width:861px){
+  .hd-soc-grp{display:none !important}
+  header[data-screen-label="Nav"] > nav{gap:14px !important;font-size:13px !important}
+}
+@media (max-width:1180px) and (min-width:901px){
+  header[data-screen-label="Nav"] > nav{gap:9px !important;font-size:11.6px !important;letter-spacing:.2px !important}
+  header[data-screen-label="Nav"]{padding-left:20px !important;padding-right:20px !important}
+  .ip-pill-gold,.ip-pill-out,.buchen-blau-full,a.hbtn-outline{font-size:11px !important;padding-left:13px !important;padding-right:13px !important}
+  .ip-pill-gold svg,.ip-pill-out svg,.buchen-blau-full svg{display:none !important}
+}
+/* Buchen-Outline (nur Vorschau 5) etwas kompakter */
+a.hbtn-outline{padding-top:11px !important;padding-bottom:11px !important;font-size:12px !important}
 </style>
 <script>(function(){
 var DESK='assets/img-c-hero.webp', MOB='assets/img-c-hero-mobile.webp';

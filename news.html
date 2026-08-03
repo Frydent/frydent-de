@@ -58,7 +58,7 @@
 .h-d32178:hover{background:#D4A930;color:#FFFFFF}
 </style>
 <script>(function(){
-var KL=["airflow", "praxisinfo"];
+var KL=["bleaching", "airflow", "praxisinfo"];
 function pokaz(){
   var hs=(location.hash||'').replace('#','');
   var akt = KL.indexOf(hs)>=0 ? hs : 'overview';
@@ -173,6 +173,17 @@ a.pp:hover{color:#8F7440 !important}
 
       <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
         <div style="position:relative;width:100%;height:240px">
+          <img id="nwc-bleaching" src="assets/img-nwc-bleaching.webp" alt="Zahnaufhellung in der Praxis mit Whitening-Lampe" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <a href="#bleaching" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
+          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Was macht Zähne heller, und was nur sauber?</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Reinigung und Aufhellung sind zwei verschiedene Dinge. Was welche Methode kann, und was keine kann.</p>
+        </a>
+      </div>
+
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <div style="position:relative;width:100%;height:240px">
           <img id="nwc-airflow" src="assets/img-nwc-airflow.webp?v=2" alt="Airflow-Gerät zur schonenden Zahnreinigung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
         <a href="#airflow" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
@@ -189,7 +200,7 @@ a.pp:hover{color:#8F7440 !important}
         <a href="https://info.frydent.de/praxisinfo.html" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
           <div style="font-size:12.5px;color:#9AA3B5">Immer aktuell</div>
           <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Schließzeiten der Praxis</div>
-          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Urlaub, Vertretung und Notdienst — stets aktuell im Infoportal.</p>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Urlaub, Vertretung und Notdienst, stets aktuell im Infoportal.</p>
         </a>
       </div>
 
@@ -205,6 +216,148 @@ a.pp:hover{color:#8F7440 !important}
 
     <div style="min-width:0">
       <a href="#news" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur Übersicht</a>
+
+      <div data-show="showBleaching">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
+            <img id="nw-bleaching" src="assets/img-nw-bleaching.webp" alt="Zahnfarbschlüssel mit Farbmustern vor dunkelblauem Hintergrund" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
+          </div>
+
+          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
+
+          <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Was macht Zähne heller, und was nur sauber?</h2>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875;font-weight:600">Viele Menschen hoffen, dass eine professionelle Zahnreinigung bereits hellere Zähne bringt. Manchmal ist der Unterschied deutlich zu sehen, manchmal verändert sich die Farbe kaum. Es kommt darauf an, ob die Verfärbungen auf den Zähnen liegen oder ob die natürliche Zahnfarbe selbst als zu dunkel empfunden wird.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was kann eine professionelle Zahnreinigung, und was nicht?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Kaffee, Tee, Rotwein, Tabak und andere Farbstoffe lagern sich auf der Zahnoberfläche ab. Solche äußeren Verfärbungen lassen sich durch eine professionelle Reinigung und Politur häufig gut entfernen. Danach wirken die Zähne sauberer, glatter und oft auch heller. Sichtbar wird dabei aber die natürliche Zahnfarbe; die Zahnsubstanz selbst wird nicht aufgehellt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wer von Natur aus eher gelbliche Zähne hat, bekommt durch eine Zahnreinigung also gepflegte und glänzende, aber nicht automatisch hellere Zähne. Bei starken Belägen kann der Unterschied dagegen erstaunlich groß sein.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was verändert ein Bleaching wirklich?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Beim Bleaching wird Wasserstoffperoxid eingesetzt oder ein Stoff, der es freisetzt. Der Wirkstoff dringt in Zahnschmelz und Dentin ein und verändert dort Strukturen, die für die Farbe mitverantwortlich sind. Eine Reinigung wirkt auf der Oberfläche, eine Aufhellung in der Zahnsubstanz.</p>
+
+          <figure style="margin:6px 0 0;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/img-bleaching-schema.webp" alt="Zwei Zähne im Querschnitt: links eine Verfärbung außen auf dem Zahn, rechts eine Verfärbung in der Zahnsubstanz" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px">
+            <figcaption style="font-size:13.5px;line-height:1.6;color:#8A93A6;font-style:italic">Links liegt die Verfärbung außen auf dem Zahn, dort erreicht sie eine Reinigung. Rechts sitzt sie in der Zahnsubstanz, dort wirkt nur eine Aufhellung. Illustration, keine Patientenaufnahme.</figcaption>
+          </figure>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dass peroxidhaltige Mittel aufhellen, ist gut untersucht. Ein Cochrane-Review von 2018 hat dazu 71 Studien mit 3.780 Erwachsenen ausgewertet, alle zur Anwendung zu Hause. Die untersuchten Mittel hellten die Zähne über Zeiträume von zwei Wochen bis sechs Monaten auf. Die Autoren stufen die Sicherheit dieser Aussage allerdings als niedrig bis sehr niedrig ein, weil die Studien sehr unterschiedlich angelegt und meist klein waren (Eachempati et al. 2018).</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dieser Punkt wird häufig missverstanden, deshalb sagen wir es deutlich: Eine niedrige Sicherheit der Evidenz bedeutet nicht, dass eine Behandlung nicht wirkt. Sie bedeutet, dass sich aus den vorhandenen Studien nicht genau ableiten lässt, um wie viel sie wirkt und welches Produkt oder welche Konzentration am besten geeignet ist. Dass aufgehellt wird, zeigen die Studien übereinstimmend.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Behandlung in der Praxis oder Schienen für zu Hause?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Es gibt zwei zahnärztlich begleitete Wege. In der Praxis wird ein stark konzentriertes Mittel in einer Sitzung aufgetragen. Beim Schienenbleaching tragen Sie ein deutlich milderes Gel über einen festgelegten Zeitraum zu Hause in Schienen; die erste Anwendung und die Kontrollen erfolgen in der Praxis. Beide Wege lassen sich kombinieren.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Welcher Weg der bessere ist, lässt sich pauschal nicht sagen. Eine systematische Übersichtsarbeit mit Metaanalyse von 2025 hat beide verglichen. Auf der Farbskala, also bei dem, was Behandlerin und Patientin tatsächlich sehen, fand sich kein Unterschied. Ein Messgerät zeigte einen kleinen Vorteil für das Schienenbleaching, den die Autoren selbst als wenig gesichert einstufen. Empfindlichkeiten traten in beiden Gruppen ähnlich häufig auf, waren beim Schienenbleaching aber weniger stark ausgeprägt (de Geus et al. 2025).</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für Sie heißt das: Beide Wege führen zu einem sichtbaren Ergebnis. Welcher passt, hängt weniger von der Studienlage ab als davon, wie empfindlich Ihre Zähne sind, wie schnell Sie ein Ergebnis möchten und wie viel Zeit Sie einplanen können.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wie wir in unserer Praxis arbeiten</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wir beginnen mit der Behandlung in der Praxis. Dabei verwenden wir ein Gel mit 32 Prozent Wasserstoffperoxid. Diese Konzentration liegt weit oberhalb dessen, was außerhalb einer Zahnarztpraxis überhaupt angewendet werden darf, und genau deshalb gehört sie hierher.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Der Ablauf stellt Anforderungen. Zahnfleisch und Schleimhaut werden sorgfältig abgedeckt, das Behandlungsfeld bleibt trocken, und der Verlauf wird durchgehend kontrolliert, damit wir bei Empfindlichkeiten sofort reagieren können. Wir arbeiten dabei mit einer Whitening-Lampe, die zum Behandlungssystem gehört. Aufgehellt wird durch das Gel. Für den Termin sollten Sie etwa anderthalb Stunden einplanen, in denen Sie ruhig sitzen bleiben.</p>
+
+          <figure style="margin:6px 0 0;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/img-bleaching-lampe.webp" alt="Behandlung zur Zahnaufhellung mit abgedecktem Zahnfleisch und Schutzbrille" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px">
+            <figcaption style="font-size:13.5px;line-height:1.6;color:#8A93A6;font-style:italic">Die Behandlung in der Praxis: Augen geschützt, Zahnfleisch abgedeckt, Behandlungsfeld trocken. Illustration, keine Patientenaufnahme.</figcaption>
+          </figure>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wenn Sie möchten, ergänzen wir das Ergebnis anschließend zu Hause. Welcher Weg dafür passt, richtet sich nach dem Befund.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In vielen Fällen genügen vorgefüllte Aufhellungsschienen mit 6 Prozent Wasserstoffperoxid. Das ist der gesetzliche Höchstwert für Mittel, die Patientinnen und Patienten mit nach Hause bekommen dürfen. Ein Abdruck ist dafür nicht nötig.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wo eine genauere Anpassung sinnvoll ist, fertigen wir individuelle Schienen an und geben ein Gel mit Carbamidperoxid mit. Auch dieses bleibt unterhalb der gesetzlich zulässigen Grenze, denn Carbamidperoxid setzt Wasserstoffperoxid erst im Mund frei, und zwar in geringerer Menge, als die Prozentzahl auf der Packung vermuten lässt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Die erste Anwendung findet in beiden Fällen bei uns statt. Viele nutzen diese Auffrischung etwa einmal im Jahr, um das Ergebnis länger zu erhalten. Notwendig ist sie nicht; sie ist ein Angebot, kein Pflichtbestandteil.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was muss vor einer Aufhellung untersucht werden?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ein Bleaching beginnt nicht mit dem Gel, sondern mit der Untersuchung.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Nicht jede dunklere Stelle ist ein rein ästhetisches Problem. Karies, undichte Füllungen, freiliegende Zahnhälse, Risse oder ein abgestorbener Zahn erfordern eine andere Behandlung.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Auch Kronen, Verblendungen und Füllungen sind zu berücksichtigen. Diese Materialien hellen nicht in derselben Weise auf wie natürliche Zähne. Liegen sie im sichtbaren Bereich, kann danach ein Farbunterschied deutlicher auffallen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ebenso wichtig ist, ob die Zähne gleichmäßig verfärbt sind. Eine Aufhellung gleicht Farbunterschiede nicht aus, sondern hellt auf, was vorhanden ist. Sind einzelne Bereiche unterschiedlich dunkel, reagieren sie nicht gleich stark, und der Unterschied kann danach sogar auffälliger wirken. Das ist eine Beobachtung aus unserem Praxisalltag und kein Ergebnis der hier genannten Studien. In solchen Fällen ist eine Aufhellung nicht der richtige Weg; dann sprechen wir über andere Möglichkeiten wie Verblendungen oder Kronen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Deshalb klären wir vorher nicht nur den Zustand von Zähnen und Zahnfleisch, sondern auch, was Sie stört und welches Ergebnis realistisch ist.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Warum sieht das Ergebnis direkt nach der Behandlung anders aus?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Während der Behandlung trocknen die Zähne vorübergehend aus. Trockener Zahnschmelz ist weniger durchsichtig und wirkt dadurch besonders hell. In einer randomisierten Untersuchung genügten zehn Minuten Trockenlegung für eine messbare Aufhellung, und eine halbe Stunde später war die Ausgangsfarbe noch nicht wieder erreicht (Burki et al. 2013).</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ein Teil dessen, was Sie unmittelbar nach der Behandlung im Spiegel sehen, entsteht also durch diese Austrocknung. Das heißt nicht, dass die Aufhellung nicht gewirkt hat. Es heißt nur, dass der erste Blick noch nicht das endgültige Ergebnis zeigt. In den folgenden Tagen nehmen die Zähne wieder Feuchtigkeit auf und die Farbe stabilisiert sich. Wir beurteilen das Ergebnis deshalb erst beim nächsten Termin.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wie lange hält die Aufhellung?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das ist verschieden. Eine Rolle spielen die natürliche Ausgangsfarbe, die Ursache der Verfärbung, Rauchen sowie Kaffee- und Teekonsum, die Mundhygiene und das verwendete Verfahren.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Eine Übersichtsarbeit von 2023 hat 24 Studien zum Schienenbleaching ausgewertet. Die meisten berichten, dass die Farbe zwischen einem und zweieinhalb Jahren stabil bleibt, unabhängig vom verwendeten Mittel und von der Anwendungsform. Bei sehr starken Ausgangsverfärbungen kehrt die dunklere Farbe häufiger zurück (Fioresta et al. 2023).</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In unserer Praxis beobachten wir bei sorgfältig ausgewählten Patientinnen und Patienten und guter häuslicher Pflege lange anhaltende Ergebnisse. Eine Garantie lässt sich daraus nicht ableiten. Lässt die Aufhellung nach, kann sie mit den deutlich milderen Mitteln in Schienen aufgefrischt werden.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was ist von Whitening-Zahnpasten, Aktivkohle und Backpulver zu halten?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Whitening-Zahnpasten können äußere Verfärbungen vermindern, weil sie die Oberfläche stärker reinigen. Das ist in einer systematischen Übersichtsarbeit mit Metaanalyse gut belegt (Soeteman et al. 2018). Die natürliche Zahnfarbe verändern sie nicht.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Zu Aktivkohle liegt eine Übersichtsarbeit vor, die sich auf Laboruntersuchungen stützt, also auf Versuche außerhalb des Mundes und an gezogenen Zähnen, nicht auf Behandlungen an Patientinnen und Patienten. Die Ergebnisse zur Aufhellung waren uneinheitlich, und die untersuchten Kohleprodukte rieben die Zahnoberfläche vergleichsweise stark ab. Die Autoren stufen das Verzerrungsrisiko der elf eingeschlossenen Studien selbst als mittel bis hoch ein (Montero Tomás et al. 2023).</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Beim Backpulver wird häufig etwas verwechselt. Untersucht wurden Zahnpasten mit Natriumhydrogencarbonat, die äußere Verfärbungen entfernen können. Daraus folgt nicht, dass Putzen mit Backpulver aus der Küche sicher oder empfehlenswert ist. Das eine ist ein abgestimmtes Produkt, das andere ein Hausmittel ohne Kontrolle der Korngröße.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Warum gehören stärkere Aufhellungsmittel in zahnärztliche Hände?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Produkte mit höchstens 0,1 Prozent Wasserstoffperoxid sind frei verkäuflich.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Bei Zahnaufhellungsmitteln mit mehr als 0,1 und bis zu 6 Prozent muss eine Zahnärztin oder ein Zahnarzt einbezogen sein. Die erste Anwendung eines Behandlungszyklus erfolgt in der Praxis oder unter direkter zahnärztlicher Aufsicht; danach darf das Mittel für den restlichen Zyklus mitgegeben werden. Bei Personen unter 18 Jahren dürfen diese Produkte nicht angewendet werden.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Höher konzentrierte Präparate wie das von uns verwendete Gel sind keine kosmetischen Mittel mehr. Für sie gelten andere Voraussetzungen, und sie gehören vollständig in die Zahnarztpraxis.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Vorübergehend empfindliche Zähne oder Reizungen des Zahnfleisches können auftreten. Die vorliegenden Studien beschreiben diese Beschwerden überwiegend als mild und vorübergehend; meist gehen sie nach dem Ende oder einer Unterbrechung der Behandlung zurück. Ausschließen lassen sie sich nicht.</p>
+
+          <div style="margin:10px 0 0;background:#F2EFE8;border:1px solid #E0D7C2;border-radius:16px;padding:26px 28px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;margin-bottom:14px">Kurz zusammengefasst</div>
+            <div style="display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.6;color:#4B5875">
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Eine professionelle Zahnreinigung entfernt äußere Verfärbungen, verändert aber nicht die natürliche Zahnfarbe.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Ein Bleaching wirkt in der Zahnsubstanz und hellt die Zähne sichtbar auf. Wie stark und wie lange, lässt sich aus den Studien nicht genau beziffern.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Behandlung in der Praxis und Schienen für zu Hause führen beide zu einem sichtbaren Ergebnis.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Bei den meisten bleibt die Farbe ein bis zweieinhalb Jahre stabil; bei sehr starken Verfärbungen kehrt sie häufiger zurück.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Eine Aufhellung gleicht Farbunterschiede nicht aus. Bei ungleichmäßigen Verfärbungen ist sie oft nicht der richtige Weg.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Kronen, Verblendungen und Füllungen hellen nicht in derselben Weise auf wie natürliche Zähne.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Vorübergehend empfindliche Zähne und Reizungen des Zahnfleisches können auftreten, meist mild und vorübergehend.</span></div>
+            </div>
+          </div>
+
+          <div style="margin:6px 0 0;background:#F7F8FA;border:1px solid #E4E6EB;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:12px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:18px;font-weight:600;color:#2C4170">Sie möchten es genauer wissen?</div>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Ablauf, Voraussetzungen, Kosten und die Pflege nach der Behandlung haben wir ausführlich im Infoportal zusammengestellt und halten sie dort aktuell.</p>
+            <a href="https://info.frydent.de/bleaching_patienten.html" style="align-self:flex-start;background:#D2B156;color:#1E2D4D;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" class="h-d32178">Zahnaufhellung im Infoportal</a>
+          </div>
+
+          <details style="margin:6px 0 0;border-top:1px solid #E4E6EB;padding-top:18px">
+            <summary style="cursor:pointer;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Quellen anzeigen</summary>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;font-size:13.5px;line-height:1.65;color:#6B7280">
+              <div>Eachempati P, Kumbargere Nagraj S, Kiran Kumar Krishanappa S, Gupta P, Yaylali IE. Home-based chemically-induced whitening (bleaching) of teeth in adults. Cochrane Database of Systematic Reviews 2018;12(12):CD006202. doi:10.1002/14651858.CD006202.pub2</div>
+              <div>de Geus JL, Martins ACR, Reis A, Rezende M. At-home vs In-office Bleaching: An Updated Systematic Review and Meta-analysis. Operative Dentistry 2025;50(4):E47–E69. doi:10.2341/24-078-LIT</div>
+              <div>Burki Z, Watkins S, Wilson R, Fenlon M. A randomised controlled trial to investigate the effects of dehydration on tooth colour. Journal of Dentistry 2013;41(3):250–257. doi:10.1016/j.jdent.2012.11.009</div>
+              <div>Soeteman GD, Valkenburg C, van der Weijden GA, van Loveren C, Bakker EWP, Slot DE. Whitening dentifrice and tooth surface discoloration: a systematic review and meta-analysis. International Journal of Dental Hygiene 2018;16(1):24–35. doi:10.1111/idh.12289</div>
+              <div>Montero Tomás DB, Pecci-Lloret MP, Guerrero-Gironés J. Effectiveness and abrasiveness of activated charcoal as a whitening agent: A systematic review of in vitro studies. Annals of Anatomy 2023;245:151998. doi:10.1016/j.aanat.2022.151998</div>
+              <div>Li Y. Stain removal and whitening by baking soda dentifrice: A review of literature. Journal of the American Dental Association 2017;148(11S):S20–S26. doi:10.1016/j.adaj.2017.09.006</div>
+              <div>Fioresta R, Melo M, Forner L, Sanz JL. Prognosis in home dental bleaching: a systematic review. Clinical Oral Investigations 2023;27(7):3347–3361. doi:10.1007/s00784-023-05069-0</div>
+              <div>Verordnung (EG) Nr. 1223/2009 über kosmetische Mittel, Anhang III, laufende Nummer 12; eingefügt durch Verordnung (EU) Nr. 344/2013. Konsolidierte Fassung.</div>
+              <div>Sicherheitsdatenblatt des in unserer Praxis verwendeten In-Office-Gels (WHITEsmile GmbH), Stand März 2025.</div>
+            </div>
+          </details>
+
+          <div style="font-size:13px;color:#9AA3B5;margin-top:6px">Stand: August 2026</div>
+
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#6B7280;border-left:3px solid #E0D7C2;padding-left:18px">Manche möchten Beläge und oberflächliche Verfärbungen loswerden. Andere stört ihre natürliche Zahnfarbe. Und manchmal liegt die Ursache an einer einzelnen Stelle, die eine ganz andere Behandlung braucht. Sagen Sie uns deshalb am besten nicht nur, welche Behandlung Sie sich vorstellen, sondern was Sie an Ihren Zähnen stört. Den Rest klären wir gemeinsam. Dieser Beitrag informiert allgemein und ersetzt weder die Untersuchung noch das persönliche Gespräch.</p>
+        </div>
+      </div>
 
       <div data-show="showAirflow">
         <div style="display:flex;flex-direction:column;gap:24px">
@@ -294,6 +447,12 @@ a.pp:hover{color:#8F7440 !important}
         <div style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Professionelle Zahnreinigung</div>
         <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Ablauf, Empfehlungen und Kosten, ausführlich im Infoportal.</p>
         <a href="https://info.frydent.de/pzr_patienten.html" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Zur PZR im Infoportal</a>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Zahnaufhellung</div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Voraussetzungen, Ablauf, Kosten und die Pflege danach.</p>
+        <a href="https://info.frydent.de/bleaching_patienten.html" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Zur Zahnaufhellung im Infoportal</a>
       </div>
 
       <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">

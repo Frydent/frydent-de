@@ -58,7 +58,7 @@
 .h-d32178:hover{background:#D4A930;color:#FFFFFF}
 </style>
 <script>(function(){
-var KL=["bleaching", "airflow", "praxisinfo"];
+var KL=["fluorid", "bleaching", "airflow", "praxisinfo"];
 function pokaz(){
   var hs=(location.hash||'').replace('#','');
   var akt = KL.indexOf(hs)>=0 ? hs : 'overview';
@@ -173,6 +173,17 @@ a.pp:hover{color:#8F7440 !important}
 
       <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
         <div style="position:relative;width:100%;height:240px">
+          <img id="nwc-fluorid" src="assets/img-nwc-fluorid.webp" alt="Zahnbürste mit einer kleinen Menge Zahnpasta" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
+        </div>
+        <a href="#fluorid" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
+          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Fluorid: Schutz oder Grund zur Sorge?</div>
+          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Fluorid schützt nachweislich vor Karies und verunsichert trotzdem viele. Fast immer läuft die Antwort auf dieselbe Frage hinaus: auf die Menge.</p>
+        </a>
+      </div>
+
+      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
+        <div style="position:relative;width:100%;height:240px">
           <img id="nwc-bleaching" src="assets/img-nwc-bleaching.webp" alt="Zahnaufhellung in der Praxis mit Whitening-Lampe" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
         </div>
         <a href="#bleaching" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
@@ -216,6 +227,164 @@ a.pp:hover{color:#8F7440 !important}
 
     <div style="min-width:0">
       <a href="#news" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur Übersicht</a>
+
+      <div data-show="showFluorid">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
+            <img id="nw-fluorid" src="assets/img-nw-fluorid.webp" alt="Drei Zahnbürsten in unterschiedlichen Größen nebeneinander" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
+          </div>
+
+          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
+
+          <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Fluorid: Schutz oder Grund zur Sorge?</h2>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875;font-weight:600">Kaum ein Thema in der Zahnmedizin wird so unterschiedlich beurteilt wie Fluorid. Die einen halten es für die wirksamste Vorbeugung, die wir haben, die anderen für ein Risiko, das man vermeiden sollte. Wir gehen die häufigsten Sorgen einzeln durch und sagen jeweils, worauf sie sich stützen. Am Ende steht kein Urteil, sondern das, was Sie brauchen, um selbst zu entscheiden.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was macht Fluorid überhaupt am Zahn?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Nach dem Essen verarbeiten Bakterien im Zahnbelag Zucker und andere Kohlenhydrate. Dabei entstehen Säuren, die Mineralien aus dem Zahnschmelz lösen. Geschieht das immer wieder, entsteht Karies.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Fluorid greift genau an dieser Stelle ein. Es lagert sich an der Zahnoberfläche an, macht den Schmelz widerstandsfähiger gegen Säure und hilft dabei, herausgelöste Mineralien wieder einzubauen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Entscheidend ist dabei: Fluorid wirkt vor allem dort, wo es ist, also an der Zahnoberfläche. Es muss nicht geschluckt werden, um zu wirken.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Warum es fast immer um die Menge geht</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wenn Sie in diesem Beitrag nur einen Satz mitnehmen, dann diesen: Bei Fluorid entscheidet die Menge, nicht die Frage ob überhaupt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das klingt banal, ist aber der Schlüssel zu fast allen Streitpunkten. Die Empfehlungen arbeiten deshalb nicht mit einem Verbot, sondern mit einer Obergrenze für die Aufnahme aus allen Quellen zusammen: Zahnpasta, Speisesalz, Trinkwasser, Lebensmittel. Und die Studien, die Sorgen ausgelöst haben, betreffen ganz andere Mengen als die, um die es beim Zähneputzen geht.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Auch in die andere Richtung gilt das. Mehr Zahnpasta bedeutet nicht automatisch mehr Schutz.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wie viel ist empfohlen, und von wem?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für bleibende Zähne gilt in Deutschland die S3-Leitlinie „Kariesprävention bei bleibenden Zähnen", Registernummer 083-021, Stand Januar 2025, gültig bis Januar 2030. Sie empfiehlt ab dem Durchbruch der bleibenden Zähne eine Zahnpasta mit mindestens 1.000 ppm Fluorid, bei Kindern und Jugendlichen zusätzlich Fluoridlack mindestens zweimal im Jahr, bei erhöhtem Kariesrisiko viermal. Fluoridiertes Speisesalz soll als grundsätzliche Maßnahme empfohlen werden. Als Obergrenze nennt die Leitlinie eine Gesamtaufnahme von 0,05 bis 0,07 Milligramm Fluorid je Kilogramm Körpergewicht und Tag.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Was das für Ihre Tube bedeutet: Übliche Zahnpasten für Erwachsene liegen meist zwischen 1.400 und 1.500 ppm und damit deutlich über dem geforderten Mindestwert. Die Zahl steht auf der Verpackung, Sie können sie selbst nachlesen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für Milchzähne gibt es keine eigene aktuelle Leitlinie, sondern eine gemeinsame Handlungsempfehlung von Zahnmedizin und Kinderheilkunde aus dem Jahr 2021. Das ist ein abgestimmter Konsens, keine Leitlinie, und wir nennen ihn hier auch so.</p>
+
+          <figure style="margin:6px 0 0">
+            <img src="assets/img-fluorid-diagramm-menge.webp" alt="Schaubild: reiskorngroße Menge Zahnpasta ab dem ersten Zahn, erbsengroße Menge ab dem zweiten Geburtstag" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px;border:1px solid #E4E6EB">
+          </figure>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Bei kleinen Kindern sollten die Eltern die Zahnpasta selbst auf die Bürste geben und beim Putzen helfen, solange das Kind es nicht allein schafft. Kleine Kinder können Zahnpasta noch nicht zuverlässig ausspucken, und genau deshalb sind die Mengen so genau angegeben.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">„Fluorid ist ein Gift"</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das stimmt in dem Sinn, in dem es auf fast alles zutrifft: Die Menge entscheidet. Auch Kochsalz und Eisen sind in hoher Dosis giftig und in kleiner Menge lebensnotwendig oder harmlos.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Deshalb arbeitet die Leitlinie mit dem oben genannten Grenzwert statt mit einem Verbot. Er bezieht sich auf alle Quellen zusammen. Genau deshalb schauen wir bei Kindern nicht auf ein einzelnes Produkt, sondern auf die Summe.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">„Fluorid schadet der Entwicklung von Kindern"</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das ist die Sorge, die in den letzten Jahren am meisten Aufmerksamkeit bekommen hat, und sie ist nicht aus der Luft gegriffen. Hier lohnt es sich, genau hinzusehen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das amerikanische National Toxicology Program hat 2024 eine systematische Übersichtsarbeit vorgelegt. Von 72 Studien zum Zusammenhang zwischen Fluoridaufnahme und Intelligenzquotient bei Kindern stufte es 19 als hochwertig ein; 18 davon fanden einen Zusammenhang zwischen höherer Fluoridaufnahme und niedrigerem IQ. Das Fazit lautet, mit mittlerer Sicherheit, dass eine höhere Aufnahme, etwa bei Trinkwasserwerten oberhalb des WHO-Leitwerts von 1,5 Milligramm pro Liter, mit niedrigerem IQ verbunden ist. Eine Metaanalyse derselben Arbeitsgruppe von 2025 über mehr als 70 Studien kam zum gleichen Ergebnis und fand Zusammenhänge auch unterhalb dieses Werts.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dem steht eine andere Arbeit gegenüber. Eine Übersichtsarbeit mit Dosis-Wirkungs-Analyse von 2023 wertete 33 Studien aus und fand ebenfalls einen Zusammenhang, stellte aber fest, dass er besonders stark in den Studien mit hohem Verzerrungsrisiko auftrat, während die einzige Studie mit niedrigem Risiko keinen Effekt zeigte. Die Autoren halten fest, dass sich ein Einfluss anderer, nicht erfasster Faktoren nicht ausschließen lässt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Was daraus folgt, ist keine Entwarnung und keine Panik, sondern eine Einordnung mit drei Punkten.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Erstens untersuchen diese Arbeiten die Aufnahme von Fluorid, gemessen im Trinkwasser oder im Urin. Keine von ihnen untersucht den Gebrauch von Zahnpasta.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Zweitens stammen die Daten überwiegend aus Regionen mit natürlich hohen Fluoridwerten im Grundwasser, wie sie in Teilen Chinas, Indiens, Mexikos und des Iran vorkommen.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Drittens, und das wissen die wenigsten: In Deutschland wird das Trinkwasser nicht fluoridiert. Mehr als 90 Prozent des deutschen Trinkwassers enthalten weniger als 0,25 Milligramm Fluorid pro Liter. Der Wert, um den in diesen Studien gestritten wird, liegt um ein Vielfaches darüber. Die Debatte, die aus den USA zu uns herüberschwappt, dreht sich um eine Maßnahme, die es hier gar nicht gibt.</p>
+
+          <figure style="margin:6px 0 0">
+            <img src="assets/img-fluorid-diagramm-wasser.webp" alt="Schaubild: Fluoridgehalt im deutschen Trinkwasser unter 0,25 Milligramm je Liter, künstliche Fluoridierung 0,7, WHO-Leitwert 1,5" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px;border:1px solid #E4E6EB">
+          </figure>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">„Fluorid macht weiße Flecken auf den Zähnen"</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das kann stimmen, und es ist der klarste Beleg dafür, dass es wirklich auf die Menge ankommt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dentale Fluorose entsteht, wenn während der Zahnbildung dauerhaft zu viel Fluorid aufgenommen wird. Sie zeigt sich als feine weiße Linien oder Flecken im Schmelz. Wichtig ist der Zeitpunkt: Fluorose kann nur entstehen, solange die Zähne im Kiefer gebildet werden, also im Kindesalter. Bei fertig durchgebrochenen Zähnen ist sie nicht mehr möglich.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In Ländern mit fluoridiertem Trinkwasser ist sie messbar. Eine Cochrane-Übersichtsarbeit von 2024 gibt bei einem Wassergehalt von 0,7 Milligramm pro Liter an, dass etwa 12 Prozent der Untersuchten eine Fluorose von ästhetischer Bedeutung hatten und etwa 40 Prozent eine Fluorose irgendeines Grades, beides bei niedriger Sicherheit der Evidenz. In Deutschland ist die hauptsächliche Quelle bei Kleinkindern verschluckte Zahnpasta. Genau darum geht es bei der Reiskorn- und der Erbsenmenge.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">„Wenn Fluorid nur äußerlich wirkt, warum dann ins Wasser?"</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Eine berechtigte Frage, und die Studienlage gibt ihr teilweise recht.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dieselbe Cochrane-Übersichtsarbeit von 2024 hat Studien aus der Zeit nach 1975 gesondert betrachtet, also aus der Zeit, seit fluoridhaltige Zahnpasta verbreitet ist. Der zusätzliche Nutzen der Trinkwasserfluoridierung fiel dort deutlich kleiner aus als in den alten Untersuchungen, im Bereich von etwa einem Viertel Zahn, bei niedriger Sicherheit der Evidenz. Anders gesagt: Seit fast alle mit Fluoridzahnpasta putzen, bringt das Fluorid im Wasser rechnerisch nur noch wenig dazu.</p>
+
+          <figure style="margin:6px 0 0;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/img-fluorid-wasser-salz.webp" alt="Ein Glas Leitungswasser und eine Schale Salz" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px">
+            <figcaption style="font-size:13.5px;line-height:1.6;color:#8A93A6;font-style:italic">In Deutschland wird das Trinkwasser nicht fluoridiert. Wer Fluorid über die Ernährung aufnehmen möchte, greift zu fluoridiertem Speisesalz. Illustration, keine Patientenaufnahme.</figcaption>
+          </figure>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für Deutschland ist die Frage ohnehin theoretisch. Hier wird nicht fluoridiert, sondern auf Zahnpasta und auf freiwillig gekauftes fluoridiertes Speisesalz gesetzt, das 310 Milligramm Fluorid je Kilogramm enthält.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Und wie gut ist der Nutzen belegt?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Deutlich besser als die Risiken. Eine Cochrane-Übersichtsarbeit von 2019 hat 96 randomisierte Studien ausgewertet. Bei Kindern und Jugendlichen senkt Zahnpasta mit 1.000 bis 1.250 ppm Fluorid den Kariesbefall gegenüber fluoridfreier Zahnpasta, die Sicherheit der Evidenz ist hier hoch bis mittel. Auch bei Erwachsenen zeigte sich ein Vorteil.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Zwischen den Konzentrationen gibt es einen leichten Dosis-Wirkungs-Effekt: Mehr Fluorid schützt etwas besser. Bei kleinen Kindern muss dieser kleine Vorteil aber gegen das Fluoroserisiko abgewogen werden. Auch hier landen wir also wieder bei der Menge, und genau diese Abwägung steckt in den Empfehlungen.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was ist von Hydroxylapatit und Xylit zu halten?</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Beides wird als Alternative angeboten, und beides ist untersucht. Aber die Beleglage unterscheidet sich von der für Fluorid, und das gehört dazugesagt.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Hydroxylapatit ist der Mineralstoff, aus dem Zahnschmelz überwiegend besteht. Zwei doppelblinde randomisierte Studien haben fluoridfreie Hydroxylapatit-Zahnpasta gegen Fluoridzahnpasta geprüft, eine an 207 Kindern über ein Jahr, eine an 189 Erwachsenen über 18 Monate. Beide kamen zu dem Ergebnis, dass die Hydroxylapatit-Zahnpasta der Fluoridzahnpasta nicht unterlegen war.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dazu drei Hinweise, die wir für wichtig halten. An beiden Studien waren Mitarbeiterinnen und Mitarbeiter eines Herstellers von Hydroxylapatit-Zahnpasta als Autoren beteiligt. Beide waren als Nichtunterlegenheitsstudien angelegt, mit einer recht großzügig gesetzten Grenze. Und die deutsche S3-Leitlinie empfiehlt Hydroxylapatit nicht. Das macht die Studien nicht wertlos, aber es ist ein anderer Beleggrad als 96 Studien über sieben Jahrzehnte.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Xylit ist ein Zuckeraustauschstoff. Eine Cochrane-Übersichtsarbeit von 2015 mit zehn Studien und 5.903 Teilnehmenden fand, dass eine Fluoridzahnpasta mit 10 Prozent Xylit den Kariesbefall gegenüber einer reinen Fluoridzahnpasta um etwa 13 Prozent senkte, bei niedriger Qualität der Evidenz und aus Studien derselben Arbeitsgruppe in derselben Bevölkerung. Für die übrigen Anwendungsformen reichte die Evidenz nicht aus. Eine Übersichtsarbeit von 2024 bestätigt einen Effekt gegenüber keiner Behandlung, weist aber darauf hin, dass 80 Prozent der eingeschlossenen Studien ein mittleres bis hohes Verzerrungsrisiko hatten.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Der Punkt, der dabei oft untergeht: In der belastbarsten Untersuchung war Xylit eine Ergänzung zu Fluorid, kein Ersatz dafür.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wenn Sie kein Fluorid möchten</h3>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Dann sagen Sie es uns, und wir arbeiten damit. Sie müssen sich bei uns nicht rechtfertigen und Sie werden nicht überredet.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Was wir dann anbieten: engmaschigere Kontrollen, weil ohne Fluorid früher erkannt werden muss; Versiegelung der Kaugrübchen, die ohne Fluorid auskommt; professionelle Zahnreinigung in kürzeren Abständen; ein sehr genauer Blick auf Zucker, besonders auf Getränke und auf die Häufigkeit statt auf die Menge; Hydroxylapatit-Zahnpasta, wenn Sie eine Alternative möchten; und bei Kindern eine ehrliche Einschätzung des individuellen Risikos, statt einer pauschalen Empfehlung in die eine oder andere Richtung.</p>
+
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Was wir nicht tun: so tun, als wäre das gleichwertig. Der Verzicht auf Fluorid bedeutet, auf die am besten belegte Vorbeugung zu verzichten, und verlangt dafür mehr Aufwand an anderer Stelle. Das ist Ihre Entscheidung, und sie ist zu respektieren. Wir sagen Ihnen nur, was sie bedeutet.</p>
+
+          <div style="margin:10px 0 0;background:#F2EFE8;border:1px solid #E0D7C2;border-radius:16px;padding:26px 28px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;margin-bottom:14px">Kurz zusammengefasst</div>
+            <div style="display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.6;color:#4B5875">
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Bei Fluorid entscheidet die Menge. Mehr Zahnpasta bedeutet nicht mehr Schutz.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Fluorid wirkt an der Zahnoberfläche und muss nicht geschluckt werden, um zu schützen.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Der Nutzen von Fluoridzahnpasta ist durch 96 randomisierte Studien belegt, in Teilen mit hoher Sicherheit der Evidenz.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Für kleine Kinder gilt reiskorn- beziehungsweise erbsengroß, mit 1.000 ppm, zweimal täglich, von den Eltern dosiert.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Die Sorge um die kindliche Entwicklung stützt sich auf Studien zur Aufnahme über Trinkwasser, meist aus Regionen mit natürlich hohen Werten. Keine dieser Arbeiten untersucht Zahnpasta.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>In Deutschland wird das Trinkwasser nicht fluoridiert; über 90 Prozent enthalten weniger als 0,25 Milligramm pro Liter.</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>Hydroxylapatit und Xylit sind untersucht, aber auf schmalerer Grundlage; bei den Hydroxylapatit-Studien war der Hersteller beteiligt.</span></div>
+            </div>
+          </div>
+
+          <div style="margin:6px 0 0;background:#F7F8FA;border:1px solid #E4E6EB;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:12px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:18px;font-weight:600;color:#2C4170">Sie möchten es genauer wissen?</div>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Wie Kariesvorbeugung bei Kindern und Erwachsenen bei uns Schritt für Schritt aussieht, haben wir ausführlich im Infoportal zusammengestellt.</p>
+            <a href="https://info.frydent.de/pzr_patienten.html" style="align-self:flex-start;background:#D2B156;color:#1E2D4D;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" class="h-d32178">Vorbeugung im Infoportal</a>
+          </div>
+
+          <details style="margin:6px 0 0;border-top:1px solid #E4E6EB;padding-top:18px">
+            <summary style="cursor:pointer;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Quellen anzeigen</summary>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;font-size:13.5px;line-height:1.65;color:#6B7280">
+              <div>Deutsche Gesellschaft für Zahn-, Mund- und Kieferheilkunde et al. S3-Leitlinie Kariesprävention bei bleibenden Zähnen, grundlegende Empfehlungen. AWMF-Registernummer 083-021, Stand 28.01.2025, gültig bis 27.01.2030.</div>
+              <div>Netzwerk Gesund ins Leben. Gemeinsame Handlungsempfehlung zur Kariesprophylaxe mit Fluorid bei Säuglingen und Kleinkindern, 2021.</div>
+              <div>Walsh T, Worthington HV, Glenny AM, Marinho VCC, Jeroncic A. Fluoride toothpastes of different concentrations for preventing dental caries. Cochrane Database of Systematic Reviews 2019;3(3):CD007868. doi:10.1002/14651858.CD007868.pub3</div>
+              <div>Iheozor-Ejiofor Z, Walsh T, Lewis SR et al. Water fluoridation for the prevention of dental caries. Cochrane Database of Systematic Reviews 2024;10(10):CD010856. doi:10.1002/14651858.CD010856.pub3</div>
+              <div>National Toxicology Program. NTP monograph on the state of the science concerning fluoride exposure and neurodevelopment and cognition: a systematic review. NTP Monograph 8, August 2024. doi:10.22427/NTP-MGRAPH-8</div>
+              <div>Taylor KW, Eftim SE, Sibrizzi CA et al. Addressing critiques of the evidence linking fluoride and children’s IQ. Annals of Global Health 2025;91(1):83. doi:10.5334/aogh.4853</div>
+              <div>Veneri F, Vinceti M, Generali L et al. Fluoride exposure and cognitive neurodevelopment: Systematic review and dose-response meta-analysis. Environmental Research 2023;221:115239. doi:10.1016/j.envres.2023.115239</div>
+              <div>Paszynska E, Pawinska M, Gawriolek M et al. Impact of a toothpaste with microcrystalline hydroxyapatite on the occurrence of early childhood caries: a 1-year randomized clinical trial. Scientific Reports 2021;11(1):2650. doi:10.1038/s41598-021-81112-y</div>
+              <div>Paszynska E, Pawinska M, Enax J et al. Caries-preventing effect of a hydroxyapatite-toothpaste in adults: a 18-month double-blinded randomized clinical trial. Frontiers in Public Health 2023;11:1199728. doi:10.3389/fpubh.2023.1199728</div>
+              <div>Riley P, Moore D, Ahmed F, Sharif MO, Worthington HV. Xylitol-containing products for preventing dental caries in children and adults. Cochrane Database of Systematic Reviews 2015;3:CD010743. doi:10.1002/14651858.CD010743.pub2</div>
+              <div>Luo BW, Liang NL, Townsend JA, Lo ECM, Chu CH, Duangthip D. Sugar substitutes on caries prevention in permanent teeth among children and adolescents: a systematic review and meta-analysis. Journal of Dentistry 2024;146:105069. doi:10.1016/j.jdent.2024.105069</div>
+              <div>Deutsche Gesellschaft für Ernährung. FAQ Fluorid, Referenzwerte 2025, Angaben zu Trinkwasser und fluoridiertem Speisesalz.</div>
+            </div>
+          </details>
+
+          <div style="font-size:13px;color:#9AA3B5;margin-top:6px">Stand: August 2026</div>
+
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#6B7280;border-left:3px solid #E0D7C2;padding-left:18px">Wenn Sie Fluorid nutzen möchten, kommt es vor allem auf zwei Dinge an: regelmäßig putzen und bei Kindern die Menge einhalten. Wenn Sie es nicht möchten, kommt es auf andere Dinge an, und wir zeigen Ihnen, auf welche. Was wir Ihnen nicht abnehmen können, ist die Entscheidung. Was wir Ihnen abnehmen können, ist die Suche nach verlässlichen Angaben. Sprechen Sie uns an, ohne Ihre Sorgen kleinzureden und ohne Sie in eine Richtung zu drängen. Dieser Beitrag informiert allgemein und ersetzt weder die Untersuchung noch das persönliche Gespräch.</p>
+        </div>
+      </div>
 
       <div data-show="showBleaching">
         <div style="display:flex;flex-direction:column;gap:24px">

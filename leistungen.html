@@ -35,6 +35,11 @@
 .lst-hint-ico{position:absolute;right:14px;bottom:14px;width:32px;height:32px;border-radius:50%;background:rgba(44,65,112,.10);border:1px solid rgba(44,65,112,.18);display:flex;align-items:center;justify-content:center;color:#5C6B8F;transition:all .3s ease}
 .lst-flip:hover .lst-hint-ico,.lst-flip.is-flipped .lst-hint-ico{background:#2C4170;border-color:#2C4170;color:#fff;transform:rotate(180deg)}
 .lst-hint{position:absolute;bottom:22px;left:26px;font-family:'Quicksand',sans-serif;font-size:12.5px;font-weight:600;color:#A88338;letter-spacing:.03em}
+/* kompakte Bildfiguren im Fliesstext: Bild links, Bildunterschrift daneben */
+.lst-fig{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:center;margin:2px 0}
+.lst-fig>img{width:100%;height:auto;display:block;border-radius:12px}
+.lst-fig>figcaption{margin:0;font-size:13.5px;line-height:1.65;color:#7A8496}
+@media(max-width:760px){.lst-fig{grid-template-columns:1fr;gap:10px}.lst-fig>img{max-width:340px}}
 @media(max-width:1200px){.lst-grid{grid-template-columns:repeat(2,1fr) !important}}
 @media(max-width:640px){.lst-grid{grid-template-columns:1fr !important}}
 @media(max-width:900px){.lst-grid .lst-flip{aspect-ratio:auto !important;height:225px !important}
@@ -536,33 +541,33 @@ a.sbl:hover{color:#E2C26A !important}
 
       <div data-show="showZahnerhaltung">
         <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="position:relative;width:100%;height:320px;margin-bottom:6px">
+            <img id="lsta-zahnerhaltung" src="assets/img-lsta-zahnerhaltung-hero.webp" alt="Zahn mit zahnfarbener Kompositfüllung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
+          </div>
+          <p style="margin:-16px 0 0;font-size:12.5px;line-height:1.5;color:#9AA3B2;text-align:right">Illustration, keine Patientenaufnahme.</p>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Zahnerhaltung</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Ihr eigener Zahn bleibt das Beste.</h2>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ein Zahn, der erhalten werden kann, ist jedem Ersatz überlegen. Deshalb prüfen wir bei jeder Füllung zuerst, wie viel gesunde Zahnsubstanz sich bewahren lässt. Erst danach entscheiden wir gemeinsam mit Ihnen über das Material.</p>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Komposit: die zahnfarbene Lösung für den Alltag</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Komposit ist ein zahnfarbener Kunststoff, der direkt im Behandlungsstuhl eingebracht und in Schichten gehärtet wird. Der Vorteil: Die Behandlung ist in einer Sitzung abgeschlossen, und es muss nur wenig Zahnsubstanz entfernt werden. Für kleine bis mittlere Defekte ist Komposit unsere Standardlösung. Bei großen Defekten und starker Kaubelastung stößt das Material allerdings an seine Grenzen.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-fuellung-komposit.webp" alt="Zahn mit zahnfarbener Kompositfüllung" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Komposit.</strong> Zahnfarbener Kunststoff, direkt im Behandlungsstuhl eingebracht und in Schichten gehärtet. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
-          <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Keramik-Inlays mit CEREC: passgenau aus einem Stück</h3>
+                    <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Keramik-Inlays mit CEREC: passgenau aus einem Stück</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Bei größeren Defekten fertigen wir Inlays und Onlays aus Keramik. Mit CEREC entsteht die Restauration digital in unserer Praxis, sodass in vielen Fällen keine zweite Sitzung und kein Provisorium nötig sind. Keramik ist farblich kaum von der eigenen Zahnsubstanz zu unterscheiden, sehr stabil und gut verträglich. Sie ist etwas aufwendiger als eine Füllung, dafür aber deutlich belastbarer.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-fuellung-keramik.webp" alt="Zahn mit Keramikinlay" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Keramik.</strong> Inlay aus Keramik, mit CEREC digital gefertigt, farblich kaum vom eigenen Zahn zu unterscheiden. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-fuellung-keramik.webp" alt="Zahn mit Keramikinlay" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Keramik.</strong> Inlay aus Keramik, mit CEREC digital gefertigt, farblich kaum vom eigenen Zahn zu unterscheiden. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></figcaption>
+          </figure>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Gold: unauffällig gut, wo es darauf ankommt</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Gold wirkt altmodisch, ist es aber nicht. In bestimmten Situationen, etwa bei starkem Knirschen oder sehr engen Platzverhältnissen im Seitenzahnbereich, hält eine Goldrestauration länger und randdichter als Keramik. Sichtbar ist sie im hinteren Bereich kaum. Wir schlagen Gold dort vor, wo es fachlich die bessere Wahl ist, nicht als Standard.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-fuellung-gold.webp" alt="Zahn mit Goldinlay" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Gold.</strong> Sehr randdicht und langlebig, besonders bei starker Kaubelastung. Im hinteren Bereich kaum sichtbar. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-fuellung-gold.webp" alt="Zahn mit Goldinlay" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Gold.</strong> Sehr randdicht und langlebig, besonders bei starker Kaubelastung. Im hinteren Bereich kaum sichtbar. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></figcaption>
+          </figure>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Und was ist mit alten Amalgamfüllungen?</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Viele Patientinnen und Patienten tragen noch silberfarbene Amalgamfüllungen aus früheren Jahrzehnten. Neu gelegt wird Amalgam heute nicht mehr. Für vorhandene Füllungen gilt: Eine dichte, intakte Amalgamfüllung muss nicht allein deshalb ausgetauscht werden, weil sie alt ist. Anders sieht es aus, wenn der Rand undicht geworden ist, sich darunter erneut Karies gebildet hat oder die Füllung Risse zeigt. Dann tauschen wir sie aus und besprechen mit Ihnen, welches Material an dieser Stelle sinnvoll ist. Und wenn Sie sich eine zahnfarbene Lösung wünschen, auch ohne medizinische Notwendigkeit, sagen Sie es uns einfach. Wir schauen dann gemeinsam, was möglich ist.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-fuellung-amalgam.webp" alt="Zahn mit älterer Amalgamfüllung" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Amalgam.</strong> Silberfarbene Füllung aus früheren Jahrzehnten, im Seitenzahnbereich deutlich sichtbar. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-fuellung-amalgam.webp" alt="Zahn mit älterer Amalgamfüllung" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Amalgam.</strong> Silberfarbene Füllung aus früheren Jahrzehnten, im Seitenzahnbereich deutlich sichtbar. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></figcaption>
+          </figure>
           <a href="https://info.frydent.de/fuellungen_patienten.html" style="display:flex;align-items:center;gap:16px;margin:20px 0;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
             <span style="font-size:14.5px;line-height:1.55">Mehr zu Füllungen und Materialien finden Sie in unserem <strong style="color:#AD8720;font-family:'Quicksand',sans-serif">Infoportal</strong>.</span>
@@ -647,32 +652,31 @@ a.sbl:hover{color:#E2C26A !important}
 
       <div data-show="showProthetik">
         <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
+            <img id="lsta-prothetik" src="assets/img-lsta-prot-cerec.webp" alt="Keramikblock wird in der CEREC-Schleifeinheit bearbeitet" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:50% 55%;border-radius:16px">
+          </div>
           <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Zahnersatz und Prothetik</div>
           <h2 style="margin:0;font-family:'Quicksand',sans-serif;font-size:30px;font-weight:400;color:#37538E">Zahnersatz, der zu Ihnen passt</h2>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Zahnersatz wird nötig, wenn Zähne fehlen, stark geschädigt sind oder ihre Aufgabe nicht mehr zuverlässig erfüllen. Das Spektrum reicht von einer einzelnen Krone über Brücken und herausnehmbare Prothesen bis zu umfangreichen Versorgungen auf eigenen Zähnen oder Implantaten.</p>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Welche Lösung geeignet ist, hängt von Ihrer Zahnsituation ab, vom Biss, von der Belastbarkeit der vorhandenen Zähne und davon, was Ihnen im Alltag wichtig ist. Auch eine einfachere Versorgung kann die beste Entscheidung sein, wenn sie medizinisch sinnvoll ist und zuverlässig funktioniert.</p>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Von der einzelnen Krone bis zur komplexen Versorgung</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Manchmal genügt eine Krone oder eine überschaubare herausnehmbare Prothese. In anderen Fällen ist mehr nötig, etwa kombinierter Zahnersatz mit Teleskopkronen oder Geschieben oder eine festsitzende Versorgung auf Implantaten.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-prot-krone.webp" alt="Vollkeramische Krone für einen Backenzahn" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Krone.</strong> Ersetzt den sichtbaren Teil eines stark geschädigten Zahnes. Die eigene Wurzel bleibt erhalten und trägt die Krone. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-prot-bruecke.webp" alt="Dreigliedrige vollkeramische Brücke" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Brücke.</strong> Der fehlende Zahn in der Mitte hängt an den beiden Nachbarzähnen, die dafür überkront werden. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-prot-krone.webp" alt="Vollkeramische Krone für einen Backenzahn" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Krone.</strong> Ersetzt den sichtbaren Teil eines stark geschädigten Zahnes. Die eigene Wurzel bleibt erhalten und trägt die Krone. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></figcaption>
+          </figure>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-prot-bruecke.webp" alt="Dreigliedrige vollkeramische Brücke" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Brücke.</strong> Der fehlende Zahn in der Mitte hängt an den beiden Nachbarzähnen, die dafür überkront werden. <em style="color:#9AA3B2">Illustration, keine Patientenaufnahme.</em></figcaption>
+          </figure>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Bei komplexen Ausgangssituationen betrachten wir die vorhandenen Zähne, die Kieferverhältnisse und die spätere Belastung als Ganzes. Die technisch aufwendigste Lösung ist dabei nicht automatisch die beste. Entscheidend ist, was zu Ihrer Situation passt, was sich gut pflegen lässt und was über Jahre hält.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-prot-teleskop.webp" alt="Teleskopversorgung auf einem Demonstrationsmodell" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Teleskopversorgung.</strong> Die Innenkronen bleiben fest auf den eigenen Zähnen, der herausnehmbare Teil wird darübergesetzt und hält ohne sichtbare Klammern. <em style="color:#9AA3B2">Aufnahme eines Demonstrationsmodells.</em></p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-prot-teleskop.webp" alt="Teleskopversorgung auf einem Demonstrationsmodell" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Teleskopversorgung.</strong> Die Innenkronen bleiben fest auf den eigenen Zähnen, der herausnehmbare Teil wird darübergesetzt und hält ohne sichtbare Klammern. <em style="color:#9AA3B2">Aufnahme eines Demonstrationsmodells.</em></figcaption>
+          </figure>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Was wir im Haus machen und wo wir zusammenarbeiten</h3>
-          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Keramischen Zahnersatz stellen wir mit CEREC häufig selbst her, meist ohne klassischen Abdruck und oft in einer Sitzung. Ob das für Ihre Versorgung in Frage kommt, zeigt die Untersuchung.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-prot-cerec.webp" alt="Keramikblock wird in der CEREC-Schleifeinheit bearbeitet" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Aus einem Block.</strong> Die Restauration wird nach dem digitalen Scan aus einem Keramikrohling herausgearbeitet.</p>
-          </div>
-          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Steht ein Implantat an, setzt es Dr. Dorow in der Klinik Dogern. Alles, was danach darauf kommt, von der einzelnen Krone bis zur größeren Konstruktion, planen und fertigen wir. Für Sie heißt das: ein Ansprechpartner für den prothetischen Teil.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Keramischen Zahnersatz stellen wir mit CEREC häufig selbst her, meist ohne klassischen Abdruck und oft in einer Sitzung. Die Restauration wird dabei nach dem digitalen Scan aus einem Keramikrohling herausgearbeitet. Ob das für Ihre Versorgung in Frage kommt, zeigt die Untersuchung.</p>
+                    <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Steht ein Implantat an, setzt es Dr. Dorow in der Klinik Dogern. Alles, was danach darauf kommt, von der einzelnen Krone bis zur größeren Konstruktion, planen und fertigen wir. Für Sie heißt das: ein Ansprechpartner für den prothetischen Teil.</p>
 
           <a href="https://info.frydent.de/kronen_bruecken_patienten.html" style="display:flex;align-items:center;gap:16px;margin:20px 0;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>
@@ -752,24 +756,24 @@ a.sbl:hover{color:#E2C26A !important}
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Aligner sind transparente Schienen, die Zähne Schritt für Schritt in eine neue Position bewegen. Sie sind herausnehmbar, im Alltag kaum sichtbar und für viele Erwachsene die angenehmere Alternative zur festen Spange.</p>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Erst planen, dann entscheiden</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Am Anfang steht ein digitaler Scan Ihrer Zähne oder ein Abdruck. Auf dieser Grundlage erstellt unser Partnerlabor MDH eine detaillierte Planung: Sie sehen die Ausgangssituation und das angestrebte Ergebnis nebeneinander, dazu den vollständigen Behandlungsablauf. Erst danach entscheiden Sie, ob Sie die Behandlung beginnen möchten. Es gibt an dieser Stelle keinen Druck und keine Vorleistung, die Sie zu etwas verpflichtet.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-aligner-handschuhe.webp" alt="Zahnärztin prüft einen transparenten Aligner" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Aligner aus dem Labor.</strong> Jede Schiene wird nach der digitalen Planung individuell für Sie gefertigt.</p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-aligner-handschuhe.webp" alt="Zahnärztin prüft einen transparenten Aligner" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Aligner aus dem Labor.</strong> Jede Schiene wird nach der digitalen Planung individuell für Sie gefertigt.</figcaption>
+          </figure>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wobei Aligner gut helfen</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Besonders gute Ergebnisse erreichen wir beim Schließen von Lücken zwischen den Zähnen, etwa bei einem Diastema oder bei größeren Zwischenräumen. Auch einzelne Zähne, die aus der Reihe stehen, lassen sich meist gut korrigieren. Bei Erwachsenen mit einer Lücke nach einem verlorenen Zahn ist manchmal sogar der Verzicht auf Implantat oder Brücke möglich, weil sich die verbliebenen Zähne gleichmäßig verteilen und die Lücke schließen lässt.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-aligner-modell.webp" alt="Transparenter Aligner auf einem Kiefermodell" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Vom Modell zur Schiene.</strong> Auf Grundlage von Scan oder Abdruck entsteht die Planung, Schritt für Schritt.</p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-aligner-modell.webp" alt="Transparenter Aligner auf einem Kiefermodell" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Vom Modell zur Schiene.</strong> Auf Grundlage von Scan oder Abdruck entsteht die Planung, Schritt für Schritt.</figcaption>
+          </figure>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Wo die Grenzen liegen</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ausgeprägte Kieferfehlstellungen gehören nicht in die Alignertherapie. Solche Fälle besprechen wir mit unserem kieferorthopädischen Kollegen und überweisen weiter, wenn das der bessere Weg ist. Jede Planung wird vorab mit dem Labor abgestimmt, damit von Anfang an klar ist, was realistisch erreichbar ist.</p>
           <h3 style="margin:6px 0 8px;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Alle zwei Wochen sehen wir uns</h3>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Aligner wirken nur, wenn sie getragen werden, in der Regel rund 22 Stunden am Tag. Diese Mitarbeit ist die entscheidende Voraussetzung für das Ergebnis. Wir begleiten Sie eng: Alle zwei Wochen prüfen wir den Fortschritt und sprechen darüber, wie Sie mit den Schienen zurechtkommen. Wenn etwas nicht mehr passt, lassen wir neue Schienen anfertigen. Nach Abschluss sichern wir das Ergebnis, damit die Zähne dort bleiben, wo sie hingehören.</p>
-          <div style="margin:6px 0 2px">
-            <img src="assets/img-lsta-aligner-box.webp" alt="Aligner in einer Aufbewahrungsbox" loading="lazy" style="width:100%;height:auto;display:block;border-radius:14px">
-            <p style="margin:8px 0 0;font-size:13px;line-height:1.55;color:#7A8496"><strong style="color:#2C4170">Für den Alltag gemacht.</strong> Herausnehmbar, unauffällig und einfach zu reinigen.</p>
-          </div>
+          <figure class="lst-fig">
+            <img src="assets/img-lsta-aligner-box.webp" alt="Aligner in einer Aufbewahrungsbox" loading="lazy">
+            <figcaption><strong style="color:#2C4170">Für den Alltag gemacht.</strong> Herausnehmbar, unauffällig und einfach zu reinigen.</figcaption>
+          </figure>
           <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Wir behandeln Jugendliche und Erwachsene, die wissen, was sie möchten, und bereit sind, den Weg mitzugehen.</p>
           <a href="https://info.frydent.de/aligner_patienten.html" style="display:flex;align-items:center;gap:16px;margin:20px 0;background:#F2EFE8;border:1px solid #E2D9C4;border-radius:14px;padding:16px 22px;margin:4px 0 14px;color:#4B5875;text-decoration:none" class="h-c8aff8">
             <span style="flex:none;display:flex;align-items:center;gap:0;transform:rotate(56deg);transform-origin:center"><span style="display:block;width:10px;height:10px;border-radius:50%;background:#C4A44E"></span><span style="display:block;width:24px;height:1.5px;background:linear-gradient(90deg,#C4A44E,#D8C288)"></span></span>

@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Einblicke · FRYDENT Bonndorf</title>
-<meta name="description" content="Aus unserer Praxis: verständliche Beiträge zu Behandlungen und Vorsorge, auf Grundlage aktueller Leitlinien und Studien.">
+<title>Was bringt Airflow wirklich? · Einblicke · FRYDENT Bonndorf</title>
+<meta name="description" content="Mehr als saubere Zähne: warum es bei der Pulverstrahlreinigung vor allem um den bakteriellen Biofilm geht, für wen sie nicht geeignet ist und was die Studienlage zeigt.">
 <link rel="stylesheet" href="mobile.css?v=40"><script>(function(){var u=false;['wheel','touchmove','keydown'].forEach(function(e){addEventListener(e,function(){u=true},{once:true,passive:true})});function go(){if(u||!location.hash)return;var el=document.getElementById(location.hash.slice(1));if(!el)return;var o=0,n=document.querySelector("header");while(n&&n!==document.body){var c=getComputedStyle(n).position;if(c==="fixed"||c==="sticky"){o=n.getBoundingClientRect().height+12;break}n=n.parentElement}scrollTo(0,el.getBoundingClientRect().top+pageYOffset-o)}addEventListener('load',function(){if(!location.hash)return;go();setTimeout(go,400);var t0=Date.now(),lh=document.body.scrollHeight,iv=setInterval(function(){if(u||Date.now()-t0>8000){clearInterval(iv);return}var h=document.body.scrollHeight;if(h!==lh){lh=h;go()}},200)});addEventListener('hashchange',function(){u=false;setTimeout(go,60)})})();</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-<link rel="canonical" href="https://frydent.de/news.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Einblicke · FRYDENT Bonndorf">
-<meta property="og:description" content="Beiträge aus unserer Praxis in Bonndorf: verständlich, sachlich und mit offengelegten Quellen.">
-<meta property="og:image" content="https://frydent.de/assets/img/og-image.jpg">
-<meta property="og:url" content="https://frydent.de/news.html">
+<link rel="canonical" href="https://frydent.de/einblicke-airflow.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Was bringt Airflow wirklich?">
+<meta property="og:description" content="Mehr als saubere Zähne: warum es bei der Pulverstrahlreinigung vor allem um den bakteriellen Biofilm geht, für wen sie nicht geeignet ist und was die Studienlage zeigt.">
+<meta property="og:image" content="https://frydent.de/assets/img-nw-airflow.webp?v=2">
+<meta property="og:url" content="https://frydent.de/einblicke-airflow.html">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Was bringt Airflow wirklich?","description":"Mehr als saubere Zähne: warum es bei der Pulverstrahlreinigung vor allem um den bakteriellen Biofilm geht, für wen sie nicht geeignet ist und was die Studienlage zeigt.","image":"https://frydent.de/assets/img-nw-airflow.webp","inLanguage":"de-DE","isAccessibleForFree":true,"datePublished":"2026-08-03","dateModified":"2026-08-03","author":{"@type":"Person","name":"Tatiana Frydrych","jobTitle":"Zahnärztin"},"publisher":{"@type":"Dentist","name":"Zahnarztpraxis Tatiana Frydrych","url":"https://frydent.de/","address":{"@type":"PostalAddress","streetAddress":"Martinstraße 21","postalCode":"79848","addressLocality":"Bonndorf im Schwarzwald","addressCountry":"DE"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://frydent.de/einblicke-airflow.html"},"isPartOf":{"@type":"Blog","name":"Einblicke","url":"https://frydent.de/news.html"},"citation":["Sanz M et al. Treatment of stage I-III periodontitis. EFP S3 level clinical practice guideline. J Clin Periodontol 2020;47(Suppl 22):4-60","Abdulbaqi HR et al. Efficacy of erythritol powder air-polishing. Int J Dent Hyg 2022;20(1):62-74","Guma E et al. Effects of Air-Polishing Powders on Sound and Demineralised Enamel. Materials 2023;16(13):4811"]}</script>
 <script src="consent.js?v=2"></script>
 <script src="menu.js?v=6" defer></script>
 <style>
@@ -120,82 +121,128 @@ a.pp:hover{color:#8F7440 !important}
   </div>
 
 
-  <!-- intro -->
-  <div style="background:linear-gradient(180deg,#EBEFF5 0%,#F6F8FB 55%,#ffffff 100%)" data-screen-label="Intro">
-  <div style="display:flex;flex-direction:column;gap:14px;padding:40px 56px 36px;text-align:center;align-items:center;max-width:1440px;margin:0 auto;box-sizing:border-box">
-    <div style="font-size:13px;letter-spacing:2.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Aus der Praxis</div>
-    <h1 style="margin:0;font-family:'Quicksand',sans-serif;font-size:35px;line-height:1.25;font-weight:400;color:#37538E;text-wrap:pretty">Wissen, das wir gerne teilen.</h1>
-    <p style="margin:12px 0 0;font-size:16px;line-height:1.7;color:#4B5875;max-width:64ch">Hier beantworten wir Fragen, die uns im Praxisalltag häufig gestellt werden: verständlich, sachlich und auf Grundlage des aktuellen Wissensstandes. Unsere Beiträge sollen Orientierung geben. Die persönliche Beratung ersetzen sie nicht.</p>
-  </div>
-  </div>
+  <!-- artikel + sidebar -->
+  <div data-show="showArticle">
+  <div id="artikel" style="background:#ffffff" data-screen-label="Artikel">
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:56px;padding:44px 56px 76px;align-items:start;max-width:1340px;margin:0 auto;box-sizing:border-box">
 
-  <!-- praxisferien permanent -->
-  <div style="background:#F2EFE8;border-top:1px solid #E0D7C2;border-bottom:1px solid #E0D7C2" data-screen-label="Praxisinfo">
-  <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 56px;max-width:1340px;margin:0 auto;box-sizing:border-box;flex-wrap:wrap">
-    <div style="display:flex;flex-direction:column;gap:6px">
-      <div style="font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Urlaub, Vertretung &amp; Notdienst</div>
-      <p style="margin:0;font-size:15px;line-height:1.65;color:#4B5875;max-width:64ch">Aktuelle Schließzeiten, Vertretungspraxen und alle Notdienstnummern finden Sie stets aktuell in unserem Infoportal.</p>
+    <div style="min-width:0">
+      <a href="news.html" style="display:inline-block;margin-bottom:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;border-bottom:1px solid #C4A44E;padding-bottom:3px" class="h-699071">← Zur Übersicht</a>
+
+      <div data-show="showAirflow">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="position:relative;width:100%;height:320px;margin-bottom:20px">
+            <img id="nw-airflow" src="assets/img-nw-airflow.webp?v=2" alt="Airflow-Gerät zur schonenden Zahnreinigung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;border-radius:16px">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px"><div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
+          <div style="font-size:13.5px;color:#6B7280">Von Tatiana Frydrych, Zahnärztin</div></div>
+          <h1 style="margin:0;font-family:'Quicksand',sans-serif;font-size:34px;line-height:1.25;font-weight:400;color:#37538E">Was bringt Airflow wirklich?</h1>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875;font-weight:600">Viele kennen Airflow als Methode gegen Verfärbungen. Der wichtigere Teil der Behandlung ist jedoch ein anderer: die Entfernung des bakteriellen Biofilms. Hier beantworten wir die Fragen, die uns dazu am häufigsten gestellt werden.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Ein Hinweis vorab: AIRFLOW ist ein Markenname. Das Verfahren dahinter heißt Pulverstrahlreinigung. Dabei trifft ein feines Gemisch aus Wasser, Luft und Pulver auf die Zahnoberfläche.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In unserer Praxis arbeiten wir mit einem Kombinationsgerät, das Ultraschallreinigung und Pulverstrahlreinigung vereint. Harte Auflagerungen und weicher Biofilm lassen sich damit in derselben Sitzung entfernen. Für Verfärbungen oberhalb des Zahnfleischrandes und für die Reinigung unterhalb davon verwenden wir zwei unterschiedliche Pulver, weil sich die beiden Aufgaben deutlich unterscheiden.</p>
+
+          <figure style="margin:6px 0 0;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/img-airflow-geraet.webp" alt="Bedienfeld unseres Kombinationsgerätes mit Wasser- und Pulverbehälter" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px">
+            <figcaption style="font-size:13.5px;line-height:1.6;color:#8A93A6;font-style:italic">Unser Kombinationsgerät: oben Wasser- und Pulverbehälter, darunter die Steuerung für das Arbeiten ober- und unterhalb des Zahnfleischrandes.</figcaption>
+          </figure>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Entfernt Airflow nur Verfärbungen oder auch Biofilm?</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Beides, und der Biofilm ist der wichtigere Teil. Biofilm ist ein weicher, bakterieller Belag, der sich täglich neu bildet, besonders am Zahnfleischrand und in den Zahnzwischenräumen. Die europäische Leitlinie zur Behandlung der Parodontitis ordnet die Kontrolle dieses Biofilms als festen Bestandteil der Vorbeugung und der Nachsorge ein (Sanz et al. 2020). Ein Konsenspapier einer Expertenkonferenz beschreibt die Pulverstrahlreinigung mit Glycin als sicher und wirksam, auch unterhalb des Zahnfleischrandes (Cobb et al. 2017).</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Verfärbungen durch Kaffee, Tee oder Nikotin liegen dagegen außen auf dem Zahn. Sie lassen sich gut entfernen, die Eigenfarbe des Zahnes verändert sich dadurch aber nicht. Genau darin liegt der Unterschied zum Bleaching: Pulverstrahlreinigung legt die natürliche Zahnfarbe wieder frei, sie hellt sie nicht auf.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Ersetzt Airflow die Zahnsteinentfernung?</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Nein. Harter Zahnstein wird weiterhin mit Ultraschall oder Handinstrumenten entfernt. Die Pulverstrahlreinigung wirkt auf weiche Beläge und Biofilm.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für die Nachsorge nach einer Parodontitisbehandlung gilt allerdings eine Besonderheit. Eine systematische Übersichtsarbeit mit Metaanalyse von acht randomisierten Studien kommt zu dem Ergebnis, dass Pulverstrahlreinigung mit Erythritol in dieser Phase die Hand- und Ultraschallinstrumentierung ersetzen kann, bei vergleichbaren Werten für Taschentiefe und Blutung. Die Behandelten empfanden dabei weniger Schmerzen (Abdulbaqi et al. 2021).</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">In unserer Praxis kombinieren wir beides in der Regel innerhalb einer Sitzung: zuerst die Entfernung harter Auflagerungen, danach die Pulverstrahlreinigung.</p>
+
+          <figure style="margin:6px 0 0;display:flex;flex-direction:column;gap:10px">
+            <img src="assets/img-airflow-behandlung.webp?v=4" alt="Anette Gantert bei der professionellen Zahnreinigung mit dem Pulverstrahlgerät" loading="lazy" style="width:100%;height:auto;display:block;border-radius:16px">
+            <figcaption style="font-size:13.5px;line-height:1.6;color:#8A93A6;font-style:italic">Frau Anette Gantert bei der Prophylaxe. Ultraschall und Pulverstrahl stehen bei uns direkt nebeneinander, so lassen sich harte und weiche Beläge in einem Termin entfernen.</figcaption>
+          </figure>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Schädigt Airflow den Zahnschmelz?</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das hängt vom Pulver und vom Zustand des Zahnes ab. In einer Laboruntersuchung an gezogenen Zähnen nahm die Oberflächenrauheit von gesundem Schmelz nach 150 Sekunden Behandlung um 0,28 Mikrometer zu, wenn Erythritol verwendet wurde, und um 0,68 Mikrometer bei Natriumbikarbonat. An entkalktem Schmelz, den sogenannten White-Spot-Läsionen, fiel die Zunahme deutlich stärker aus (Guma et al. 2023). Es handelt sich um eine Untersuchung im Labor, deren Ergebnisse sich nicht eins zu eins auf die Behandlung im Mund übertragen lassen.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Für die Praxis bedeutet das zweierlei. Ein niedrigabrasives Pulver ist nicht dasselbe wie Natriumbikarbonat; unterhalb des Zahnfleischrandes verwenden wir ausschließlich das niedrigabrasive. Und an entkalkten Stellen sind wir zurückhaltend, was besonders nach einer kieferorthopädischen Behandlung eine Rolle spielt, weil dort White Spots häufig vorkommen.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Welches der niedrigabrasiven Pulver das beste ist, ist offen: Eine Netzwerk-Metaanalyse von neun Studien fand zwischen Erythritol, Glycin und Trehalose keine bedeutsamen Unterschiede (Yuan et al. 2025).</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Für wen ist Airflow nicht geeignet?</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Nicht für alle. Die Gebrauchsanweisungen der Prophylaxepulver schließen die Anwendung bei Asthma und chronischer Bronchitis ausdrücklich aus. Für das natriumhaltige Pulver kommen weitere Einschränkungen hinzu: natriumarme Ernährung, etwa bei Bluthochdruck, sowie eine bekannte Allergie gegen Aromastoffe. Auch freiliegende Zahnhälse, Karies im Schmelz und bestimmte Füllungsmaterialien werden damit nicht behandelt, weil die Oberfläche aufrauen kann.</p>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Deshalb fragen wir vorher nach Vorerkrankungen. Wenn etwas dagegenspricht, reinigen wir auf einem anderen Weg.</p>
+
+          <h3 style="margin:6px 0 0;font-family:'Quicksand',sans-serif;font-size:20px;font-weight:600;color:#2C4170">Ist Airflow auch bei Implantaten sinnvoll?</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4B5875">Das Verfahren wird bei Implantaten eingesetzt und gilt als gut verträglich. Ein Vorteil gegenüber anderen Reinigungsmethoden ist jedoch nicht belegt: Eine systematische Übersichtsarbeit mit Metaanalyse von zwölf Studien kam zu dem Schluss, dass die Pulverstrahlreinigung bei Erkrankungen rund um Implantate vergleichbare, aber keine besseren Ergebnisse erzielte als andere Verfahren (Bi et al. 2023). Ein internationales Konsenspapier bewertet die Anwendung als effizient und patientenfreundlich, hält aber ausdrücklich fest, dass zu Langzeitwirkungen weitere Studien nötig sind (Liu et al. 2024).</p>
+
+          <div style="margin:10px 0 0;background:#F2EFE8;border:1px solid #E0D7C2;border-radius:16px;padding:26px 28px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170;margin-bottom:14px">Kurz zusammengefasst</div>
+            <div style="display:flex;flex-direction:column;gap:9px;font-size:15px;line-height:1.6;color:#4B5875">
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>entfernt bakteriellen Biofilm und äußere Verfärbungen</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>kann in der Nachsorge die Hand- und Ultraschallinstrumentierung ersetzen</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>wird meist als angenehmer empfunden als die klassische Instrumentierung</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>ersetzt nicht die Entfernung von hartem Zahnstein</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>hellt die Eigenfarbe der Zähne nicht auf, ist also kein Bleaching</span></div>
+              <div style="display:flex;align-items:baseline;gap:11px"><span style="color:#A88338;font-weight:700">+</span><span>bei Asthma und chronischer Bronchitis nicht geeignet, bei entkalktem Schmelz nur zurückhaltend</span></div>
+            </div>
+          </div>
+
+          <div style="margin:6px 0 0;background:#F7F8FA;border:1px solid #E4E6EB;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:12px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:18px;font-weight:600;color:#2C4170">Sie möchten es genauer wissen?</div>
+            <p style="margin:0;font-size:15px;line-height:1.7;color:#4B5875">Wie eine professionelle Zahnreinigung bei uns Schritt für Schritt abläuft, was danach zu beachten ist und was sie kostet, haben wir ausführlich im Infoportal zusammengestellt.</p>
+            <a href="https://info.frydent.de/pzr_patienten.html" style="align-self:flex-start;background:#D2B156;color:#1E2D4D;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" class="h-d32178">Ablauf und Kosten im Infoportal</a>
+          </div>
+
+          <details style="margin:6px 0 0;border-top:1px solid #E4E6EB;padding-top:18px">
+            <summary style="cursor:pointer;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif">Quellen anzeigen</summary>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;font-size:13.5px;line-height:1.65;color:#6B7280">
+              <div>Sanz M, Herrera D, Kebschull M et al. Treatment of stage I–III periodontitis — The EFP S3 level clinical practice guideline. Journal of Clinical Periodontology 2020;47(Suppl 22):4–60. doi:10.1111/jcpe.13290</div>
+              <div>Cobb CM, Daubert DM, Davis K et al. Consensus Conference Findings on Supragingival and Subgingival Air Polishing. Compendium of Continuing Education in Dentistry 2017;38(2):e1–e4. PMID 28156118</div>
+              <div>Abdulbaqi HR, Shaikh MS, Abdulkareem AA et al. Efficacy of erythritol powder air-polishing in active and supportive periodontal therapy: A systematic review and meta-analysis. International Journal of Dental Hygiene 2022;20(1):62–74. doi:10.1111/idh.12539</div>
+              <div>Guma E, Kiliaridis S, Scherrer SS, Antonarakis GS. An In Vitro Evaluation of the Effects of Air-Polishing Powders on Sound and Demineralised Enamel. Materials 2023;16(13):4811. doi:10.3390/ma16134811</div>
+              <div>Yuan ZL, Tang YX, Zhou Y et al. Clinical effects of erythritol, glycine and trehalose as subgingival air-polishing powders on non-surgical periodontal treatment: a systematic review with meta-analysis of randomized controlled trials. Frontiers in Physiology 2025;16:1593204. doi:10.3389/fphys.2025.1593204</div>
+              <div>Bi J, Khoshkam V, Hunter M et al. Effect of Air Polishing on the Treatment of Peri-Implant Diseases: A Systematic Review and Meta-Analysis. Journal of Oral Implantology 2023;49(6):616–628. doi:10.1563/aaid-joi-D-23-00114</div>
+              <div>Liu CC, Dixit N, Hatz CR et al. Air powder waterjet technology using erythritol or glycine powders in periodontal or peri-implant prophylaxis and therapy: A consensus report of an expert meeting. Clinical and Experimental Dental Research 2024;10(1):e855. doi:10.1002/cre2.855</div>
+              <div>Gebrauchsanweisungen der in unserer Praxis verwendeten Prophylaxepulver (B.A. International Ltd., Northampton; Prisman GmbH, Lorsch), Stand der Etiketten 2022.</div>
+            </div>
+          </details>
+
+          <div style="font-size:13px;color:#9AA3B5;margin-top:6px">Stand: August 2026</div>
+          <p style="margin:0;font-size:15px;line-height:1.75;color:#6B7280;border-left:3px solid #E0D7C2;padding-left:18px">Welche Form der professionellen Zahnreinigung für Sie sinnvoll ist, hängt von Ihrer persönlichen Mundsituation ab: vom Zustand des Zahnfleisches, von vorhandenen Füllungen oder Implantaten und davon, wie stark sich bei Ihnen überhaupt Beläge bilden. Dieser Beitrag ersetzt deshalb keine persönliche Beratung und keine Untersuchung. Sprechen Sie uns an, wir schauen es uns gemeinsam an.</p>
+
+          <div style="margin:14px 0 0;border-top:1px solid #E4E6EB;padding-top:26px;display:flex;flex-direction:column;gap:4px">
+            <div style="font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;color:#A88338;font-weight:600;font-family:'Quicksand',sans-serif;margin-bottom:8px">Für Sie geschrieben von</div>
+            <img src="assets/unterschrift-frydrych.png" alt="Unterschrift von Tatiana Frydrych" width="269" height="176" style="width:138px;height:90px;max-width:none;display:block;margin:0 0 10px">
+            <div style="font-family:'Quicksand',sans-serif;font-size:16px;font-weight:600;color:#2C4170">Tatiana Frydrych</div>
+            <div style="font-size:14.5px;color:#6B7280">Zahnärztin, Bonndorf im Schwarzwald</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <a href="https://info.frydent.de/praxisinfo.html" style="border:1.5px solid #A88338;color:#8F7440;padding:12px 26px;border-radius:999px;font-size:14px;font-weight:600;font-family:'Quicksand',sans-serif;white-space:nowrap" class="h-b1a3d5">Aktuelle Praxisinfos</a>
-  </div>
-  </div>
 
-  <!-- übersicht -->
-  <div data-show="showOverview">
-  <div id="news" style="background:#ffffff" data-screen-label="News Übersicht">
-  <div style="padding:50px 56px 70px;max-width:1340px;margin:0 auto;box-sizing:border-box">
-    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px">
+    <div style="background-color:#4D577F;border-radius:16px;padding:30px 28px;display:flex;flex-direction:column;gap:20px;position:sticky;top:110px;margin-top:44px" data-screen-label="Sidebar">
+      <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#ffffff">Mehr zum Nachlesen</div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="nwc-fluorid" src="assets/img-nwc-fluorid.webp" alt="Zahnbürste mit einer kleinen Menge Zahnpasta" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
-        </div>
-        <a href="einblicke-fluorid.html" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
-          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
-          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Fluorid: Schutz oder Grund zur Sorge?</div>
-          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Fluorid schützt nachweislich vor Karies und verunsichert trotzdem viele. Fast immer läuft die Antwort auf dieselbe Frage hinaus: auf die Menge.</p>
-        </a>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Professionelle Zahnreinigung</div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Ablauf, Empfehlungen und Kosten, ausführlich im Infoportal.</p>
+        <a href="https://info.frydent.de/pzr_patienten.html" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Zur PZR im Infoportal</a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="nwc-bleaching" src="assets/img-nwc-bleaching.webp" alt="Zahnaufhellung in der Praxis mit Whitening-Lampe" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
-        </div>
-        <a href="einblicke-zahnaufhellung.html" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
-          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
-          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Was macht Zähne heller, und was nur sauber?</div>
-          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Reinigung und Aufhellung sind zwei verschiedene Dinge. Was welche Methode kann, und was keine kann.</p>
-        </a>
+      <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Zahnaufhellung</div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Voraussetzungen, Ablauf, Kosten und die Pflege danach.</p>
+        <a href="https://info.frydent.de/bleaching_patienten.html" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Zur Zahnaufhellung im Infoportal</a>
       </div>
 
-      <div style="min-width:0;border:1px solid #E4E6EB;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#ffffff" class="h-696b32">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="nwc-airflow" src="assets/img-nwc-airflow.webp?v=2" alt="Airflow-Gerät zur schonenden Zahnreinigung" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
-        </div>
-        <a href="einblicke-airflow.html" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
-          <div style="font-size:12.5px;color:#9AA3B5">03.08.2026</div>
-          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Was bringt Airflow wirklich?</div>
-          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Mehr als saubere Zähne: Warum es vor allem um den bakteriellen Biofilm geht.</p>
-        </a>
+      <div style="border-top:1px solid rgba(255,255,255,.2);padding-top:16px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-family:'Quicksand',sans-serif;font-size:15.5px;font-weight:600;color:#ffffff">Urlaub &amp; Notdienst</div>
+        <p style="margin:0;font-size:13.5px;line-height:1.6;color:#C9D6EC">Immer aktuell im Infoportal.</p>
+        <a href="https://info.frydent.de/praxisinfo.html" style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#E2C26A;font-weight:600;text-decoration:underline">Zu den Praxisinfos</a>
       </div>
-
-      <div style="min-width:0;border:1px solid #E0D7C2;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;background:#F2EFE8" class="h-d91a50">
-        <div style="position:relative;width:100%;height:240px">
-          <img id="nwc-praxisinfo" src="assets/img-nwc-praxisinfo.webp?v=2" alt="Praxisferien" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover">
-        </div>
-        <a href="https://info.frydent.de/praxisinfo.html" style="padding:22px 26px 24px;display:flex;flex-direction:column;gap:6px">
-          <div style="font-size:12.5px;color:#9AA3B5">Immer aktuell</div>
-          <div style="font-family:'Quicksand',sans-serif;font-size:19px;font-weight:600;color:#2C4170">Schließzeiten der Praxis</div>
-          <p style="margin:0;font-size:14.5px;line-height:1.6;color:#6B7280">Urlaub, Vertretung und Notdienst, stets aktuell im Infoportal.</p>
-        </a>
-      </div>
-
     </div>
-  </div>
-  </div>
-  </div>
 
-
+  </div>
+  </div>
+  </div>
 
   <!-- patientenportal band -->
   <div style="background:#F2EFE8;border-top:1px solid #E0D7C2;border-bottom:1px solid #E0D7C2" data-screen-label="Infoportal">
@@ -275,7 +322,5 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
-<script>(function(){var M={fluorid:"einblicke-fluorid.html",bleaching:"einblicke-zahnaufhellung.html",airflow:"einblicke-airflow.html"};
-var h=(location.hash||"").replace("#","");if(M[h])location.replace(M[h]);})();</script>
 </body>
 </html>

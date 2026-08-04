@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Einblicke · FRYDENT Bonndorf</title>
+    <link>https://frydent.de/news.html</link>
+    <atom:link href="https://frydent.de/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Verständliche Beiträge zu Behandlungen und Vorsorge aus der Zahnarztpraxis Tatiana Frydrych in Bonndorf im Schwarzwald, mit offengelegten Quellen.</description>
+    <language>de-DE</language>
+    <copyright>Zahnarztpraxis Tatiana Frydrych, Bonndorf im Schwarzwald</copyright>
+    <managingEditor>info@frydent.de (Tatiana Frydrych)</managingEditor>
+    <lastBuildDate>Mon, 03 Aug 2026 11:00:00 +0200</lastBuildDate>
+    <item>
+      <title>Fluorid: Schutz oder Grund zur Sorge?</title>
+      <link>https://frydent.de/einblicke-fluorid.html</link>
+      <guid isPermaLink="true">https://frydent.de/einblicke-fluorid.html</guid>
+      <pubDate>Mon, 03 Aug 2026 11:00:00 +0200</pubDate>
+      <description>Ist Fluorid giftig? Schadet es Kindern? Warum steckt es im Trinkwasser? Wir gehen die häufigsten Sorgen einzeln durch, mit offengelegten Quellen und einer gültigen S3-Leitlinie.</description>
+      <author>info@frydent.de (Tatiana Frydrych)</author>
+    </item>
+    <item>
+      <title>Was macht Zähne heller, und was nur sauber?</title>
+      <link>https://frydent.de/einblicke-zahnaufhellung.html</link>
+      <guid isPermaLink="true">https://frydent.de/einblicke-zahnaufhellung.html</guid>
+      <pubDate>Mon, 03 Aug 2026 10:00:00 +0200</pubDate>
+      <description>Reinigung und Aufhellung sind zwei verschiedene Dinge. Was welche Methode kann, was keine kann, wie lange das Ergebnis hält und wie wir in unserer Praxis arbeiten.</description>
+      <author>info@frydent.de (Tatiana Frydrych)</author>
+    </item>
+    <item>
+      <title>Was bringt Airflow wirklich?</title>
+      <link>https://frydent.de/einblicke-airflow.html</link>
+      <guid isPermaLink="true">https://frydent.de/einblicke-airflow.html</guid>
+      <pubDate>Mon, 03 Aug 2026 09:00:00 +0200</pubDate>
+      <description>Mehr als saubere Zähne: warum es bei der Pulverstrahlreinigung vor allem um den bakteriellen Biofilm geht, für wen sie nicht geeignet ist und was die Studienlage zeigt.</description>
+      <author>info@frydent.de (Tatiana Frydrych)</author>
+    </item>
+  </channel>
+</rss>

@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://frydent.de/news.html</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -49,6 +49,11 @@
     <loc>https://frydent.de/ihr-besuch.html</loc>
     <lastmod>2026-08-04</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://frydent.de/einblicke-krebstherapie.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://frydent.de/einblicke-fluorid.html</loc>

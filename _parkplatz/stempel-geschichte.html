@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Parkplatz: Deko-Stempel Seite Geschichte</title>
+<!--
+  ============================================================================
+  PARKPLATZ  ·  Deko-Stempel der Seite "Unsere Geschichte" (geschichte.html)
+  ============================================================================
+
+  Diese drei runden Siegel wurden am 06.08.2026 aus geschichte.html entfernt.
+  Grund: vorsorgliche Zuruecknahme waehrend der laufenden Auseinandersetzung
+  mit der frueheren Agentur. Kein inhaltlicher oder gestalterischer Mangel.
+
+  Die Stempel sind rein dekorativ:
+    position:absolute + pointer-events:none
+  Ihr Entfernen hinterlaesst keine Luecke im Layout. Das Wiedereinsetzen
+  besteht darin, den jeweiligen Block an der genannten Stelle wieder
+  einzufuegen und den CSS-Block zurueck in den <style>-Bereich der Seite
+  zu setzen.
+
+  HINWEIS FUER SPAETER:
+  Der dritte Stempel trug die Umschrift "VIER GENERATIONEN". Das widerspricht
+  der uebrigen Seite, die durchgehend von FUENF Generationen spricht
+  (Dr. Stritt, Familie Landwerlin, Dr. Landwerlin-Fuehrer, Tatiana Frydrych,
+  Max Frydrych). Vor einer Rueckkehr bitte auf "FUENF GENERATIONEN" aendern.
+  Achtung: der laengere Text braucht ggf. font-size 9 statt 10 und
+  letter-spacing 1.8 statt 2.2, damit die Umschrift auf den Kreis passt.
+  ============================================================================
+-->
+
+<!-- ===== Stempel 1: "ZAHNMEDIZIN IN BONNDORF / SEIT 1925" =====
+     Frueherer Ort: Abschnitt data-screen-label="Historie Timeline",
+     direkt vor dem schliessenden </div> des Abschnitts. -->
+    <svg data-stamp="" width="260" height="260" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; bottom: 40px; left: 380px; transform: rotate(-10deg); opacity: .42; pointer-events: none">
+      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
+      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
+      <defs><path id="stArc1" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
+      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc1">ZAHNMEDIZIN IN BONNDORF</textPath></text>
+      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
+      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
+    </svg>
+
+<!-- ===== Stempel 2: "MIT HERZ UND TRADITION / SEIT 1925" =====
+     Frueherer Ort: Abschnitt data-screen-label="Zwischenwort",
+     direkt vor dem schliessenden </div> des Abschnitts. -->
+    <svg data-stamp="" width="260" height="260" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 68px; transform: rotate(14deg); opacity: .42; pointer-events: none; right: 360px">
+      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
+      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
+      <defs><path id="stArc3" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
+      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc3">MIT HERZ UND TRADITION</textPath></text>
+      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
+      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
+    </svg>
+
+<!-- ===== Stempel 3: "VIER GENERATIONEN / SEIT 1925" =====
+     Frueherer Ort: Abschnitt data-screen-label="Schlusswort",
+     direkt vor dem schliessenden </div> des Abschnitts. -->
+  <svg data-stamp="" width="230" height="230" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 178px; transform: rotate(-10deg); opacity: .5; pointer-events: none; left: 340px">
+      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
+      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
+      <defs><path id="stArc2" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
+      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc2">VIER GENERATIONEN</textPath></text>
+      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
+      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
+    </svg>
+
+<!-- ===== Zugehoeriges Mobil-CSS =====
+     Frueherer Ort: im <style>-Block von geschichte.html,
+     innerhalb von @media (max-width: 600px).
+-->
+<style>
+@media (max-width: 600px){
+  /* Deko-Stempel auf Mobil: groß, teils hinter den Rand, nie ganz im Bild */
+  svg[data-stamp]{width:230px !important;height:230px !important;opacity:.28 !important}
+  [data-screen-label="Historie Timeline"] svg[data-stamp]{left:auto !important;right:-70px !important;bottom:24px !important}
+  [data-screen-label="Zwischenwort"] svg[data-stamp]{right:auto !important;left:-70px !important;top:auto !important;bottom:20px !important}
+  [data-screen-label="Schlusswort"] svg[data-stamp]{left:auto !important;right:-70px !important;top:120px !important}
+}
+</style>

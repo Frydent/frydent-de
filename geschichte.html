@@ -42,6 +42,17 @@
   header[data-screen-label="Nav"]{padding-left:20px !important;padding-right:20px !important}
   .ip-pill-out,a.hbtn-outline{font-size:11px !important;padding-left:13px !important;padding-right:13px !important}
 }
+
+/* Intro: Schlossbild fuellt den Abschnitt bis zur Ober und Unterkante.
+   Ohne diese Regel bleibt unten ein heller Streifen, weil die Bildhoehe
+   aus der Breite folgt und nicht zur Abschnittshoehe passt. */
+@media (min-width: 1000px){
+  [data-screen-label="Intro"] > img{
+    top:0 !important; bottom:0 !important; height:100% !important;
+    right:-10% !important;
+    object-fit:cover !important; object-position:0% 45% !important;
+  }
+}
 </style>
 <style>
 .h-421b75:hover{color:#3D5A98}
@@ -94,11 +105,6 @@ image-slot::part(empty){color:#9C8C74}
   /* Timeline-Jahreszahlen und „Heute" mitskalieren */
   [data-screen-label="Historie Timeline"] div[style*="font-size:46px"]{font-size:30px !important}
   [data-screen-label="Historie Timeline"] div[style*="font-size:34px"]{font-size:26px !important}
-  /* Deko-Stempel auf Mobil: groß, teils hinter den Rand, nie ganz im Bild */
-  svg[data-stamp]{width:230px !important;height:230px !important;opacity:.28 !important}
-  [data-screen-label="Historie Timeline"] svg[data-stamp]{left:auto !important;right:-70px !important;bottom:24px !important}
-  [data-screen-label="Zwischenwort"] svg[data-stamp]{right:auto !important;left:-70px !important;top:auto !important;bottom:20px !important}
-  [data-screen-label="Schlusswort"] svg[data-stamp]{left:auto !important;right:-70px !important;top:120px !important}
   /* iOS: background-attachment:fixed ist unzuverlässig — auf Mobil scroll */
   #historie, [data-screen-label="Zwischenwort"], [data-screen-label="Intro"]{background-attachment:scroll !important}
 }
@@ -260,14 +266,6 @@ image-slot::part(empty){color:#9C8C74}
       </div>
 
     </div>
-    <svg data-stamp="" width="260" height="260" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; bottom: 40px; left: 380px; transform: rotate(-10deg); opacity: .42; pointer-events: none">
-      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
-      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
-      <defs><path id="stArc1" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
-      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc1">ZAHNMEDIZIN IN BONNDORF</textPath></text>
-      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
-      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
-    </svg>
   </div>
   </div>
   <div style="background:#FAF4E8" data-screen-label="Menschlichkeit">
@@ -437,14 +435,7 @@ image-slot::part(empty){color:#9C8C74}
       <span style="display: inline-block; font-family: 'Great Vibes',cursive; font-size: 30px; line-height: 1; color: #37538E">Tatiana Frydrych</span>
     </div>
   </div>
-    <svg data-stamp="" width="260" height="260" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 68px; transform: rotate(14deg); opacity: .42; pointer-events: none; right: 360px">
-      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
-      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
-      <defs><path id="stArc3" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
-      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc3">MIT HERZ UND TRADITION</textPath></text>
-      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
-      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
-    </svg></div>
+</div>
 
   <!-- damals & heute: behandlungszimmer -->
   <div style="background:#FAF4E8" data-screen-label="Damals &amp; Heute, Empfang">
@@ -522,14 +513,7 @@ image-slot::part(empty){color:#9C8C74}
     <div aria-hidden="true" style="width:80px;height:9px;margin:0 auto 32px;background-image:radial-gradient(circle at 40px 4.5px,#C4A44E 3.4px,rgba(196,164,78,0) 4.4px),linear-gradient(#C4A44E,#C4A44E);background-repeat:no-repeat;background-size:80px 9px,70px 1px;background-position:0 0,5px 4px"></div>
     <p style="margin:0;font-family:'Cormorant Garamond',serif;font-size:31px;line-height:1.45;font-weight:500;font-style:italic;color:#2C4170;text-wrap:balance">„100 Jahre, fünf Generationen, eine Stadt. Das nächste Kapitel schreiben wir mit Ihnen."</p>
   </div>
-  <svg data-stamp="" width="230" height="230" viewBox="0 0 128 128" aria-hidden="true" style="position: absolute; top: 178px; transform: rotate(-10deg); opacity: .5; pointer-events: none; left: 340px">
-      <circle cx="64" cy="64" r="60" fill="none" stroke="#8F7440" stroke-width="2"></circle>
-      <circle cx="64" cy="64" r="51" fill="none" stroke="#8F7440" stroke-width="1"></circle>
-      <defs><path id="stArc2" d="M 64 64 m -42 0 a 42 42 0 1 1 84 0 a 42 42 0 1 1 -84 0"></path></defs>
-      <text font-family="Quicksand,sans-serif" font-size="10" letter-spacing="2.2" font-weight="600" fill="#8F7440"><textPath href="#stArc2">VIER GENERATIONEN</textPath></text>
-      <text x="64" y="62" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="19" font-weight="700" letter-spacing="3" fill="#8F7440">SEIT</text>
-      <text x="64" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="30" font-weight="700" fill="#8F7440">1925</text>
-    </svg></div>
+</div>
 
   
   <!-- kontakt kurz -->

@@ -1,6 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Strona w przygotowaniu — indeksowanie zablokowane.
-# Aby odsloniac: zamienic na "Allow: /" i przywrocic linie Sitemap ponizej.
-# Sitemap: https://frydent.de/sitemap.xml
+Sitemap: https://frydent.de/sitemap.xml

@@ -247,7 +247,8 @@ a.pp:hover{color:#8F7440 !important}
   <div id="kontakt" style="background-color:#4D577F;border-top:1px solid rgba(226,194,106,.55)" data-screen-label="Kontakt">
   <div style="display:grid;grid-template-columns:1fr 1fr;color:#E8EEF8;max-width:1440px;margin:0 auto">
     <div style="padding:66px 60px 66px 56px">
-      <h2 style="margin:0 0 26px;font-family:'Quicksand',sans-serif;font-size:28px;font-weight:400;color:#ffffff">Sprechzeiten</h2>
+      <h2 style="margin:0 0 14px;font-family:'Quicksand',sans-serif;font-size:28px;font-weight:400;color:#ffffff">Sprechzeiten</h2>
+      <div id="urlaub-hinweis" style="margin:0 0 22px;padding:11px 16px;border-left:3px solid #E2C26A;background:rgba(226,194,106,.12);border-radius:0 8px 8px 0;font-family:'Quicksand',sans-serif;font-size:14.5px;font-weight:600;color:#F4E7C4">Vom 7. bis einschlie&szlig;lich 23. September bleibt unsere Praxis geschlossen.</div>
       <div style="display:grid;grid-template-columns:auto 1fr;gap:12px 32px;font-size:15.5px;line-height:1.5">
         <span style="color:#A9BCE0">Montag</span><span>08:00 – 12:00 · 14:00 – 19:00</span>
         <span style="color:#A9BCE0">Dienstag</span><span>08:00 – 12:00 · 14:00 – 19:00</span>
@@ -301,5 +302,6 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
 })();</script>
 <script>(function(){var M={fluorid:"einblicke-fluorid.html",bleaching:"einblicke-zahnaufhellung.html",airflow:"einblicke-airflow.html",krebs:"einblicke-krebstherapie.html",krebstherapie:"einblicke-krebstherapie.html"};
 var h=(location.hash||"").replace("#","");if(M[h])location.replace(M[h]);})();</script>
+<script>(function(){var e=document.getElementById("urlaub-hinweis");if(e&&new Date()>=new Date(2026,8,24)){var h=e.previousElementSibling;if(h&&h.tagName==="H2")h.style.margin="0 0 26px";e.remove()}})();</script>
 </body>
 </html>

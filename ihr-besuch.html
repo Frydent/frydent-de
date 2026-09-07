@@ -358,7 +358,8 @@ a{color:#2C4170;text-decoration:none}a:hover{color:#3D5A98 !important}
 
       <!-- 1: Sprechzeiten -->
       <div style="display:flex;flex-direction:column;gap:16px">
-        <h2 style="margin:0 0 26px;font-family:'Quicksand',sans-serif;font-size:28px;font-weight:400;color:#33416E">Sprechzeiten</h2>
+        <h2 style="margin:0 0 14px;font-family:'Quicksand',sans-serif;font-size:28px;font-weight:400;color:#33416E">Sprechzeiten</h2>
+      <div id="urlaub-hinweis" style="margin:0 0 22px;padding:11px 16px;border-left:3px solid #B08B54;background:rgba(176,139,84,.10);border-radius:0 8px 8px 0;font-family:'Quicksand',sans-serif;font-size:14.5px;font-weight:600;color:#33416E">Vom 7. bis einschlie&szlig;lich 23. September bleibt unsere Praxis geschlossen.</div>
         <div style="display:grid;grid-template-columns:auto 1fr;gap:12px 32px;font-size:15.5px;line-height:1.5;color:#4B5875">
           <span style="color:#B08B54;font-weight:600">Montag</span><span>8 – 12 Uhr · 14 – 19 Uhr</span>
           <span style="color:#B08B54;font-weight:600">Dienstag</span><span>8 – 12 Uhr · 14 – 19 Uhr</span>
@@ -449,5 +450,6 @@ tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,25
   var t;window.addEventListener("resize",function(){clearTimeout(t);t=setTimeout(run,120)});
 })();
 </script>
+<script>(function(){var e=document.getElementById("urlaub-hinweis");if(e&&new Date()>=new Date(2026,8,24)){var h=e.previousElementSibling;if(h&&h.tagName==="H2")h.style.margin="0 0 26px";e.remove()}})();</script>
 </body>
 </html>

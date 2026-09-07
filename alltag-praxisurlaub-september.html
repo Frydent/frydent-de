@@ -241,6 +241,6 @@ var fl=e.target.closest('.flip');document.querySelectorAll('.flip.is-flipped').f
 function tg(){if(mq.matches)document.querySelectorAll('a[target="_blank"][href*="formulare/"]').forEach(function(a){a.removeAttribute('target')})}
 tg();addEventListener('load',function(){tg();setTimeout(tg,800);setTimeout(tg,2500);setTimeout(tg,6000)});if(mq.addEventListener)mq.addEventListener('change',tg);
 })();</script>
-<script>(function(){var e=document.getElementById("urlaub-hinweis");if(e&&new Date()>=new Date(2026,8,24))e.remove()})();</script>
+<script>(function(){var e=document.getElementById("urlaub-hinweis");if(e&&new Date()>=new Date(2026,8,24)){var h=e.previousElementSibling;if(h&&h.tagName==="H2")h.style.margin="0 0 26px";e.remove()}})();</script>
 </body>
 </html>
